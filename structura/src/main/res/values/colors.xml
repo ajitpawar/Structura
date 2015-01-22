@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 80% alpha theme_primary -->
+    <color name="translucent_ab_bg">#CC009688</color>
+
+    <!-- 80% alpha theme_primary_dark -->
+    <color name="translucent_status_bg">#CC00796b</color>
+
+    <!-- 20% alpha white -->
+    <color name="pressed_color">#3FFF</color>
+
+    <!-- Branding colors -->
+    <color name="theme_primary">@color/teal_500</color>
+    <color name="theme_primary_dark">@color/teal_700</color>
+    <color name="theme_primary_light">@color/teal_100</color>
+    <color name="theme_accent_1">@color/red_A200</color>
+    <color name="theme_accent_2">@color/amber_A200</color>
+
+    <color name="divider">@color/black_dividers</color>
+    <color name="divider_inverse">@color/white_dividers</color>
+    <color name="icons">@color/body_text_2</color>
+    <color name="icons_inverse">@color/body_text_1_inverse</color>
+
+    <!-- Body text colors -->
+    <color name="body_text_1">@color/black_text</color>
+    <color name="body_text_1_inverse">@color/white_text</color>
+    <color name="body_text_2">@color/black_text_secondary</color>
+    <color name="body_text_2_inverse">@color/white_text_secondary</color>
+    <color name="body_text_disabled">@color/black_text_disabled</color>
+    <color name="body_text_disabled_inverse">@color/white_text_disabled</color>
+    <color name="body_text_hint">@color/body_text_disabled</color>
+    <color name="body_text_hint_inverse">@color/body_text_disabled_inverse</color>
+
+    <!-- Navigation drawer colors -->
+    <color name="drawer_bg">@color/grey_200</color>
+    <color name="drawer_text_color">@color/body_text_1</color>
+    <color name="drawer_text_color_selected">@color/theme_primary</color>
+    <color name="drawer_icon_tint">@color/icons</color>
+    <color name="drawer_icon_tint_selected">@color/theme_primary</color>
+    <color name="drawer_separator_color">#E5E5E5</color>
+</resources>
