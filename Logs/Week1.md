@@ -11,7 +11,8 @@ This log contains a summary of the meeting:
 ## MVP (4 weeks to implement)
 An Android app to facilitate learning of basic data structures and their operations through visualization and interaction.
 
-Features: 
+Features:
+
  * Interactivity
  * Summary of each topic 
  * Quiz of each topic
@@ -19,6 +20,7 @@ Features:
  * Search? (potential feature)
 
 Content for MVP:
+
  * Binary Search Trees: Add, Delete, Search
  * Singly-linked List: Add, Delete, Search
 
