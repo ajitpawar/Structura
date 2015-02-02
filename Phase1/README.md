@@ -29,7 +29,10 @@ bio
 bio
 
 ## Choosing The Project
-Data structures are fundamental building blocks of Computer Science. In today's world, the need to conquer the inherent complexity of these concepts is critical for success. But, learning data structures can be intimidating for some. The abstractness of the concept can be hard to grasp and students can get stuck trying to "imagine" how it works. Existing teaching methods like videos (Khan Academy) and  text-based forums (StackOverflow) don't quite solve the problem. There seems to be a need for a better way to help students learn data structures. And this is why we chose to build Structra.
+Data structures are fundamental building blocks of Computer Science. In today's world, the need to conquer the inherent complexity of these concepts is critical for success. But, learning data structures can be intimidating for some. The abstractness of the concept can be hard to grasp and students can get stuck trying to "imagine" how it works. Existing teaching methods like videos (Khan Academy) and  text-based forums (StackOverflow) don't quite solve the problem. And this is why we chose to build Structra. We chose this problem space because we recognized there was not a single platform that helps students learn about data structures in an interactive manner. Our product will an insightful, organized and immersive way of learning about Trees, Lists, Hash Tables and Objects. Technical content will come from verified sources like textbooks and Wikipedia. Users will have an opportunity to choose from variety of topics with varying difficulty levels. As an added feature, we thought of implementing exercises and quizzes to give the user an opportunity to validate their learning. We will be making use of open source API and bootstraps to help us with the interactivity of the UI.
+
+In essence, we wish to build a product that helps students learn by visualizing the abstract concepts in Computer Science
+
 << NOT DONE YET >>
 
 ## Personas
