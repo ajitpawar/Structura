@@ -29,7 +29,8 @@ bio
 bio
 
 ## Choosing The Project
-why?
+Data structures are fundamental building blocks of Computer Science. In today's world, the need to conquer the inherent complexity of these concepts is critical for success. But, learning data structures can be intimidating for some. The abstractness of the concept can be hard to grasp and students can get stuck trying to "imagine" how it works. Existing teaching methods like videos (Khan Academy) and  text-based forums (StackOverflow) don't quite solve the problem. There seems to be a need for a better way to help students learn data structures. And this is why we chose to build Structra.
+<< NOT DONE YET >>
 
 ## Personas
 
