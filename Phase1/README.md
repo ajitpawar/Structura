@@ -105,4 +105,18 @@ goes here
 
 #UI Mockups
 
-mockups
+**Drawer to select a Data Scruture**
+
+![Drawer](Mockups/DS-Drawer.png =300x)
+
+**An interactive canvas to play around with different data scructure operations**
+
+![Play](Mockups/LL-Play.png =300x)
+
+**A summary for the Data Scruture**
+
+![Summary](Mockups/LL-Summary.png =300x)
+
+**Test your knowledge**
+
+![Quiz](Mockups/LL-Quiz.png =300x)
