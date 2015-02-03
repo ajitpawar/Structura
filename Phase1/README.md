@@ -69,8 +69,8 @@ Each tuple is of the form (Priority, Difficulty)
 * (P,D) quizzes
 * (P,D) interactive games?
 * (P,D) profile?
-* (P,D) 
-* (P,D)
+* (P,D) insert
+* (P,D) delete
 
 Additional features:<br>
 * (P,D) xyz
@@ -84,6 +84,11 @@ Piotr had an epiphany of singly linked lists one night and decided to carry out 
 ###Piotr Tames the List (Searching)
 Structra contains many topics to view. Piotr can navigate the different topics by searching using keywords. So, flipping between reading about singly linked lists to binary heaps is very easy for Piotr since all he does is open the overflow menu and entry his query at the top of said menu. 
 
+###UserX Builds a Tree (Insertion)
+UserX wants to insert a node into a data structure in order to build a tree.
+
+###UserX Extracts a Node (Deletion)
+UserX wants to delete a node in order to extract the maximum value.
 
 #MVP
 Structra is a tool that allows people to learn data structures efficiently. The app consists of a list of various data structures to start from. They will be ordered in a particular manner so as to maximize the learning, and guide the beginners through the process. However, if you are not a beginner, the app has a feature that allows you to search for specific topics to learn. You can look up for any of the available data structures and study them specifically, instead of going through the guided sections. Another cool feature in the app is being able to save your state. If you are in a hurry, or wish to look at your progress at a later time, Structra’s “Save my Progress” feature will be handy. An app cannot appeal the masses or please the current group of customers if it is not easy to use. The users will be mostly students, ranging from ones in their first year, who can use this app to get a head start, or second year, who can revise and practice their topics here, or even higher year students who can brush up their skills on these topics before interviews, or for other courses. That’s why Structra has a great, fluid UI, which would not only guide users through the app, but the interactivity in visualizing the data structure operations provides a unique learning experience, which is not possible to have in the class rooms. It allows you to play with the individual elements of the data structure. And if one has already gone through the larning process using Structra, and wants a quick revision before his examinations, or an interview, Structra provides the “Summary” feature, which will consists of a brief description of the data structure, its operations, applications, and some of the abstract data types it supports. Thus, Structra is “the complete learning tool” for these concepts. 
