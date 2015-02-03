@@ -76,6 +76,10 @@ Each tuple is of the form (Priority, Difficulty)
 * (P,D) profile?
 * (P,D) UserX wants to read summaries for topics in preparation for his upcoming exam
 * (P,D) UserX wants to interact with structures through drag-and-drop
+* (P,D) UserX wants to insert a node into a data structure in order to build a tree
+* (P,D) UserX wants to delete a node in order to extract the maximum value
+* (P,D) UserX logs in to Structura to learn about binary search trees
+* (P,D) UserX takes a quiz using Structura to test how well UserX knows about binary search trees
 
 Additional features:<br>
 
