@@ -107,7 +107,7 @@ goes here
 
 **Drawer to select a Data Scruture**
 
-![Drawer](Mockups/DS-Drawer.png =300x)
+<img src="Mockups/DS-Drawer.png" alt="Drawer" style="width:300px;">
 
 **An interactive canvas to play around with different data scructure operations**
 
