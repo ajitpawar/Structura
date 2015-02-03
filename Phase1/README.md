@@ -4,8 +4,8 @@
 
 [Group photo]
 
-### Name
-bio
+### Vaishali Deswal
+Vaishali is a 4th year CS and Bioinformatics student. 
 
 ### Name
 bio
