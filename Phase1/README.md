@@ -107,16 +107,16 @@ goes here
 
 **Drawer to select a Data Scruture**
 
-<img src="Mockups/DS-Drawer.png" style="width:100px;"/>
+![Drawer](Mockups/DS-Drawer.png)
 
 **An interactive canvas to play around with different data scructure operations**
 
-![Play](Mockups/LL-Play.png =300x)
+![Play](Mockups/LL-Play.png)
 
 **A summary for the Data Scruture**
 
-![Summary](Mockups/LL-Summary.png =300x)
+![Summary](Mockups/LL-Summary.png)
 
 **Test your knowledge**
 
-![Quiz](Mockups/LL-Quiz.png =300x)
+![Quiz](Mockups/LL-Quiz.png)
