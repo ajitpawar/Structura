@@ -5,7 +5,7 @@
 [Group photo]
 
 ### Vaishali Deswal ###
-Vaishali is a 4th year CS and Bioinformatics student. 
+Vaishali is a 4th year CS and Bioinformatics student at University of Toronto. She is a python enthusiast and completing her fourth year project to create a tool to visualize RNA data of the plant, Arabidopsis Thaliana. She has recently gotten addicted to Quora.
 
 ### Ajit Pawar ###
 Ajit is a fourth year Computer Science specialist at University of Toronto. He loves to attend hackathons and is always excited at the opportunity of using new hardware. He completed his PEY at BlackBerry (Waterloo) and is looking forward to apply his skills to this project. In his spare time, he loves to hit the gym, watch F1 and browse through some awesome sub-reddits to expand his mind. And of course he struggles with musical instruments :(
@@ -45,7 +45,10 @@ most of day in the residence building either doing school work or don work.
 Savio has always been a very outgoing student who has been very involved in the social aspect of university, that being said he still manages to take a full
 course load and keep up in his academics. 
 
-*TODO: Vaishali's Personas Missing*
+### Cynthia ###
+Cynthia is a 1st year Computer Science student at the University of Toronto. She is single. She is taking the introductory courses of the Computer Science program. She started learning programming in high school and is excited to pursue it further. Since she is usually on campus till late,she is looking to get involved in extra curricular activities to complement her studies. She has a particular interest in Habitat for Humanity and the archery club at UofT. She has a long commute from Mississauga to the St. George campus and likes to read (books/lecture material) on her commute to campus.
+
+
 
 
 ## User Stories ##
