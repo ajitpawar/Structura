@@ -107,7 +107,7 @@ goes here
 
 **Drawer to select a Data Scruture**
 
-<img src="Mockups/DS-Drawer.png" alt="Drawer" style="width:300px;">
+<img src="Mockups/DS-Drawer.png" style="width:100px;"/>
 
 **An interactive canvas to play around with different data scructure operations**
 
