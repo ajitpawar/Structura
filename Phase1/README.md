@@ -36,8 +36,14 @@ In essence, we wish to build a product that helps students learn by visualizing 
 << NOT DONE YET >>
 
 ## Personas
-
-### Persona 1
+Savio is a 2st year Computer Science student at UofT’s
+St. George campus. He is single. He lives on Campus 
+in the New College residences and Dons on one of the floors.
+Because of the fairly long and busy days, Savio usually spends 
+most of day in the residence building either doing school work or don work.
+Savio has always been a very outgoing student who has been very involved in the  
+social aspect of university, That being said he still manages to take a full
+course load and keep up in his academics. 
 
 ### Persona 2
 
