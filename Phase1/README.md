@@ -56,18 +56,18 @@ Cynthia is a 1st year Computer Science student at the University of Toronto. She
 ### Legend: ###
 
 #### Priority: ####
-1 - We must have this feature, without it our product has no value to our users. <br>
-2 - Valuable feature, but we can still release a product without it.<br>
-3 - Might be valuable, but we should look at it later.<br>
+1. We must have this feature, without it our product has no value to our users.
+2. Valuable feature, but we can still release a product without it.
+3. Might be valuable, but we should look at it later.
 
 #### Difficulty: ####
-1- Easiest <br>
-2- Medium <br>
-3- Hard <br>
+1. Easiest
+2. Medium
+3. Hard
 
 Each tuple is of the form (Priority, Difficulty)
 
-* (2,1) UserX wants to search a list of topics to learn
+* **(2,1)** UserX wants to search a list of topics to learn
 * (2,3) UserX wants an interactive user interface that helps him create a visual data structure
 * (2,3) UserX wants to create a tree by tapping on a node which then gets added to the tree
 * (2,3) UserX wants to re-balance the tree
@@ -81,10 +81,13 @@ Each tuple is of the form (Priority, Difficulty)
 * (2,1) UserX logs in to Structura to learn about binary search trees
 * (3,2) UserX takes a quiz using Structura to test how well UserX knows about binary search trees
 
-Additional features:<br>
+##### Additional features:
 
 * (3,3) UserX wants to play interactive games to learn data structures in a fun way
 * (3,1) profile?
+
+*TODO: User stories have to be in the form of userx does x because y. All one liners or so*
+*TODO: bold each tuple*
 
 ### For PR User Stories ###
 
@@ -117,6 +120,10 @@ Making this app will not be easy. There are obvious hurdles in this process. Som
 | A  | A |
 | A  | A |
 
+
+## CRC Play out
+
+*TODO*
 
 ## UI Mockups ##
 
