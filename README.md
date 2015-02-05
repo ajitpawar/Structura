@@ -1,2 +1,2 @@
 # Structura
-<a href="https://www.zenhub.io/" target="_blank"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png" height="18px" alt="Powered by ZenHub"/></a>
+[![Waffle](https://badge.waffle.io/uot-csc30x-w15/301w15-prj-team2-repo.svg?label=ready&title=Got%20Waffle)](https://waffle.io/uot-csc30x-w15/301w15-prj-team2-repo)
