@@ -19,8 +19,8 @@ Sean is a third-year Computer Science and Political Science student at Universit
 ### Dhyey Sejpal ###
 Dhyey Sejpal is a third year Computer Science Specialist. The project we will be working on is a mobile app. He has experience in designing the user interface of an app, building an app using agile development methods and am also currently working on two apps apart from this project. Technically speaking, he knows languages like Java, C++ and C, which are required in such projects. Apart from that, he has an immense passion for Entrepreneurship. He can work in teams very well, and encourages the practice, as it provides us with complementary skills and several viewpoints about a situation.
 
-### Name ###
-bio
+### Amit Prabhakar ###
+Amit Prabhakar is a third year Computer Science Specialist at UofT. His hobbies include Web development and he's also a major car enthusiast with his dream car being the Nissan GT-R. Aside from that he will be working at Soti Inc. as a full-stack developer as apart of the PEY program. From this project he is hoping to enhance his Android development skills in both frontend and backend.
 
 ### Name ###
 bio
