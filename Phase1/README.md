@@ -16,8 +16,8 @@ Shahin is a third-year Computer Science specialist student at University of Toro
 ### Sean Williams ###
 Sean is a third-year Computer Science and Political Science student at University of Toronto. He has an interest in video game development, and as a member of the UT Game Design and Development Club, has participated in a number of game development competitions and events. He is hoping to take away from this project greater experience in software development.
 
-### Name ###
-bio
+### Dhyey Sejpal ###
+Dhyey Sejpal is a third year Computer Science Specialist. The project we will be working on is a mobile app. He has experience in designing the user interface of an app, building an app using agile development methods and am also currently working on two apps apart from this project. Technically speaking, he knows languages like Java, C++ and C, which are required in such projects. Apart from that, he has an immense passion for Entrepreneurship. He can work in teams very well, and encourages the practice, as it provides us with complementary skills and several viewpoints about a situation.
 
 ### Name ###
 bio
@@ -63,18 +63,18 @@ Seamus is a student in his final year studying Computer Science at University of
 
 Each tuple is of the form (Priority, Difficulty)
 
-* **(2,1)** Savio wants to search a list of topics to learn because he is particularly interested in learning about Linked list for his midterm.
-* **(2,3)** Seamus wants an interactive user interface that helps him create a visual data structure because he finds it difficult to understand by reading the textbook.
+* **(1,1)** Savio wants to search a list of topics to learn because he is particularly interested in learning about Linked list for his midterm.
+* **(1,3)** Seamus wants an interactive user interface that helps him create a visual data structure because he finds it difficult to understand by reading the textbook.
 * **(2,3)** Cynthia wants to create a tree by tapping on a node which then gets added to the tree 
 * **(2,3)** Savio wants to re-balance the tree because he wants to avoid making the tree one-side-heavy
 * **(3,1)** Cynthia wants to login to the app so the app knows the user and what they were learning
 * **(1,2)** Savio wants to save the state of the app because he wants resume where he left off
 * **(3,2)** Cynthia wants to be able to test her knowledge by doing simple online quizzes to better prepare for her tests
 * **(1,1)** Seamus wants to read summaries for topics in preparation for his upcoming exam
-* **(2,3)** Savio wants to interact with structures through drag-and-drop because they find visual learning a more helpful tool
+* **(1,3)** Savio wants to interact with structures through drag-and-drop because they find visual learning a more helpful tool
 * **(2,3)** Seamus wants to insert a node into a data structure in order to build a tree because he is trying to learn the insert operation for trees.
 * **(2,3)** Savio wants to delete a node in order to extract the maximum value
-* **(2,1)** Cynthia logs in to Structura to learn about binary search trees because her friend recommended this app for learning data structures
+* **(2,2)** Cynthia logs in to Structura to learn about binary search trees because her friend recommended this app for learning data structures
 * **(3,2)** Seamus takes a quiz using Structura to test how well he knows about binary search trees   
 
 ##### Additional features:
@@ -103,8 +103,30 @@ Structura is a tool that allows people to learn data structures efficiently. The
 
 Making this app will not be easy. There are obvious hurdles in this process. Some of them will be the difference in knowledge base of the group. But that is where we will turn it into our advantage. People from different backgrounds have different skills, and hence we will divide the tasks according to everyone’s strengths. Apart from that, co-ordination and schedule conflicts will be a problem, but then we have Git, and Slack to keep us organized.
 
+
+
+
 ## Release & Iteration Planning ##
-*TODO*
+
+In order to finish our app successfully, we need to divide and plan our work throughout the term. For our first release, which will be about 3 weeks long, we have decided to implement the following features:
+1. Interactivity in creating a data structure to start learning, and then manipulate it using drag and drop features.
+
+2. Adding the Singly linked list data structure and operations based on it, do get the users started with their learning, on a reasonably simple topic as compared to the more complex ones like trees, heaps, etc.
+
+3.  Having summaries about various data structures provided in the app, to enable quick recalling of the topics without having to play through the app, or read 50 pages in textbook. 
+
+4. Ability to save the state of the app locally, to enable resuming of the user’s progress.
+The user stories marked with priority 1 cover these features, and will be implemented in the first release.
+
+Some of the features that we excluded from the app are as follows:
+1. Providing the Binary Search Tree data structure and its operations to learn through the app. This feature was excluded from the first release because it was difficult to implement in the given time of 3 weeks, along with the overhead of designing the basic layout of the app and getting the team to blend into the development process.
+
+2. Having quizzes to test the user’s knowledge. This feature was excluded because of both, its less significance in the MVP, and its difficulty of implementation. The quizzes are a tool to test one’s knowledge. Our goal for the MVP is to first provide the knowledge to people. Testing can be done after that. Designing quizzes that are quick and also sufficient to test people’s knowledge is difficult, and needs more time, and hence should be done later.
+
+3. Allowing user to have an account in the app and log in. This feature was excluded because of its low importance in our project idea. This is completely an extra feature, and not at all required currently. Later on, this can be added, and features can be built on top of it as well.
+
+For the very first week of our release, that is, our first iteration, we plan to implement the interactivity feature of the app. The first step is to design the basic layout of the app, and make it interactive so that the users has a pleasurable experience in learning through the app. Then, features like adding the data structure, and summaries about it, and the state saving can be implemented. The first step required is the interactive framework to support these other features.
+
 
 ## CRC Cards ##
 
