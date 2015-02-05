@@ -61,29 +61,26 @@ Seamus is a student in his final year studying Computer Science at University of
 2. Medium
 3. Hard
 
-Each tuple is of the form (Priority, Difficulty)
+Each tuple is of the form (Priority, Difficulty). Sorted by Priority:
 
 * **(1,1)** Savio wants to search a list of topics to learn because he is particularly interested in learning about Linked list for his midterm.
 * **(1,3)** Seamus wants an interactive user interface that helps him create a visual data structure because he finds it difficult to understand by reading the textbook.
-* **(2,3)** Cynthia wants to create a tree by tapping on a node which then gets added to the tree 
-* **(2,3)** Savio wants to re-balance the tree because he wants to avoid making the tree one-side-heavy
-* **(3,1)** Cynthia wants to login to the app so the app knows the user and what they were learning
 * **(1,2)** Savio wants to save the state of the app because he wants resume where he left off
-* **(3,2)** Cynthia wants to be able to test her knowledge by doing simple online quizzes to better prepare for her tests
 * **(1,1)** Seamus wants to read summaries for topics in preparation for his upcoming exam
 * **(1,3)** Savio wants to interact with structures through drag-and-drop because they find visual learning a more helpful tool
 * **(2,3)** Seamus wants to insert a node into a data structure in order to build a tree because he is trying to learn the insert operation for trees.
 * **(2,3)** Savio wants to delete a node in order to extract the maximum value
 * **(2,2)** Cynthia logs in to Structura to learn about binary search trees because her friend recommended this app for learning data structures
+* **(2,3)** Cynthia wants to create a tree by tapping on a node which then gets added to the tree 
+* **(2,3)** Savio wants to re-balance the tree because he wants to avoid making the tree one-side-heavy
+* **(3,1)** Cynthia wants to login to the app so the app knows the user and what they were learning
+* **(3,2)** Cynthia wants to be able to test her knowledge by doing simple online quizzes to better prepare for her tests
 * **(3,2)** Seamus takes a quiz using Structura to test how well he knows about binary search trees   
 
 ##### Additional features:
 
-* (3,3) UserX wants to play interactive games to learn data structures in a fun way
+* (3,3) Savio wants to play interactive games to learn data structures in a fun way
 * (3,1) User profile?
-
-*TODO: User stories have to be in the form of userx does x because y. All one liners or so*
-*TODO: bold each tuple*
 
 ### For PR User Stories ###
 
