@@ -2,7 +2,7 @@
 
 ## Introducing The Team ##
 
-[Group photo]
+![GroupPhoto](Mockups/sotu.jpg)
 
 ### Vaishali Deswal ###
 Vaishali is a 4th year CS and Bioinformatics student at University of Toronto. She is a Python enthusiast and completing her fourth year project to create a tool to visualize RNA data of the plant, Arabidopsis Thaliana. She has recently gotten addicted to Quora.
