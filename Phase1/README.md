@@ -22,8 +22,8 @@ Dhyey Sejpal is a third year Computer Science Specialist. The project we will be
 ### Amit Prabhakar ###
 Amit Prabhakar is a third year Computer Science Specialist at UofT. His hobbies include Web development and he's also a major car enthusiast with his dream car being the Nissan GT-R. Aside from that he will be working at Soti Inc. as a full-stack developer as apart of the PEY program. From this project he is hoping to enhance his Android development skills in both frontend and backend.
 
-### Name ###
-bio
+### Omar Hamdan ###
+Omar Hamdan is third year Computer Science Specialist at UofT. With interests lying in comedy, philosophy and the philosophy of programming; publications like *Plato and a Platypus Walk Into a Bar*, *phrack.org*, *defenceindepth.com* and *stroustrup.com* are of great value to him. With high hopes, Omar wishes to make the best of this group project experience.   
 
 ### Name ###
 bio
