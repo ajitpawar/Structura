@@ -13,8 +13,8 @@ Ajit is a fourth year Computer Science specialist at University of Toronto. He l
 ### Shahin Yousefi ###
 Shahin is a third-year Computer Science specialist student at University of Toronto. His hobbies are Android programming and finding memes for any situation. He listens to way too much mainstream music and loves to stay up-to-date on tech news through social media. Despite being an introvert, he lives dangerously by using beta, alpha, or even pre-alpha software if it means he will get new features.
 
-### Name ###
-bio
+### Sean Williams ###
+Sean is a third-year Computer Science and Political Science student at University of Toronto. He has an interest in video game development, and as a member of the UT Game Design and Development Club, has participated in a number of game development competitions and events. He is hoping to take away from this project greater experience in software development.
 
 ### Name ###
 bio
@@ -63,19 +63,19 @@ Seamus is a student in his final year stuyding Computer Science at University of
 
 Each tuple is of the form (Priority, Difficulty)
 
-* **(2,1)** UserX wants to search a list of topics to learn because he is particularly interested in learning about Linked list for his midterm.
-* **(2,3)** UserX wants an interactive user interface that helps him create a visual data structure because he finds it difficult to understand by reading the textbook.
-* **(2,3)** UserX wants to create a tree by tapping on a node which then gets added to the tree 
-* **(2,3)** UserX wants to re-balance the tree because he wants to avoid making the tree one-side-heavy
-* **(3,1)** UserX wants to login to the app so the app knows the user and what they were learning
-* **(1,2)** UserX wants to save the state of the app because he wants resume where he left off
-* **(3,2)** UserX wants to be able to test her knowledge by doing simple online quizzes to better prepare for her tests
-* **(1,1)** UserX wants to read summaries for topics in preparation for his upcoming exam
-* **(2,3)** UserX wants to interact with structures through drag-and-drop because they find visual learning a more helpful tool
-* **(2,3)** UserX wants to insert a node into a data structure in order to build a tree because he is trying to learn the insert operation for trees.
-* **(2,3)** UserX wants to delete a node in order to extract the maximum value
-* **(2,1)** UserX logs in to Structura to learn about binary search trees because her friend recommended this app for learning data structures
-* **(3,2)** UserX takes a quiz using Structura to test how well UserX knows about binary search trees   
+* **(2,1)** Savio wants to search a list of topics to learn because he is particularly interested in learning about Linked list for his midterm.
+* **(2,3)** Seamus wants an interactive user interface that helps him create a visual data structure because he finds it difficult to understand by reading the textbook.
+* **(2,3)** Cynthia wants to create a tree by tapping on a node which then gets added to the tree 
+* **(2,3)** Savio wants to re-balance the tree because he wants to avoid making the tree one-side-heavy
+* **(3,1)** Cynthia wants to login to the app so the app knows the user and what they were learning
+* **(1,2)** Savio wants to save the state of the app because he wants resume where he left off
+* **(3,2)** Cynthia wants to be able to test her knowledge by doing simple online quizzes to better prepare for her tests
+* **(1,1)** Seamus wants to read summaries for topics in preparation for his upcoming exam
+* **(2,3)** Savio wants to interact with structures through drag-and-drop because they find visual learning a more helpful tool
+* **(2,3)** Seamus wants to insert a node into a data structure in order to build a tree because he is trying to learn the insert operation for trees.
+* **(2,3)** Savio wants to delete a node in order to extract the maximum value
+* **(2,1)** Cynthia logs in to Structura to learn about binary search trees because her friend recommended this app for learning data structures
+* **(3,2)** Seamus takes a quiz using Structura to test how well he knows about binary search trees   
 
 ##### Additional features:
 
