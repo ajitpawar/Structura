@@ -5,7 +5,7 @@
 [Group photo]
 
 ### Vaishali Deswal ###
-Vaishali is a 4th year CS and Bioinformatics student at University of Toronto. She is a python enthusiast and completing her fourth year project to create a tool to visualize RNA data of the plant, Arabidopsis Thaliana. She has recently gotten addicted to Quora.
+Vaishali is a 4th year CS and Bioinformatics student at University of Toronto. She is a Python enthusiast and completing her fourth year project to create a tool to visualize RNA data of the plant, Arabidopsis Thaliana. She has recently gotten addicted to Quora.
 
 ### Ajit Pawar ###
 Ajit is a fourth year Computer Science specialist at University of Toronto. He loves to attend hackathons and is always excited at the opportunity of using new hardware. He completed his PEY at BlackBerry (Waterloo) and is looking forward to apply his skills to this project. In his spare time, he loves to hit the gym, watch F1 and browse through some awesome sub-reddits to expand his mind. And of course he struggles with musical instruments :(
@@ -29,7 +29,7 @@ bio
 bio
 
 ## Choosing The Project ##
-Data structures are fundamental building blocks of Computer Science. In today's world, the need to conquer the inherent complexity of these concepts is critical for success. But, learning data structures can be intimidating for some. The abstractness of the concept can be hard to grasp and students can get stuck trying to "imagine" how it works. Existing teaching methods like videos (Khan Academy) and  text-based forums (StackOverflow) don't quite solve the problem. And this is why we chose to build Structra. We chose this problem space because we recognized there was not a single platform that helps students learn about data structures in an interactive manner. Our product will an insightful, organized and immersive way of learning about Trees, Lists, Hash Tables and Objects. Technical content will come from verified sources like textbooks and Wikipedia. Users will have an opportunity to choose from variety of topics with varying difficulty levels. As an added feature, we thought of implementing exercises and quizzes to give the user an opportunity to validate their learning. We will be making use of open source API and bootstraps to help us with the interactivity of the UI.
+Data structures are fundamental building blocks of Computer Science. In today's world, the need to conquer the inherent complexity of these concepts is critical for success. But, learning data structures can be intimidating for some. The abstractness of the concept can be hard to grasp and students can get stuck trying to "imagine" how it works. Existing teaching methods like videos (Khan Academy) and  text-based forums (StackOverflow) don't quite solve the problem. And this is why we chose to build Structura. We chose this problem space because we recognized there was not a single platform that helps students learn about data structures in an interactive manner. Our product will an insightful, organized and immersive way of learning about Trees, Lists, Hash Tables and Objects. Technical content will come from verified sources like textbooks and Wikipedia. Users will have an opportunity to choose from variety of topics with varying difficulty levels. As an added feature, we thought of implementing exercises and quizzes to give the user an opportunity to validate their learning. We will be making use of open source API and bootstraps to help us with the interactivity of the UI.
 
 In essence, we wish to build a product that helps students learn by visualizing the abstract concepts in Computer Science
 
@@ -43,7 +43,7 @@ Savio is a 17 years old high school student in his senior year. He lives in Nort
 Cynthia is a 1st year Computer Science student at the University of Toronto. She is 18 years old and currently single. She is taking the introductory courses of the Computer Science program. She started learning programming in high school and is excited to pursue it further. Since she is usually on campus till late,she is looking to get involved in extra curricular activities to complement her studies. She has a particular interest in Habitat for Humanity and the archery club at UofT. She has a long commute from Mississauga to the St. George campus and likes to read (books/lecture material) on her commute to campus.
 
 ### Seamus ###
-Seamus is a student in his final year stuyding Computer Science at University of Toronto. He is 22 years old and lives in Vaughan, Ontario. He works part-time as a freelance web developer, while also working on MarkUs (CS department's grading software) as his final year project. He is an avid gamer with Halo and FIFA 2015 being his favourites. He also loves to network with new people and goes to a lot of Meet-ups around the city. He, like most of his graduating friends, is looking for full-time employment. He recently has scored interviews from IBM, Amazon and RBC Bank.
+Seamus is a student in his final year studying Computer Science at University of Toronto. He is 22 years old and lives in Vaughan, Ontario. He works part-time as a freelance web developer, while also working on MarkUs (CS department's grading software) as his final year project. He is an avid gamer with Halo and FIFA 2015 being his favourites. He also loves to network with new people and goes to a lot of Meet-ups around the city. He, like most of his graduating friends, is looking for full-time employment. He recently has scored interviews from IBM, Amazon and RBC Bank.
 
 
 
@@ -88,7 +88,7 @@ Each tuple is of the form (Priority, Difficulty)
 ### For PR User Stories ###
 
 #### Piotr Recalls an Epiphany (State Saving) ####
-Piotr had an epiphany of singly linked lists one night and decided to carry out his suspicions on the Structra app. The interactivity of SLLs confirmed his theory, thus Piotr closed Structra and slept peacefully the night before his midterm. In the morning, Piotr recalls his epiphany and decides to review what he did on Structra. Once he launches the app, it brings him straight to where he left it off with all his interactions rendered. Satisfied with what he reviews, Piotr confidently faces his midterm. 
+Piotr had an epiphany of singly linked lists one night and decided to carry out his suspicions on the Structura app. The interactivity of SLLs confirmed his theory, thus Piotr closed Structura and slept peacefully the night before his midterm. In the morning, Piotr recalls his epiphany and decides to review what he did on Structura. Once he launches the app, it brings him straight to where he left it off with all his interactions rendered. Satisfied with what he reviews, Piotr confidently faces his midterm. 
  
 #### Piotr Tames the List (Searching) ####
 Structra contains many topics to view. Piotr can navigate the different topics by searching using keywords. So, flipping between reading about singly linked lists to binary heaps is very easy for Piotr since all he does is open the overflow menu and entry his query at the top of said menu. 
