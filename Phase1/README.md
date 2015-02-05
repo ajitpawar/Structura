@@ -37,17 +37,13 @@ In essence, we wish to build a product that helps students learn by visualizing 
 ## Personas ##
 
 ### Savio ###
-Savio is a 2nd year Computer Science student at UofT’s
-St. George campus. He is single. He lives on campus 
-in the New College residences and Dons on one of the floors.
-Because of the fairly long and busy days, Savio usually spends 
-most of day in the residence building either doing school work or don work.
-Savio has always been a very outgoing student who has been very involved in the social aspect of university, that being said he still manages to take a full
-course load and keep up in his academics. 
+Savio is a 17 years old high school student in his senior year. He lives in North York, Toronto. He likes to play guitar on the side and was part of a garage band with his friends until last year. His parents are high school teachers. However, it is his uncle that Savio wants to follow in terms of career. His uncle is a Software Developer at TD bank and he got Savio interested in taking up the discipline. Thus, Savio tried a CS course in school and liked it very much. He has been accepted to University of Toronto Computer Science program and is very excited to start.
 
 ### Cynthia ###
-Cynthia is a 1st year Computer Science student at the University of Toronto. She is single. She is taking the introductory courses of the Computer Science program. She started learning programming in high school and is excited to pursue it further. Since she is usually on campus till late,she is looking to get involved in extra curricular activities to complement her studies. She has a particular interest in Habitat for Humanity and the archery club at UofT. She has a long commute from Mississauga to the St. George campus and likes to read (books/lecture material) on her commute to campus.
+Cynthia is a 1st year Computer Science student at the University of Toronto. She is 18 years old and currently single. She is taking the introductory courses of the Computer Science program. She started learning programming in high school and is excited to pursue it further. Since she is usually on campus till late,she is looking to get involved in extra curricular activities to complement her studies. She has a particular interest in Habitat for Humanity and the archery club at UofT. She has a long commute from Mississauga to the St. George campus and likes to read (books/lecture material) on her commute to campus.
 
+### Seamus ###
+Seamus is a student in his final year stuyding Computer Science at University of Toronto. He is 22 years old and lives in Vaughan, Ontario. He works part-time as a freelance web developer, while also working on MarkUs (CS department's grading software) as his final year project. He is an avid gamer with Halo and FIFA 2015 being his favourites. He also loves to network with new people and goes to a lot of Meet-ups around the city. He, like most of his graduating friends, is looking for full-time employment. He recently has scored interviews from IBM, Amazon and RBC Bank.
 
 
 
