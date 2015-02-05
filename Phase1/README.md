@@ -63,24 +63,24 @@ Seamus is a student in his final year stuyding Computer Science at University of
 
 Each tuple is of the form (Priority, Difficulty)
 
-* **(2,1)** UserX wants to search a list of topics to learn
-* (2,3) UserX wants an interactive user interface that helps him create a visual data structure
-* (2,3) UserX wants to create a tree by tapping on a node which then gets added to the tree
-* (2,3) UserX wants to re-balance the tree
-* (3,1) UserX wants to login to the app so the app knows the user and what they were learning
-* (1,2) UserX wants to save the state of the app so he can resume where he left off
-* (3,2) UserX wants to be able to test her knowledge by doing simple online quizzes
-* (1,1) UserX wants to read summaries for topics in preparation for his upcoming exam
-* (2,3) UserX wants to interact with structures through drag-and-drop
-* (2,3) UserX wants to insert a node into a data structure in order to build a tree
-* (2,3) UserX wants to delete a node in order to extract the maximum value
-* (2,1) UserX logs in to Structura to learn about binary search trees
-* (3,2) UserX takes a quiz using Structura to test how well UserX knows about binary search trees
+* **(2,1)** UserX wants to search a list of topics to learn because he is particularly interested in learning about Linked list for his midterm.
+* **(2,3)** UserX wants an interactive user interface that helps him create a visual data structure because he finds it difficult to understand by reading the textbook.
+* **(2,3)** UserX wants to create a tree by tapping on a node which then gets added to the tree 
+* **(2,3)** UserX wants to re-balance the tree because he wants to avoid making the tree one-side-heavy
+* **(3,1)** UserX wants to login to the app so the app knows the user and what they were learning
+* **(1,2)** UserX wants to save the state of the app because he wants resume where he left off
+* **(3,2)** UserX wants to be able to test her knowledge by doing simple online quizzes to better prepare for her tests
+* **(1,1)** UserX wants to read summaries for topics in preparation for his upcoming exam
+* **(2,3)** UserX wants to interact with structures through drag-and-drop because they find visual learning a more helpful tool
+* **(2,3)** UserX wants to insert a node into a data structure in order to build a tree because he is trying to learn the insert operation for trees.
+* **(2,3)** UserX wants to delete a node in order to extract the maximum value
+* **(2,1)** UserX logs in to Structura to learn about binary search trees because her friend recommended this app for learning data structures
+* **(3,2)** UserX takes a quiz using Structura to test how well UserX knows about binary search trees   
 
 ##### Additional features:
 
 * (3,3) UserX wants to play interactive games to learn data structures in a fun way
-* (3,1) profile?
+* (3,1) User profile?
 
 *TODO: User stories have to be in the form of userx does x because y. All one liners or so*
 *TODO: bold each tuple*
