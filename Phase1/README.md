@@ -135,6 +135,19 @@ For the very first week of our release, that is, our first iteration, we plan to
 | A  | A |
 | A  | A |
 
+###### Summary
+| Responsibility        | Collaboration           | 
+| ------------- |:-------------:| 
+| Information  |  |
+
+###### Quiz
+| Responsibility        | Collaboration           | 
+| ------------- |:-------------:| 
+| True or False  |  |
+| Multiple Choice  |  |
+| Question  |  |
+| Answer  |  |
+
 
 ## CRC Play out
 
