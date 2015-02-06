@@ -127,8 +127,17 @@ For the very first week of our release, that is, our first iteration, we plan to
 | Drag and Drop |  |
 | Enter Value |  |
 
+###### Search
+| Responsibility        | Collaboration           |
+| ------------- |:-------------:|
+| Searchng |  |
 
-## CRC Play out
+###### Display
+| Responsibility        | Collaboration           |
+| ------------- |:-------------:|
+| Display |  |
+
+##CRC PLAY OUT
 
 *TODO*
 
