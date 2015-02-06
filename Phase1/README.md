@@ -122,13 +122,11 @@ For the very first week of our release, that is, our first iteration, we plan to
 | ------------- |:-------------:| 
 | Information  |  |
 
-###### Quiz
+###### Snapshot
 | Responsibility        | Collaboration           | 
 | ------------- |:-------------:| 
-| True or False  |  |
-| Multiple Choice  |  |
-| Question  |  |
-| Answer  |  |
+| Save |  |
+| Load  |  |
 
 
 ## CRC Play out
