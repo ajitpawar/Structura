@@ -79,20 +79,10 @@ Each tuple is of the form (Priority, Difficulty). Sorted by Priority:
 * **(3,1)** Savio wants a user profile
 
 
-### For PR User Stories ###
-
-#### Piotr Recalls an Epiphany (State Saving) ####
-Piotr had an epiphany of singly linked lists one night and decided to carry out his suspicions on the Structura app. The interactivity of SLLs confirmed his theory, thus Piotr closed Structura and slept peacefully the night before his midterm. In the morning, Piotr recalls his epiphany and decides to review what he did on Structura. Once he launches the app, it brings him straight to where he left it off with all his interactions rendered. Satisfied with what he reviews, Piotr confidently faces his midterm. 
- 
-#### Piotr Tames the List (Searching) ####
-Structra contains many topics to view. Piotr can navigate the different topics by searching using keywords. So, flipping between reading about singly linked lists to binary heaps is very easy for Piotr since all he does is open the overflow menu and entry his query at the top of said menu. 
-
-
 ## MVP ##
 Structura is a tool that allows people to learn data structures efficiently. The app consists of a list of various data structures to start from. They will be ordered in a particular manner so as to maximize learning, and guide beginners through the process. However, if you are not a beginner, the app has a feature that allows you to search for specific topics to learn. You can look up any of the available data structures and study them specifically, instead of going through the guided sections. Another cool feature in the app is being able to save your state. If you are in a hurry, or wish to look at your progress at a later time, Structura’s “Snapshot” feature will be handy. An app cannot appeal to the masses or please the current group of customers if it is not easy to use. Users will be mostly students, ranging from those in their first year, who can use this app to get a head start, or second year, who can review and practice lecture topics here, or even higher year students who can brush up their skills on these topics before job interviews, or prepare themselves for other courses. That is why Structura has a great, fluid UI, which would not only guide users through the app, but also provide a unique learning experience through interactivity in visualizing data structure operations, which is not possible to have in the classroom. It allows you to play with the individual elements of the data structure. And if one has already gone through the learning process using Structura, and wants a quick review before their exams, or an interview, Structura provides the “Summary” feature, which will consist of a brief description of the data structure, its operations, applications, and some of the abstract data types it supports. Thus, Structura is “the complete learning tool” for these concepts. 
 
 Making this app will not be easy. There are obvious hurdles in this process. Some of them will be the difference in knowledge base of the group. But that is where we will turn it into our advantage. People from different backgrounds have different skills, and hence we will divide the tasks according to everyone’s strengths. Apart from that, co-ordination and schedule conflicts will be a problem, but then we have Git, and Slack to keep us organized.
-
 
 
 
