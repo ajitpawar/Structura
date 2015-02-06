@@ -76,11 +76,8 @@ Each tuple is of the form (Priority, Difficulty). Sorted by Priority:
 * **(3,1)** Cynthia wants to login to the app so the app knows the user and what they were learning
 * **(3,2)** Cynthia wants to be able to test her knowledge by doing simple online quizzes to better prepare for her tests
 * **(3,2)** Seamus takes a quiz using Structura to test how well he knows about binary search trees   
+* **(3,1)** Savio wants a user profile
 
-##### Additional features:
-
-* (3,3) Savio wants to play interactive games to learn data structures in a fun way
-* (3,1) User profile?
 
 ### For PR User Stories ###
 
@@ -89,10 +86,6 @@ Piotr had an epiphany of singly linked lists one night and decided to carry out 
  
 #### Piotr Tames the List (Searching) ####
 Structra contains many topics to view. Piotr can navigate the different topics by searching using keywords. So, flipping between reading about singly linked lists to binary heaps is very easy for Piotr since all he does is open the overflow menu and entry his query at the top of said menu. 
-
-### Excluded Features/User Stories
-
-*TODO*
 
 
 ## MVP ##
