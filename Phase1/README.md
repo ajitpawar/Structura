@@ -139,7 +139,7 @@ For the very first week of our release, that is, our first iteration, we plan to
 
 ##CRC PLAY OUT
 
-*TODO*
+* Search: Savio launches Structura and taps on the search bar. This invokes the search responsibility which takes in a query and returns a list of topics. Tapping on a topic asks the Display CRC to display content of the topic to the main screen.   
 
 ## UI Mockups ##
 
