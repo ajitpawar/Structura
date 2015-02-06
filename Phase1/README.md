@@ -25,7 +25,7 @@ Amit Prabhakar is a third year Computer Science Specialist at UofT. His hobbies 
 ### Omar Hamdan ###
 Omar Hamdan is third year Computer Science Specialist at UofT. With interests lying in comedy, philosophy and the philosophy of programming; publications like *Plato and a Platypus Walk Into a Bar*, *phrack.org*, *defenceindepth.com* and *stroustrup.com* are of great value to him. With high hopes, Omar wishes to make the best of this group project experience.   
 
-### Ishan ###
+### Ishan Thukral ###
 Ishan is a third year Computer Science Specialist. He has worked on variety of mobie and web apps. He's previously intered at Yahoo, where he worked on the Yahoo Mail iOS and web client, collectively used by over 300 million users, before that he worked at Pivotal Labs making iOS and web apps for clients like RBC, CIBC and Boston Pizza. He's an experienced Tennis player, having played the game for over 15 years. In his free time, he plays the Guitar, struggles at singing and tries to watch as much Cricket as possible.
 
 ## Choosing The Project ##
