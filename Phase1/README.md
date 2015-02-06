@@ -64,18 +64,18 @@ Seamus is a student in his final year studying Computer Science at University of
 Each tuple is of the form (Priority, Difficulty). Sorted by Priority:
 
 * **(1,1)** Savio wants to search a list of topics to learn because he is particularly interested in learning about Linked list for his midterm.
-* **(1,3)** Seamus wants an interactive user interface becuase it  helps him create a visual data structure because he finds it difficult to understand by reading the textbook.
+* **(1,3)** Seamus wants an interactive user interface because it  helps him create a visual data structure because he finds it difficult to understand by reading the textbook.
 * **(1,2)** Savio wants to save the state of the app because he wants resume where he left off
-* **(1,1)** Seamus wants to read summaries for topics becuase he needs a review for his upcoming exam
+* **(1,1)** Seamus wants to read summaries for topics because he needs a review for his upcoming exam
 * **(1,3)** Savio wants to interact with structures through drag-and-drop because they find visual learning a more helpful tool
 * **(2,3)** Seamus wants to insert a node into a data structure in order to build a tree because he is trying to learn the insert operation for trees.
-* **(2,3)** Savio wants to delete a node becuase he wants to extract the maximum value
+* **(2,3)** Savio wants to delete a node because he wants to extract the maximum value
 * **(2,2)** Cynthia logs in to Structura to learn about binary search trees because her friend recommended this app for learning data structures
 * **(2,3)** Cynthia wants to tap on a BST becuase she wants to make a new node 
 * **(2,3)** Savio wants to re-balance the tree because he wants to avoid making the tree one-side-heavy
-* **(3,1)** Cynthia wants to login to the app becuase she want to load all her user data to continue learning about linked lists
-* **(3,2)** Cynthia wants to be able to test her knowledge by doing simple online quizzes becuase she needs to prepare for her upcoming exam
-* **(3,1)** Savio wants a user profile becuase we he wants to see his grade from a previous quiz
+* **(3,1)** Cynthia wants to login to the app because she want to load all her user data to continue learning about linked lists
+* **(3,2)** Cynthia wants to be able to test her knowledge by doing simple online quizzes because she needs to prepare for her upcoming exam
+* **(3,1)** Savio wants a user profile because we he wants to see his grade from a previous quiz
 
 
 ## MVP ##
