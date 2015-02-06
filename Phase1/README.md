@@ -75,7 +75,7 @@ Each tuple is of the form (Priority, Difficulty). Sorted by Priority:
 * **(2,3)** Savio wants to re-balance the tree because he wants to avoid making the tree one-side-heavy
 * **(3,1)** Cynthia wants to login to the app becuase she want to load all her user data to continue learning about linked lists
 * **(3,2)** Cynthia wants to be able to test her knowledge by doing simple online quizzes becuase she needs to prepare for her upcoming exam
-* **(3,1)** Savio wants a user profile becuase we he wants to see his grade previous quiz
+* **(3,1)** Savio wants a user profile becuase we he wants to see his grade from a previous quiz
 
 
 ## MVP ##
