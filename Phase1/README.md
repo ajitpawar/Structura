@@ -109,14 +109,6 @@ For the very first week of our release, that is, our first iteration, we plan to
 
 ## CRC Cards ##
 
-*TODO*
-
-###### Class Name
-| Responsibility        | Collaboration           | 
-| ------------- |:-------------:| 
-| A  | A |
-| A  | A |
-
 ###### Summary
 | Responsibility        | Collaboration           | 
 | ------------- |:-------------:| 
@@ -127,6 +119,13 @@ For the very first week of our release, that is, our first iteration, we plan to
 | ------------- |:-------------:| 
 | Save |  |
 | Load  |  |
+
+###### Play Mode
+| Responsibility        | Collaboration           | 
+| ------------- |:-------------:| 
+| Data Structure |  |
+| Drag and Drop |  |
+| Enter Value |  |
 
 
 ## CRC Play out
