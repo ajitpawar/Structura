@@ -141,6 +141,7 @@ For the very first week of our release, that is, our first iteration, we plan to
 
 * Search: Savio launches Structura and taps on the search bar. This invokes the search responsibility which takes in a query and returns a list of topics. Tapping on a topic asks the Display CRC to display content of the topic to the main screen.
 * Snapshot: Cynthia has been playing around with a data structure in Structura, but is now done working with the app. She exits out of the app and goes her merry way. Later, Cynthia opens Structura again and she can continue where she left off.
+* Play Mode : Seamus launches the Structura app and searches for a linked-list. Once found he begins to drag and drop nodes, entering a value in each, to create a sorted linked-list. Then finally, Seamus saves his linked list to view it at a later time. 
 
 ## UI Mockups ##
 
