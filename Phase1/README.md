@@ -87,50 +87,6 @@ Making this app will not be easy. There are obvious hurdles in this process. Som
 
 ## Release & Iteration Planning ##
 
-### Release 1  (Feb 5)
-#### Iteration #1: Feb 9
-* Start creating framework to support user-interactivity
-* Bootstrap integration
-* Testing framework
-
-#### Iteration #2: Feb 16
-* On-boarding / Landing page
-* Basic layout of the app
-* Add content for data structure: linked lists
-* Add textual summaries for various topics
-
-#### Iteration #3: Feb 23
-* Add interactivity for linked lists
-* Add drag-and-drop features for lists
-* Save state of app
-* Resume from previously saved state
-
-** All priority level 1 completed in Release 1  **
-
-<br>
-### Release 2  (Mar 5)
-#### Iteration #4: Mar 9
-* Add content for data structure: trees
-* CREATE a node
-* INSERT a node
-* DELETE a node
-
-#### Iteration #5: Mar 16
-* Add drag-and-drop features for nodes
-* RE-BALANCE a tree
-
-** All priority level 2 completed in Release 2  **
-
-<br>
-### Release 3  (Mar 26)
-* Debugging
-* Testing
-* Extra functionality like user accounts, quizzes, games
-
-** This release will focus on making the app stable and fully functional **
-
-
-<!--
 In order to finish our app successfully, we need to divide and plan our work throughout the term. For our first release, which will be about 3 weeks long, we have decided to implement the following features:
 1. Interactivity in creating a data structure to start learning, and then manipulate it using drag and drop features.
 
@@ -149,58 +105,44 @@ Some of the features that we excluded from the app are as follows:
 3. Allowing user to have an account in the app and log in. This feature was excluded because of its low importance in our project idea. This is completely an extra feature, and not at all required currently. Later on, this can be added, and features can be built on top of it as well.
 
 For the very first week of our release, that is, our first iteration, we plan to implement the interactivity feature of the app. The first step is to design the basic layout of the app, and make it interactive so that the users has a pleasurable experience in learning through the app. Then, features like adding the data structure, and summaries about it, and the state saving can be implemented. The first step required is the interactive framework to support these other features.
--->
 
-<br>
+
 ## CRC Cards ##
 
-###### Topics
+###### Summary
 | Responsibility        | Collaboration           | 
 | ------------- |:-------------:| 
-| Knows Topic name  |  |
-| Knows Topic content |  |
-| Knows Topic id  |  |
+| Information  |  |
 
 ###### Snapshot
 | Responsibility        | Collaboration           | 
 | ------------- |:-------------:| 
-| Knows user progress |  |
-
-###### DAO
-| Responsibility        | Collaboration           | 
-| ------------- |:-------------:| 
-| Create Topic | Topics |
-| Delete Topic | Topics |
-| Create Snapshot | Snapshot |
-| Delete Snapshot | Snapshot |
+| Save |  |
+| Load  |  |
 
 ###### Play Mode
 | Responsibility        | Collaboration           | 
 | ------------- |:-------------:| 
-| Knows Data Structure |  |
-| Knows if dragged |  |
-| Knows if dropped |  |
-| Knows Value |  |
+| Data Structure |  |
+| Drag and Drop |  |
+| Enter Value |  |
 
 ###### Search
 | Responsibility        | Collaboration           |
 | ------------- |:-------------:|
-| Knows Topics | Topics  |
+| Searchng |  |
 
 ###### Display
 | Responsibility        | Collaboration           |
 | ------------- |:-------------:|
-| Knows user state |  |
+| Display |  |
 
-<!--
-### CRC PLAY OUT
+##CRC PLAY OUT
 
 * Search: Savio launches Structura and taps on the search bar. This invokes the search responsibility which takes in a query and returns a list of topics. Tapping on a topic asks the Display CRC to display content of the topic to the main screen.
 * Snapshot: Cynthia has been playing around with a data structure in Structura, but is now done working with the app. She exits out of the app which passes a command to Snapshot CRC saving the state of the app and goes her merry way. Later, Cynthia opens Structura again and she can continue where she left off thanks to Snapshot CRC.
 * Play Mode : Seamus launches the Structura app and searches for a linked-list. Once found he begins to drag and drop nodes, entering a value in each, to create a sorted linked-list; all of these actions are possible due to Play Mode CRC. Then finally, Seamus saves his linked list to view it at a later time. 
--->
 
-<br>
 ## UI Mockups ##
 
 **Drawer to select a Data Scruture**
