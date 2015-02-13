@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="Theme" parent="FrameworkRoot.Theme" />
+<style name="Theme" parent="FrameworkRoot.Theme" />
 
     <style name="Theme.Structura" parent="Theme.Structura.Base">
         <item name="android:navigationBarColor">@android:color/black</item>

@@ -23,6 +23,7 @@ import com.davisosa.structura.activities.MainActivity;
 import com.davisosa.structura.util.PrefUtils;
 import com.davisosa.structura.util.RecentTasksStyler;
 import com.davisosa.structura.util.UIUtils;
+import com.mikepenz.aboutlibraries.Libs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +41,7 @@ public abstract class BaseActivity extends ActionBarActivity
     protected static final int DRAWER_ITEM_SEC1 = 0;
     protected static final int DRAWER_ITEM_SEC2 = 1;
     protected static final int DRAWER_ITEM_SETTINGS = 2;
+    protected static final int DRAWER_ITEM_ABOUT = 3;
     protected static final int DRAWER_ITEM_INVALID = -1;
     protected static final int DRAWER_ITEM_SEPARATOR = -2;
     protected static final int DRAWER_ITEM_SEPARATOR_SPECIAL = -3;
@@ -48,14 +50,16 @@ public abstract class BaseActivity extends ActionBarActivity
     private static final int[] RES_IDS_DRAWER_TITLE = new int[]{
             R.string.title_section1,
             R.string.title_section2,
-            R.string.title_settings
+            R.string.title_settings,
+            R.string.title_about
     };
 
     // Icons for navigation drawer items (indices must correspond to RES_IDS_DRAWER_TITLE)
     private static final int[] RES_IDS_DRAWER_ICON = new int[]{
             0,    // Section 1
             0,    // Section 2
-            R.drawable.ic_settings
+            R.drawable.ic_settings,
+            R.drawable.ic_about
     };
 
     // Delay to launch navigation drawer item, to allow close animation to play
@@ -122,6 +126,7 @@ public abstract class BaseActivity extends ActionBarActivity
 
         mDrawerItems.add(DRAWER_ITEM_SEPARATOR_SPECIAL);
         mDrawerItems.add(DRAWER_ITEM_SETTINGS);
+        mDrawerItems.add(DRAWER_ITEM_ABOUT);
 
         createDrawerItems();
     }
@@ -331,7 +336,7 @@ public abstract class BaseActivity extends ActionBarActivity
     }
 
     private boolean isSpecialItem(int itemId) {
-        return itemId == DRAWER_ITEM_SETTINGS;
+        return itemId == DRAWER_ITEM_SETTINGS || itemId == DRAWER_ITEM_ABOUT;
     }
 
     /**
@@ -352,6 +357,15 @@ public abstract class BaseActivity extends ActionBarActivity
                 break;
             case DRAWER_ITEM_SETTINGS:
                 // TODO: startActivity
+                break;
+            case DRAWER_ITEM_ABOUT:
+                new Libs.Builder()
+                        .withFields(R.string.class.getFields())
+                        .withVersionShown(false)
+                        .withLicenseShown(true)
+                        .withActivityTitle(getResources().getString(R.string.title_about))
+                        .withActivityTheme(R.style.Theme_Structura_LibsActivity)
+                        .start(this);
                 break;
         }
     }
@@ -456,6 +470,10 @@ public abstract class BaseActivity extends ActionBarActivity
 
         ImageView iconView = (ImageView) view.findViewById(R.id.icon);
         TextView titleView = (TextView) view.findViewById(R.id.title);
+
+        if (selected) {
+            view.setBackgroundResource(R.drawable.drawer_item_bg_selected);
+        }
 
         // Configure its appearance according to whether or not it's selected.
         titleView.setTextColor(selected ?
