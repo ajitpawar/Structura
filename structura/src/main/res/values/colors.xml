@@ -15,6 +15,7 @@
     <color name="theme_primary_light">@color/teal_100</color>
     <color name="theme_accent_1">@color/red_A200</color>
     <color name="theme_accent_2">@color/amber_A200</color>
+    <color name="theme_window_bg">@color/grey_200</color>
 
     <color name="divider">@color/black_dividers</color>
     <color name="divider_inverse">@color/white_dividers</color>
@@ -32,10 +33,17 @@
     <color name="body_text_hint_inverse">@color/body_text_disabled_inverse</color>
 
     <!-- Navigation drawer colors -->
-    <color name="drawer_bg">@color/grey_200</color>
+    <color name="drawer_bg">@color/theme_window_bg</color>
     <color name="drawer_text_color">@color/body_text_1</color>
     <color name="drawer_text_color_selected">@color/theme_primary</color>
     <color name="drawer_icon_tint">@color/icons</color>
     <color name="drawer_icon_tint_selected">@color/theme_primary</color>
     <color name="drawer_separator_color">#E5E5E5</color>
+
+    <!-- AboutLibraries colors -->
+    <color name="about_libraries_card">@color/cardview_light_background</color>
+    <color name="about_libraries_title_openSource">@color/body_text_1</color>
+    <color name="about_libraries_text_openSource">@color/body_text_2</color>
+    <color name="about_libraries_dividerDark_openSource">@color/divider</color>
+    <color name="about_libraries_dividerLight_openSource">@color/divider_inverse</color>
 </resources>
