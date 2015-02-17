@@ -25,7 +25,32 @@
             android:orientation="vertical">
 
             <include layout="@layout/toolbar_actionbar" />
+
         </LinearLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_node_label"
+            android:id="@+id/addNode"
+            android:background="#ff00ff00"
+            android:layout_gravity="right|bottom"
+            android:clickable="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_node_label"
+            android:id="@+id/deleteNode"
+            android:background="#ffff0000"
+            android:clickable="true"
+            android:layout_gravity="center_horizontal|bottom" /><![CDATA[
+
+        />
+
+    ]]>
     </FrameLayout>
 
     <!-- Navigation drawer -->
