@@ -25,6 +25,9 @@
             android:orientation="vertical">
 
             <include layout="@layout/toolbar_actionbar" />
+
+            <include layout="@layout/tab_layout" />
+            
         </LinearLayout>
     </FrameLayout>
 
