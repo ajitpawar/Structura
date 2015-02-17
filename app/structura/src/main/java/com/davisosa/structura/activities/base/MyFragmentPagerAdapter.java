@@ -1,7 +1,9 @@
 package com.davisosa.structura.activities.base;
 
-/**
- * Created by ajit on 2/17/2015.
- */
+import android.content.Context;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
 public class MyFragmentPagerAdapter {
 }
