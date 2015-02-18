@@ -361,8 +361,9 @@ public abstract class BaseActivity extends ActionBarActivity
             case DRAWER_ITEM_ABOUT:
                 new Libs.Builder()
                         .withFields(R.string.class.getFields())
-                        .withVersionShown(false)
+                        .withLibraries("materialdesignicons", "materialdesigniconsexpanded")
                         .withLicenseShown(true)
+                        .withVersionShown(false)
                         .withActivityTitle(getResources().getString(R.string.title_about))
                         .withActivityTheme(R.style.Theme_Structura_LibsActivity)
                         .start(this);
