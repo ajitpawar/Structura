@@ -10,10 +10,6 @@
     <string name="title_settings">Settings</string>
     <string name="title_about">About</string>
 
-    <!-- Button text -->
-    <string name="add_node_label">+</string>
-    <string name="delete_node_label">-</string>
-
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
 
