@@ -73,8 +73,7 @@
 
 ####Sean Williams
 
-* Something
-* Something else
+* Researching object placement on the layout
 
 ####Amit Prabhakar
 
