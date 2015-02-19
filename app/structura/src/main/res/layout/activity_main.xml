@@ -37,9 +37,7 @@
             android:background="#ff00ff00"
             android:layout_gravity="right|bottom"
             android:clickable="true"
-            android:layout_marginBottom="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp" />
+            android:layout_margin="15dp" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
