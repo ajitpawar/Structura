@@ -8,8 +8,7 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Researched Android UI
 
 ####Vaishali Deswal
 
@@ -49,8 +48,7 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Researched UI libs *(SlidingTabLayout, SlidingTabStrip)* required for creating tabs
 
 ####Vaishali Deswal
 
