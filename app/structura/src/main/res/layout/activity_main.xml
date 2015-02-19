@@ -36,7 +36,10 @@
             android:id="@+id/addNode"
             android:background="#ff00ff00"
             android:layout_gravity="right|bottom"
-            android:clickable="true" />
+            android:clickable="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -46,11 +49,10 @@
             android:id="@+id/deleteNode"
             android:background="#ffff0000"
             android:clickable="true"
-            android:layout_gravity="center_horizontal|bottom" /><![CDATA[
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="15dp" />
 
-        />
-
-    ]]>
     </FrameLayout>
 
     <!-- Navigation drawer -->
