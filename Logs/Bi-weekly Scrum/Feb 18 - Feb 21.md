@@ -24,8 +24,9 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Worked on #8
+* Opened #20
+* Need review for #19, #21
 
 ####Omar Hamdan
 
