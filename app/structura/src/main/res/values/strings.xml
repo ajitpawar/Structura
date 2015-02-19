@@ -19,4 +19,8 @@
 
     <string name="desc_example">Example action</string>
     <string name="desc_settings">Settings</string>
+
+    <!-- Node Layout -->
+    <string name="nodeValue">Value</string>
+    <string name="nodeNext">Next</string>
 </resources>
