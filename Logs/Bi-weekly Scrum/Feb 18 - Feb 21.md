@@ -18,8 +18,7 @@
 
 ####Ishan Thukral
 
-* Something
-* Something else
+* Researched Android Canvas
 
 ####Shahin Yousefi
 
@@ -60,8 +59,7 @@
 
 ####Ishan Thukral
 
-* Something
-* Something else
+* Worked on #22
 
 ####Shahin Yousefi
 
