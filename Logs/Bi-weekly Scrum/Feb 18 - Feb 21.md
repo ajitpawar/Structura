@@ -4,8 +4,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Searched for good explanations on Linked lists and its operations.
 
 ####Ajit Pawar
 
@@ -47,8 +46,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Written the actual summary to be included in the summary tab for linked lists. 
 
 ####Ajit Pawar
 
