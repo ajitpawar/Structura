@@ -25,6 +25,7 @@
             android:orientation="vertical">
 
             <include layout="@layout/toolbar_actionbar" />
+
         </LinearLayout>
 
         <LinearLayout
