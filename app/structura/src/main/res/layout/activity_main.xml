@@ -33,6 +33,7 @@
             android:id="@+id/landing_img"
             android:src="@drawable/structura_logo"
             android:layout_gravity="center_horizontal|top"
+            android:contentDescription="welcome_img"
             android:scaleType="fitEnd" />
 
         <TextView
@@ -42,8 +43,7 @@
             android:text="@string/landing_txt_content"
             android:textIsSelectable="false"
             android:id="@+id/landing_txt"
-            android:layout_gravity="center"
-            android:elegantTextHeight="false" />
+            android:layout_gravity="center" />
 
     </FrameLayout>
 
