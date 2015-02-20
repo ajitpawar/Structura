@@ -40,6 +40,6 @@
     <dimen name="drawer_title_text_size">14sp</dimen>
 
     <!-- Landing page -->
-    <dimen name="landing_img_height">250dp</dimen>
-    <dimen name="landing_img_width">175dp</dimen>
+    <dimen name="landing_img_height">128dp</dimen>
+    <dimen name="landing_img_width">176dp</dimen>
 </resources>
