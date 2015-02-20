@@ -5,10 +5,11 @@
     <string name="drawer_close">Close navigation drawer</string>
 
     <!-- Landing Page -->
-    <string name="landing_body">Welcome to Structura! Tap around and see what interests you.</string>
+    <string name="landing">Landing Page</string>
+    <string name="landing_txt_content">Welcome to Structura! Tap around and see what interests you.</string>
 
     <!-- Navigation drawer sections -->
-    <string name="title_landing">Welcome</string>
+    <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_settings">Settings</string>
     <string name="title_about">About</string>

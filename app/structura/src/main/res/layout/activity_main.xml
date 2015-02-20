@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/keyline_1"
                 android:paddingRight="@dimen/keyline_1"
-                android:text="@string/landing_body"
+                android:text="@string/landing_txt_content"
                 android:textIsSelectable="false"
                 android:textSize="@dimen/text_size_large"
                 android:layout_gravity="center_horizontal" />
