@@ -50,7 +50,8 @@
                 android:paddingRight="@dimen/keyline_1"
                 android:text="@string/landing_body"
                 android:textIsSelectable="false"
-                android:textSize="@dimen/text_size_large" />
+                android:textSize="@dimen/text_size_large"
+                android:layout_gravity="center_horizontal" />
         </LinearLayout>
 
     </FrameLayout>
