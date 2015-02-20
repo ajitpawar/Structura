@@ -1,11 +1,7 @@
 package com.davisosa.structura.activities;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.animation.AnimationUtils;
-import android.widget.TextView;
-import android.widget.ImageView;
 
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
@@ -21,16 +17,9 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = getActionBarToolbar();
-        toolbar.setTitle(R.string.landing);
+        getSupportActionBar().setTitle(R.string.landing);
 
         overridePendingTransition(0, 0);
-
-        final TextView welText = (TextView) findViewById(R.id.landing_txt);
-        final ImageView welImg = (ImageView) findViewById(R.id.landing_img);
-
-        welText.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_in_left));
-        welImg.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_in_left));
     }
 
     @Override

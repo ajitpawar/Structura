@@ -6,8 +6,7 @@
 
     <!-- Landing Page -->
     <string name="landing">Landing Page</string>
-    <string name="landing_txt_content">Welcome to Structura!
-Tap around and see what interests you.</string>
+    <string name="landing_txt_content">Welcome to Structura! Tap around and see what interests you.</string>
 
     <!-- Navigation drawer sections -->
     <string name="title_section1">Section 1</string>
@@ -17,6 +16,7 @@ Tap around and see what interests you.</string>
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
+    <string name="desc_landing_img">Landing Image</string>
 
     <string name="desc_example">Example action</string>
     <string name="desc_settings">Settings</string>
