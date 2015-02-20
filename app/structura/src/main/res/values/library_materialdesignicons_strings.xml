@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="define_int_materialdesignicons" />
+    <!-- Author section -->
+    <string name="library_materialdesignicons_author">Google</string>
+    <string name="library_materialdesignicons_authorWebsite">http://www.google.com/design/spec/resources/sticker-sheets-icons.html#sticker-sheets-components</string>
+    <!-- Library section -->
+    <string name="library_materialdesignicons_libraryName">Material Design Icons</string>
+    <string name="library_materialdesignicons_libraryDescription">Material Design Icons are the official open-source icons featured in the Google Material Design specification.</string>
+    <string name="library_materialdesignicons_libraryWebsite">https://google.github.io/material-design-icons/</string>
+    <string name="library_materialdesignicons_libraryVersion">1.0.1</string>
+    <!-- OpenSource section -->
+    <string name="library_materialdesignicons_isOpenSource">true</string>
+    <string name="library_materialdesignicons_repositoryLink">https://github.com/google/material-design-icons</string>
+    <!-- ClassPath for autoDetect section -->
+    <string name="library_materialdesignicons_classPath" />
+    <!-- License section -->
+    <string name="library_materialdesignicons_licenseId">cc40</string>
+    <!-- Custom variables section -->
+</resources>
