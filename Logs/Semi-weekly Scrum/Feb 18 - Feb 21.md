@@ -73,6 +73,8 @@
 ####Sean Williams
 
 * Researching object placement on the layout
+* Moved insert/delete button from main activity
+* Fixed button placement
 
 ####Amit Prabhakar
 
