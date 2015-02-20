@@ -4,6 +4,11 @@
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
 
+    <!-- Landing Page -->
+    <string name="landing">Landing Page</string>
+    <string name="landing_img">Landing Image</string>
+    <string name="landing_txt">Landing Text</string>
+
     <!-- Navigation drawer sections -->
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>

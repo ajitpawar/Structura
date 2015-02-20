@@ -30,9 +30,9 @@
         <ImageView
             android:layout_width="176dp"
             android:layout_height="251dp"
-            android:id="@+id/landingImage"
+            android:id="@+id/landing_img"
             android:src="@drawable/structura_logo"
-            android:layout_gravity="center_horizontal|top"
+            android:layout_gravity="center|top"
             android:scaleType="fitEnd" />
 
         <TextView
@@ -42,7 +42,7 @@
             android:text="Welcome to Structura!
 Tap around and see what interests you."
             android:textIsSelectable="false"
-            android:id="@+id/landingText"
+            android:id="@+id/landing_txt"
             android:layout_gravity="center"
             android:elegantTextHeight="false" />
 

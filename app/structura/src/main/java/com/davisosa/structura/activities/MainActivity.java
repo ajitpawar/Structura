@@ -22,12 +22,12 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = getActionBarToolbar();
-        //toolbar.setTitle(R.string.title_section1); //TODO: set this to a landing page tag
+        toolbar.setTitle(R.string.landing);
 
         overridePendingTransition(0, 0);
 
-        final TextView welText = (TextView) findViewById(R.id.landingText);
-        final ImageView welImg = (ImageView) findViewById(R.id.landingImage);
+        final TextView welText = (TextView) findViewById(R.id.landing_txt);
+        final ImageView welImg = (ImageView) findViewById(R.id.landing_img);
 
         welText.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_in_left));
         welImg.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_in_left));
