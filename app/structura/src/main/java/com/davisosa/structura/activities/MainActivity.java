@@ -9,7 +9,7 @@ import com.davisosa.structura.activities.base.BaseActivity;
 public class MainActivity extends BaseActivity {
     @Override
     protected int getSelfDrawerItem() {
-        return DRAWER_ITEM_SEC1;
+        return DRAWER_ITEM_LANDING;
     }
 
     @Override
@@ -17,7 +17,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle(R.string.landing);
+        getSupportActionBar().setTitle(R.string.title_landing);
 
         overridePendingTransition(0, 0);
     }

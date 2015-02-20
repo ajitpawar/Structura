@@ -38,7 +38,7 @@ public abstract class BaseActivity extends ActionBarActivity
     /* Symbols for navigation drawer items (indices must correspond to RES_IDS_DRAWER_TITLE).
      * This is a list of all possible items, which are not necessarily present,
      * in the navigation drawer. */
-    protected static final int DRAWER_ITEM_SEC1 = 0;
+    protected static final int DRAWER_ITEM_LANDING = 0;
     protected static final int DRAWER_ITEM_SEC2 = 1;
     protected static final int DRAWER_ITEM_SETTINGS = 2;
     protected static final int DRAWER_ITEM_ABOUT = 3;
@@ -48,7 +48,7 @@ public abstract class BaseActivity extends ActionBarActivity
 
     // Titles for navigation drawer items (indices must correspond to DRAWER_ITEM_*)
     private static final int[] RES_IDS_DRAWER_TITLE = new int[]{
-            R.string.title_section1,
+            R.string.title_landing,
             R.string.title_section2,
             R.string.title_settings,
             R.string.title_about
@@ -121,7 +121,7 @@ public abstract class BaseActivity extends ActionBarActivity
     private void populateDrawer() {
         mDrawerItems.clear();
 
-        mDrawerItems.add(DRAWER_ITEM_SEC1);
+        mDrawerItems.add(DRAWER_ITEM_LANDING);
         mDrawerItems.add(DRAWER_ITEM_SEC2);
 
         mDrawerItems.add(DRAWER_ITEM_SEPARATOR_SPECIAL);
@@ -346,7 +346,7 @@ public abstract class BaseActivity extends ActionBarActivity
      */
     public void goToDrawerItem(int item) {
         switch (item) {
-            case DRAWER_ITEM_SEC1:
+            case DRAWER_ITEM_LANDING:
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
