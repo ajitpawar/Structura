@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_node_label"
+            android:id="@+id/addNode"
+            android:background="#ff00ff00"
+            android:layout_gravity="right|bottom"
+            android:clickable="true"
+            android:layout_alignTop="@+id/deleteNode"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="21dp"
+            android:layout_marginEnd="21dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_node_label"
+            android:id="@+id/deleteNode"
+            android:background="#ffff0000"
+            android:clickable="true"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="21dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/addNode"
+            android:layout_toStartOf="@+id/addNode" />
+
+    </RelativeLayout>
+
+</LinearLayout>
