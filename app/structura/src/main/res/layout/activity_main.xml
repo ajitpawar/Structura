@@ -32,15 +32,14 @@
             android:layout_height="251dp"
             android:id="@+id/landing_img"
             android:src="@drawable/structura_logo"
-            android:layout_gravity="center|top"
+            android:layout_gravity="center_horizontal|top"
             android:scaleType="fitEnd" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Welcome to Structura!
-Tap around and see what interests you."
+            android:text="@string/landing_txt_content"
             android:textIsSelectable="false"
             android:id="@+id/landing_txt"
             android:layout_gravity="center"

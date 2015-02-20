@@ -8,6 +8,8 @@
     <string name="landing">Landing Page</string>
     <string name="landing_img">Landing Image</string>
     <string name="landing_txt">Landing Text</string>
+    <string name="landing_txt_content">Welcome to Structura!
+Tap around and see what interests you.</string>
 
     <!-- Navigation drawer sections -->
     <string name="title_section1">Section 1</string>
