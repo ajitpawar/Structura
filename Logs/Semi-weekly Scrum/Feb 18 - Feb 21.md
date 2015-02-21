@@ -73,6 +73,7 @@
 * Researching object placement on the layout
 * Moved insert/delete button from main activity
 * Fixed button placement
+* Researching persistent footers
 
 ####Amit Prabhakar
 
