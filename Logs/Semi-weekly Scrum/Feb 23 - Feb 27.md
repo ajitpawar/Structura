@@ -34,8 +34,7 @@
 
 ####Sean Williams
 
-* Something
-* Something else
+* Made footer, changed button placement
 
 ####Amit Prabhakar
 
