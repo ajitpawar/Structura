@@ -12,8 +12,7 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* Researched Android tutorials for adding tabs 
 
 ####Ishan Thukral
 
@@ -48,12 +47,11 @@
 
 ####Ajit Pawar
 
-* Experimted with Android libs for creating tabs
+* Experimented with Android libs for creating tabs
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* Reviewed #28. Worked on #16
 
 ####Ishan Thukral
 
