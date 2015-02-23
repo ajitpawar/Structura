@@ -1,4 +1,4 @@
-# Daily Scrum
+# Semi-weekly Scrum
 
 ## Feb 18 (Wednesday)
 
@@ -59,8 +59,9 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Opened #27 and closed it with #28
+* Reviewed and contributed to #25
+* Merged #19 and #21
 
 ####Omar Hamdan
 
