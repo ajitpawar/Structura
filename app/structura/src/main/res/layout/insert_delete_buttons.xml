@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/add_node_label"
-            android:id="@+id/addNode"
-            android:background="#ff00ff00"
-            android:layout_gravity="right|bottom"
-            android:clickable="true"
-            android:layout_alignTop="@+id/deleteNode"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="21dp"
-            android:layout_marginEnd="21dp" />
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="#ffffffff"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -28,16 +19,42 @@
             android:layout_height="wrap_content"
             android:text="@string/delete_node_label"
             android:id="@+id/deleteNode"
-            android:background="#ffff0000"
+            android:background="#ffffffff"
             android:clickable="true"
-            android:layout_gravity="right|bottom"
-            android:layout_marginRight="21dp"
-            android:layout_marginEnd="21dp"
-            android:layout_marginBottom="23dp"
-            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:singleLine="true"
+            android:textSize="20sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/red_600"
+            android:layout_marginEnd="39dp"
+            android:layout_marginRight="39dp"
+            android:layout_alignTop="@+id/addNode"
             android:layout_toLeftOf="@+id/addNode"
             android:layout_toStartOf="@+id/addNode" />
 
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_node_label"
+            android:id="@+id/addNode"
+            android:layout_gravity="end|bottom"
+            android:clickable="false"
+            android:textColor="@color/green_600"
+            android:textSize="20sp"
+            android:textColorHighlight="@color/grey_500"
+            android:background="#ffffffff"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" />
+
     </RelativeLayout>
 
-</LinearLayout>
+
+</RelativeLayout>
