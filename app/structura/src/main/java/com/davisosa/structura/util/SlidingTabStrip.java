@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.davisosa.structura.widget;
+package com.davisosa.structura.util;
 
 import android.R;
 import android.content.Context;

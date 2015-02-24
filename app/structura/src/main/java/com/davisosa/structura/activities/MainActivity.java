@@ -7,8 +7,8 @@ import android.view.Menu;
 
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
-import com.davisosa.structura.adapters.MyFragmentPagerAdapter;
-import com.davisosa.structura.widget.SlidingTabLayout;
+import com.davisosa.structura.activities.base.MyFragmentPagerAdapter;
+import com.davisosa.structura.util.SlidingTabLayout;
 
 public class MainActivity extends BaseActivity {
     @Override
