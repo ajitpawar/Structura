@@ -29,8 +29,7 @@
 
 ####Omar Hamdan
 
-* Something
-* Something else
+* Policing MainActivity.java
 
 ####Sean Williams
 
