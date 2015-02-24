@@ -1,4 +1,4 @@
-package com.davisosa.structura.activities.base;
+package com.davisosa.structura.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
