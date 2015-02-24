@@ -8,7 +8,7 @@ import com.davisosa.structura.fragments.PageFragment;
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[] { "Play_", "Summary_", "Quiz_" };
+    private String tabTitles[] = new String[] { "Play", "Summary", "Quiz" };
     private Context context;
 
     public MyFragmentPagerAdapter(FragmentManager fm, Context context) {
