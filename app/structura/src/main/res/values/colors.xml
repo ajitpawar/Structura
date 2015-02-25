@@ -38,12 +38,12 @@
     <color name="drawer_text_color_selected">@color/theme_primary</color>
     <color name="drawer_icon_tint">@color/icons</color>
     <color name="drawer_icon_tint_selected">@color/theme_primary</color>
-    <color name="drawer_separator_color">#E5E5E5</color>
+    <color name="drawer_separator_color">@color/divider</color>
 
     <!-- AboutLibraries colors -->
     <color name="about_libraries_card">@color/cardview_light_background</color>
     <color name="about_libraries_title_openSource">@color/body_text_1</color>
     <color name="about_libraries_text_openSource">@color/body_text_2</color>
-    <color name="about_libraries_dividerDark_openSource">@color/divider</color>
-    <color name="about_libraries_dividerLight_openSource">@color/divider_inverse</color>
+    <color name="about_libraries_dividerDark_openSource">@color/divider_inverse</color>
+    <color name="about_libraries_dividerLight_openSource">@color/divider</color>
 </resources>

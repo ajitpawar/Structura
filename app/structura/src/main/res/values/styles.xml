@@ -51,12 +51,12 @@
     <style name="ActionBarPopupThemeOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
     </style>
 
     <style name="Theme.Structura.Search" parent="Theme.Structura">
-        <item name="android:windowBackground">@color/grey_200</item>
+        <item name="android:windowBackground">@color/theme_window_bg</item>
         <item name="android:autoCompleteTextViewStyle">
             @style/Widget.Structura.Search.AutoCompleteTextView
         </item>
@@ -64,7 +64,7 @@
     </style>
 
     <style name="Widget.Structura.Search.AutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
-        <item name="android:textColorHint">#5FFF</item>
+        <item name="android:textColorHint">@color/body_text_hint_inverse</item>
     </style>
 
     <style name="Widget.Structura.PopupMenu" parent="Widget.AppCompat.Light.PopupMenu" />

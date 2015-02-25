@@ -3,14 +3,15 @@ package com.davisosa.structura.activities.base;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.LayoutRes;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,7 @@ public abstract class BaseActivity extends ActionBarActivity
     protected static final int DRAWER_ITEM_INVALID = -1;
     protected static final int DRAWER_ITEM_SEPARATOR = -2;
     protected static final int DRAWER_ITEM_SEPARATOR_SPECIAL = -3;
+    protected static final int DRAWER_ITEM_LANDING = -4;
 
     // Titles for navigation drawer items (indices must correspond to DRAWER_ITEM_*)
     private static final int[] RES_IDS_DRAWER_TITLE = new int[]{
@@ -106,12 +108,12 @@ public abstract class BaseActivity extends ActionBarActivity
     }
 
     protected boolean isDrawerOpen() {
-        return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(GravityCompat.START);
+        return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(Gravity.START);
     }
 
     protected void closeDrawer() {
         if (mDrawerLayout != null) {
-            mDrawerLayout.closeDrawer(GravityCompat.START);
+            mDrawerLayout.closeDrawer(Gravity.START);
         }
     }
 
@@ -231,7 +233,7 @@ public abstract class BaseActivity extends ActionBarActivity
                     }
                 });
 
-        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, Gravity.START);
 
         // Populate the navigation drawer with the correct items.
         populateDrawer();
@@ -241,7 +243,7 @@ public abstract class BaseActivity extends ActionBarActivity
         // First run of the app starts with the navigation drawer open.
         if (!PrefUtils.isWelcomeDone(this)) {
             PrefUtils.markWelcomeDone(this);
-            mDrawerLayout.openDrawer(GravityCompat.START);
+            mDrawerLayout.openDrawer(Gravity.START);
         }
     }
 
@@ -261,7 +263,7 @@ public abstract class BaseActivity extends ActionBarActivity
 
     public void onDrawerItemClicked(final int itemId) {
         if (itemId == getSelfDrawerItem()) {
-            mDrawerLayout.closeDrawer(GravityCompat.START);
+            mDrawerLayout.closeDrawer(Gravity.START);
             return;
         }
 
@@ -286,7 +288,7 @@ public abstract class BaseActivity extends ActionBarActivity
             }
         }
 
-        mDrawerLayout.closeDrawer(GravityCompat.START);
+        mDrawerLayout.closeDrawer(Gravity.START);
     }
 
     protected ActionBarDrawerToggleWrapper setupDrawerToggle(
@@ -327,7 +329,7 @@ public abstract class BaseActivity extends ActionBarActivity
         drawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDrawerLayout.openDrawer(GravityCompat.START);
+                mDrawerLayout.openDrawer(Gravity.START);
             }
         });
 
@@ -361,8 +363,9 @@ public abstract class BaseActivity extends ActionBarActivity
             case DRAWER_ITEM_ABOUT:
                 new Libs.Builder()
                         .withFields(R.string.class.getFields())
-                        .withVersionShown(false)
+                        .withLibraries("materialdesignicons", "materialdesigniconsexpanded")
                         .withLicenseShown(true)
+                        .withVersionShown(false)
                         .withActivityTitle(getResources().getString(R.string.title_about))
                         .withActivityTheme(R.style.Theme_Structura_LibsActivity)
                         .start(this);
@@ -481,7 +484,7 @@ public abstract class BaseActivity extends ActionBarActivity
                 getResources().getColor(R.color.drawer_text_color));
         iconView.setColorFilter(selected ?
                 getResources().getColor(R.color.drawer_icon_tint_selected) :
-                getResources().getColor(R.color.drawer_icon_tint));
+                getResources().getColor(R.color.drawer_icon_tint), PorterDuff.Mode.SRC_IN);
     }
 
     @Override

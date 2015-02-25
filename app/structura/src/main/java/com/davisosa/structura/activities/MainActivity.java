@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
 import com.davisosa.structura.adapters.MyFragmentPagerAdapter;
@@ -13,7 +12,7 @@ import com.davisosa.structura.widget.SlidingTabLayout;
 public class MainActivity extends BaseActivity {
     @Override
     protected int getSelfDrawerItem() {
-        return DRAWER_ITEM_SEC1;
+        return DRAWER_ITEM_LANDING;
     }
 
     @Override
@@ -21,8 +20,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = getActionBarToolbar();
-        toolbar.setTitle(R.string.title_section1);
+        getSupportActionBar().setTitle(R.string.landing);
 
         overridePendingTransition(0, 0);
 
