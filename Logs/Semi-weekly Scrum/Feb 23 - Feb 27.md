@@ -34,6 +34,7 @@
 ####Sean Williams
 
 * Made footer, changed button placement
+* Researching fragment implementation
 
 ####Amit Prabhakar
 
