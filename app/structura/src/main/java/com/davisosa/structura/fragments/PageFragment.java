@@ -12,7 +12,6 @@ import com.davisosa.structura.R;
 
 public class PageFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
-
     private int mPage;
 
     public static PageFragment newInstance(int page) {
