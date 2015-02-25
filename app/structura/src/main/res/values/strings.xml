@@ -12,7 +12,11 @@
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
-
     <string name="desc_example">Example action</string>
     <string name="desc_settings">Settings</string>
+
+    <!-- Tab titles -->
+    <string name="title_tab1">Play</string>
+    <string name="title_tab2">Summary</string>
+    <string name="title_tab3">Quiz</string>
 </resources>
