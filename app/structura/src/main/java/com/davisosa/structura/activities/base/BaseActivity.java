@@ -20,6 +20,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.davisosa.structura.R;
+import com.davisosa.structura.activities.LinkedListActivity;
 import com.davisosa.structura.activities.MainActivity;
 import com.davisosa.structura.util.PrefUtils;
 import com.davisosa.structura.util.RecentTasksStyler;
@@ -349,7 +350,7 @@ public abstract class BaseActivity extends ActionBarActivity
     public void goToDrawerItem(int item) {
         switch (item) {
             case DRAWER_ITEM_SEC1:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, LinkedListActivity.class));
                 finish();
                 break;
             case DRAWER_ITEM_SEC2:
