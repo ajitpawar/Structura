@@ -1,9 +1,12 @@
 package com.davisosa.structura.activities;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
+import com.davisosa.structura.adapters.MyFragmentPagerAdapter;
+import com.davisosa.structura.widget.SlidingTabLayout;
 
 
 public class MainActivity extends BaseActivity {
@@ -20,6 +23,18 @@ public class MainActivity extends BaseActivity {
         getSupportActionBar().setTitle(R.string.landing);
 
         overridePendingTransition(0, 0);
+    /*
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),
+                MainActivity.this));
+
+        // Give the SlidingTabLayout the ViewPager
+        SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
+
+        // Center the tabs in the layout
+        slidingTabLayout.setDistributeEvenly(true);
+        slidingTabLayout.setViewPager(viewPager);
+    */
     }
 
     @Override
