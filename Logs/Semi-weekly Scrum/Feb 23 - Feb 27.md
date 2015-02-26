@@ -9,8 +9,8 @@
 
 ####Ajit Pawar
 
-* Created layout for tabs
-* Created sliding tabs 
+* Created layout for tabs (issue #17)
+* Created sliding tabs (issue #17)
 
 ####Vaishali Deswal
 
@@ -50,8 +50,8 @@
 
 ####Ajit Pawar
 
-* Created new activity to handle menu item click
-* Integrated new activity with tabs
+* Created new activity to handle menu item click (issue #29)
+* Integrated new activity with tabs (issue #29)
 
 ####Vaishali Deswal
 
