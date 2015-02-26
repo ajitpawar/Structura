@@ -35,6 +35,7 @@
 
 * Made footer, changed button placement
 * Researching fragment implementation
+* Added fragment for insert/delete buttons
 
 ####Amit Prabhakar
 
