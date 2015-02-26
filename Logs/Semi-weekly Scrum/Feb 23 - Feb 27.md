@@ -1,4 +1,4 @@
-# Daily Scrum
+# Semi-weekly Scrum
 
 ## Feb 23 (Monday)
 
@@ -24,12 +24,11 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Opened #30
 
 ####Omar Hamdan
 
-* Policing MainActivity.java
+* Policing `MainActivity.java`
 
 ####Sean Williams
 
