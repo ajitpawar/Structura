@@ -1,9 +1,9 @@
 package com.davisosa.structura.fragments;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,15 +23,6 @@ public class InsertDeleteFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment InsertDeleteFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static InsertDeleteFragment newInstance() {
         InsertDeleteFragment fragment = new InsertDeleteFragment();
         Bundle args = new Bundle();
