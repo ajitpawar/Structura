@@ -27,7 +27,7 @@ public class LinkedListActivity extends BaseActivity {
 
          getSupportActionBar().setTitle(R.string.landing);
          overridePendingTransition(0, 0);
-    /*
+
         // Get the ViewPager and set it's PagerAdapter so that it can display items
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),
@@ -39,7 +39,7 @@ public class LinkedListActivity extends BaseActivity {
         // Center the tabs in the layout
         slidingTabLayout.setDistributeEvenly(true);
         slidingTabLayout.setViewPager(viewPager);
-    */
+
     }
 
     @Override

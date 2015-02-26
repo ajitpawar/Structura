@@ -10,7 +10,7 @@
     <string name="landing_body_txt_2">Tap around and see what interests you.</string>
 
     <!-- Navigation drawer sections -->
-    <string name="title_section1">Section 1</string>
+    <string name="title_section1">Linked List</string>
     <string name="title_section2">Section 2</string>
     <string name="title_settings">Settings</string>
     <string name="title_about">About</string>
