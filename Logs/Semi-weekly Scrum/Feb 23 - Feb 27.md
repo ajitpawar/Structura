@@ -9,8 +9,8 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Created layout for tabs
+* Created sliding tabs 
 
 ####Vaishali Deswal
 
@@ -50,8 +50,8 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Created new activity to handle menu item click
+* Integrated new activity with tabs
 
 ####Vaishali Deswal
 
