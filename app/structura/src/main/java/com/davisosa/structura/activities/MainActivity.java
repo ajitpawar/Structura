@@ -1,5 +1,7 @@
 package com.davisosa.structura.activities;
 
+import com.davisosa.structura.activities.base.BaseActivity;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.app.Activity;
