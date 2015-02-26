@@ -1,5 +1,7 @@
 package com.davisosa.structura.activities;
 
+import com.davisosa.structura.activities.base.BaseActivity;
+
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
