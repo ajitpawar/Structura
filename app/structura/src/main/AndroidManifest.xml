@@ -23,8 +23,7 @@
         </activity>
         <activity
                 android:label="@string/label_sec1"
-                android:name=".activities.LinkedListActivity"
-                android:theme="@style/Theme.Structura.LinkedListActivity">
+                android:name=".activities.LinkedListActivity" >
         </activity>
     </application>
 </manifest>
