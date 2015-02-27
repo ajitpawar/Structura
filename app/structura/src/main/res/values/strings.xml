@@ -26,7 +26,7 @@
     <string name="actionbar_sec1">Linked List</string>
 
     <!-- Labels -->
-    <string name="label_sec1">LLActivity</string>
+    <string name="label_sec1">LinkedListActivity</string>
 
     <!-- Tab titles -->
     <string name="title_tab1">Play</string>
