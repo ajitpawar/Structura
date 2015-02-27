@@ -10,7 +10,7 @@
     <string name="landing_body_txt_2">Tap around and see what interests you.</string>
 
     <!-- Navigation drawer sections -->
-    <string name="title_section1">Linked List</string>
+    <string name="title_linked_list">Linked List</string>
     <string name="title_section2">Section 2</string>
     <string name="title_settings">Settings</string>
     <string name="title_about">About</string>
@@ -22,14 +22,8 @@
     <string name="desc_example">Example action</string>
     <string name="desc_settings">Settings</string>
 
-    <!-- Action bar titles -->
-    <string name="actionbar_sec1">Linked List</string>
-
-    <!-- Labels -->
-    <string name="label_sec1">LinkedListActivity</string>
-
     <!-- Tab titles -->
-    <string name="title_tab1">Play</string>
-    <string name="title_tab2">Summary</string>
-    <string name="title_tab3">Quiz</string>
+    <string name="title_play">Play</string>
+    <string name="title_summary">Summary</string>
+    <string name="title_quiz">Quiz</string>
 </resources>

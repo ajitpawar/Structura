@@ -42,4 +42,7 @@
     <!-- Landing page -->
     <dimen name="landing_img_height">128dp</dimen>
     <dimen name="landing_img_width">176dp</dimen>
+
+    <!-- Tabs -->
+    <dimen name="tab_height">48dp</dimen>
 </resources>

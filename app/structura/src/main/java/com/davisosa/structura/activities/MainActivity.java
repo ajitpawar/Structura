@@ -1,12 +1,10 @@
 package com.davisosa.structura.activities;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.view.Menu;
+
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
-import com.davisosa.structura.adapters.MyFragmentPagerAdapter;
-import com.davisosa.structura.widget.SlidingTabLayout;
 
 
 public class MainActivity extends BaseActivity {
