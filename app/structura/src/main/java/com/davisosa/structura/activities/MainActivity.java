@@ -6,6 +6,7 @@ import android.view.Menu;
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
 
+
 public class MainActivity extends BaseActivity {
     @Override
     protected int getSelfDrawerItem() {

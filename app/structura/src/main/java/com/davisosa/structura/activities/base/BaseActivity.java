@@ -20,6 +20,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.davisosa.structura.R;
+import com.davisosa.structura.activities.LLActivity;
 import com.davisosa.structura.activities.MainActivity;
 import com.davisosa.structura.util.PrefUtils;
 import com.davisosa.structura.util.RecentTasksStyler;
@@ -39,7 +40,7 @@ public abstract class BaseActivity extends ActionBarActivity
     /* Symbols for navigation drawer items (indices must correspond to RES_IDS_DRAWER_TITLE).
      * This is a list of all possible items, which are not necessarily present,
      * in the navigation drawer. */
-    protected static final int DRAWER_ITEM_SEC1 = 0;
+    protected static final int DRAWER_ITEM_LL = 0;
     protected static final int DRAWER_ITEM_SEC2 = 1;
     protected static final int DRAWER_ITEM_SETTINGS = 2;
     protected static final int DRAWER_ITEM_ABOUT = 3;
@@ -50,7 +51,7 @@ public abstract class BaseActivity extends ActionBarActivity
 
     // Titles for navigation drawer items (indices must correspond to DRAWER_ITEM_*)
     private static final int[] RES_IDS_DRAWER_TITLE = new int[]{
-            R.string.title_section1,
+            R.string.title_linked_list,
             R.string.title_section2,
             R.string.title_settings,
             R.string.title_about
@@ -123,7 +124,7 @@ public abstract class BaseActivity extends ActionBarActivity
     private void populateDrawer() {
         mDrawerItems.clear();
 
-        mDrawerItems.add(DRAWER_ITEM_SEC1);
+        mDrawerItems.add(DRAWER_ITEM_LL);
         mDrawerItems.add(DRAWER_ITEM_SEC2);
 
         mDrawerItems.add(DRAWER_ITEM_SEPARATOR_SPECIAL);
@@ -348,8 +349,8 @@ public abstract class BaseActivity extends ActionBarActivity
      */
     public void goToDrawerItem(int item) {
         switch (item) {
-            case DRAWER_ITEM_SEC1:
-                startActivity(new Intent(this, MainActivity.class));
+            case DRAWER_ITEM_LL:
+                startActivity(new Intent(this, LLActivity.class));
                 finish();
                 break;
             case DRAWER_ITEM_SEC2:

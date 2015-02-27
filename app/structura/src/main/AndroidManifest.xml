@@ -21,5 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.LLActivity"
+            android:label="@string/title_linked_list"
+            android:theme="@style/Theme.Structura.LLActivity"></activity>
     </application>
 </manifest>
