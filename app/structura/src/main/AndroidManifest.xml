@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:label="LinkedList Activity"
+                android:label="@string/label_sec1"
                 android:name=".activities.LinkedListActivity" >
         </activity>
     </application>

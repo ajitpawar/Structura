@@ -22,6 +22,12 @@
     <string name="desc_example">Example action</string>
     <string name="desc_settings">Settings</string>
 
+    <!-- Action bar titles -->
+    <string name="actionbar_sec1">Linked List</string>
+
+    <!-- Labels -->
+    <string name="label_sec1">LLActivity</string>
+
     <!-- Tab titles -->
     <string name="title_tab1">Play</string>
     <string name="title_tab2">Summary</string>

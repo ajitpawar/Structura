@@ -17,7 +17,7 @@ public class LinkedListActivity extends BaseActivity {
 
     @Override
     protected int getSelfDrawerItem() {
-        return DRAWER_ITEM_LANDING;
+        return DRAWER_ITEM_SEC1;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class LinkedListActivity extends BaseActivity {
         super.onCreate(bundle);
         setContentView(R.layout.activity_linkedlist);
 
-         getSupportActionBar().setTitle(R.string.landing);
+         getSupportActionBar().setTitle(R.string.actionbar_sec1);
          overridePendingTransition(0, 0);
 
         // Get the ViewPager and set it's PagerAdapter so that it can display items
