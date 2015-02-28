@@ -38,4 +38,11 @@
     <dimen name="drawer_icon_margin_end">@dimen/drawer_icon_margin_right</dimen>
     <dimen name="drawer_icon_margin_right">32dp</dimen>
     <dimen name="drawer_title_text_size">14sp</dimen>
+
+    <!-- Insert/Delete buttons -->
+    <dimen name="footer_height">56dp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="insert_margin_left">30dp</dimen>
+    <dimen name="delete_margin_right">39dp</dimen>
+
 </resources>
