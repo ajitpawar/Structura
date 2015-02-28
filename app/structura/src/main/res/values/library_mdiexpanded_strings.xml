@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="define_int_mdiexpanded" />
+    <!-- Author section -->
+    <string name="library_mdiexpanded_author">iconShock</string>
+    <string name="library_mdiexpanded_authorWebsite">http://www.iconshock.com/</string>
+    <!-- Library section -->
+    <string name="library_mdiexpanded_libraryName">Material Design Icons Expanded (Color Version)</string>
+    <string name="library_mdiexpanded_libraryDescription">Following the Material design concept and mixing it with the usual Shock Magic, we present you this color-injected version of the Material icons, over 1400 eye-catching icons comprising the basic default models and a load of custom new ones.</string>
+    <string name="library_mdiexpanded_libraryWebsite">http://www.iconshock.com/material-design-icons/</string>
+    <string name="library_mdiexpanded_libraryVersion" />
+    <!-- OpenSource section -->
+    <string name="library_mdiexpanded_isOpenSource">true</string>
+    <string name="library_mdiexpanded_repositoryLink" />
+    <!-- ClassPath for autoDetect section -->
+    <string name="library_mdiexpanded_classPath" />
+    <!-- License section -->
+    <string name="library_mdiexpanded_licenseId">cc40</string>
+    <!-- Custom variables section -->
+</resources>
