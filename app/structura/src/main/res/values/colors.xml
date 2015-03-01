@@ -48,12 +48,7 @@
     <!-- Insert and Delete colours -->
     <color name="insert_button_colour">@color/green_600</color>
     <color name="delete_button_colour">@color/red_600</color>
-    <color name="node_button_bg">#ffffffff</color>
-
-    <!-- Insert and Delete colours -->
-    <color name="insert_button_colour">@color/green_600</color>
-    <color name="delete_button_colour">@color/red_600</color>
-    <color name="node_button_bg">#ffffffff</color>
+    <color name="node_button_bg">@color/white</color>
 
     <!-- AboutLibraries colors -->
     <color name="about_libraries_card">@color/cardview_light_background</color>
