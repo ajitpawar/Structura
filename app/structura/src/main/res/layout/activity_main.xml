@@ -28,7 +28,7 @@
 
         </LinearLayout>
 
-        <include layout="@layout/fragment_insert_delete"/>
+        <!--<include layout="@layout/fragment_insert_delete"/>-->
 
     </FrameLayout>
 
