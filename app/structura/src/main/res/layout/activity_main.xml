@@ -70,7 +70,7 @@
                 android:textSize="@dimen/text_size_large" />
         </LinearLayout>
 
-        <include layout="@layout/fragment_insert_delete"/>
+        <!--<include layout="@layout/fragment_insert_delete"/>-->
 
     </FrameLayout>
 
