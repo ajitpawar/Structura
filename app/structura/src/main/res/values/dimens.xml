@@ -41,7 +41,8 @@
 
     <!-- Insert/Delete buttons -->
     <dimen name="footer_height">56dp</dimen>
-    <dimen name="button_padding">10dp</dimen>
+    <dimen name="del_button_padding">10dp</dimen>
+    <dimen name="ins_button_padding">10dp</dimen>
     <dimen name="insert_margin_left">30dp</dimen>
     <dimen name="delete_margin_right">39dp</dimen>
 
