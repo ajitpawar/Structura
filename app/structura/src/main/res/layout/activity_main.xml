@@ -70,15 +70,9 @@
                 android:textSize="@dimen/text_size_large" />
         </LinearLayout>
 
-        <fragment
-            android:name="com.davisosa.structura.fragments.InsertDeleteFragment"
-            android:id="@+id/test"
-            android:layout_width="94dp"
-            android:layout_height="match_parent"/>
+        <include layout="@layout/fragment_insert_delete"/>
 
     </FrameLayout>
-
-
 
     <!-- Navigation drawer -->
     <include layout="@layout/drawer" />
