@@ -45,6 +45,10 @@
     <color name="tab_text_disabled">#9FFF</color>
     <color name="tab_indicator_color">@color/theme_accent_1</color>
 
+    <!-- Play Fragment colours -->
+    <color name="footer_bg">@color/white</color>
+    <color name="footer_separator_color">@color/divider</color>
+
     <!-- AboutLibraries colors -->
     <color name="about_libraries_card">@color/cardview_light_background</color>
     <color name="about_libraries_title_openSource">@color/body_text_1</color>
