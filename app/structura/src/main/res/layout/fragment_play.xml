@@ -42,7 +42,7 @@
             android:layout_height="@dimen/button_height"
             android:text="@string/delete_node_label"
             android:id="@+id/deleteNode"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="android?attr/selectableItemBackground"
             android:clickable="true"
             android:layout_gravity="right|center_vertical"
             android:singleLine="true"
