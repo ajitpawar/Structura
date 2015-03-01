@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     tools:context="com.davisosa.structura.fragments.InsertDeleteFragment">
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="@dimen/footer_height"
@@ -16,43 +16,38 @@
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/delete_node_label"
-            android:id="@+id/deleteNode"
-            android:background="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:layout_gravity="end|bottom"
-            android:singleLine="true"
-            android:textSize="20sp"
-            android:paddingLeft="@dimen/del_button_padding"
-            android:paddingRight="@dimen/del_button_padding"
-            android:textColor="@color/delete_button_colour"
-            android:layout_marginEnd="@dimen/delete_margin_right"
-            android:layout_marginRight="@dimen/delete_margin_right"
-            android:layout_alignTop="@+id/addNode"
-            android:layout_toLeftOf="@+id/addNode"
-            android:layout_toStartOf="@+id/addNode" />
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/button_height"
             android:text="@string/add_node_label"
             android:id="@+id/addNode"
-            android:layout_gravity="end|bottom"
+            android:layout_gravity="right|center_vertical"
             android:clickable="true"
-            android:textColor="@color/insert_button_colour"
-            android:textSize="20sp"
+            android:textColor="@color/theme_accent_1"
+            android:textSize="@dimen/text_size_medium"
             android:background="?android:attr/selectableItemBackground"
             android:paddingLeft="@dimen/ins_button_padding"
             android:paddingRight="@dimen/ins_button_padding"
             android:singleLine="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="@dimen/insert_margin_left"
-            android:layout_marginStart="@dimen/insert_margin_left" />
+            android:layout_marginRight="@dimen/insert_margin_right"
+            android:layout_marginEnd="@dimen/insert_margin_right"/>
 
-    </RelativeLayout>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/delete_node_label"
+            android:id="@+id/deleteNode"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_gravity="right|center_vertical"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingLeft="@dimen/del_button_padding"
+            android:paddingRight="@dimen/del_button_padding"
+            android:textColor="@color/theme_accent_1"
+            android:layout_marginRight="@dimen/delete_margin_right"
+            android:layout_marginEnd="@dimen/delete_margin_right"/>
+
+
+    </FrameLayout>
 
 </RelativeLayout>
