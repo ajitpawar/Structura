@@ -75,8 +75,8 @@
 
 ####Sean Williams
 
-* Something
-* Something else
+* Implemented new fragment for Play to contain the footer and buttons
+* Integrated fragment into tabs
 
 ####Amit Prabhakar
 
