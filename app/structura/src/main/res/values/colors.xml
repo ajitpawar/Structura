@@ -45,10 +45,9 @@
     <color name="tab_text_disabled">#9FFF</color>
     <color name="tab_indicator_color">@color/theme_accent_1</color>
 
-    <!-- Insert and Delete colours -->
-    <color name="insert_button_colour">@color/green_600</color>
-    <color name="delete_button_colour">@color/red_600</color>
-    <color name="node_button_bg">@color/white</color>
+    <!-- Play Fragment colours -->
+    <color name="footer_bg">@color/white</color>
+    <color name="footer_separator_color">@color/divider</color>
 
     <!-- AboutLibraries colors -->
     <color name="about_libraries_card">@color/cardview_light_background</color>

@@ -53,5 +53,6 @@
     <dimen name="ins_button_padding">8dp</dimen>
     <dimen name="insert_margin_right">16dp</dimen>
     <dimen name="delete_margin_right">88dp</dimen>
+    <dimen name="footer_separator_height">1dp</dimen>
 
 </resources>

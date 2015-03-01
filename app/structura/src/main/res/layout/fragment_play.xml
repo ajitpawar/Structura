@@ -7,7 +7,7 @@
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="@dimen/footer_height"
-        android:background="@color/node_button_bg"
+        android:background="@color/footer_bg"
         android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -15,8 +15,8 @@
 
         <View xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/drawer_separator_height"
-            android:background="@color/drawer_separator_color"
+            android:layout_height="@dimen/footer_separator_height"
+            android:background="@color/footer_separator_color"
             android:gravity="start|center_vertical" />
 
         <Button
@@ -29,7 +29,7 @@
             android:clickable="true"
             android:textColor="@color/theme_accent_1"
             android:textSize="@dimen/text_size_medium"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="android?attr/selectableItemBackground"
             android:paddingLeft="@dimen/ins_button_padding"
             android:paddingRight="@dimen/ins_button_padding"
             android:singleLine="true"

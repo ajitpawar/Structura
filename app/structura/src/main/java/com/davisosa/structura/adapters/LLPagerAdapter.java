@@ -32,12 +32,18 @@ public class LLPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0){
-            Timber.d("Creating Play fragment");
-            return PlayFragment.newInstance();
-        } else {
-            Timber.d("Creating fragment #" + position);
-            return PageFragment.newInstance(position + 1);
+        switch (position) {
+            case PLAY: {
+                Timber.d("Creating Play fragment");
+                return PlayFragment.newInstance();
+            } case SUMMARY: {
+                Timber.d("Creating fragment #" + position);
+                return PageFragment.newInstance(position + 1);
+            } case QUIZ: {
+                Timber.d("Creating fragment #" + position);
+                return PageFragment.newInstance(position + 1);
+            } default:
+                return null;
         }
     }
 
