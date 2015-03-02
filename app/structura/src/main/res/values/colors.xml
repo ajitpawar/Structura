@@ -69,4 +69,12 @@
     <color name="del_ripple">#ff80ab</color>
     <color name="del_accent">#ff4081</color>
     <color name="del_accent_pressed">#f50057</color>
+
+    <!-- Search Node Button colors -->
+    <color name="srch_primary">#466EB1</color>
+    <color name="srch_primary_pressed">#5DACE1</color>
+    <color name="srch_ripple">#ff80ab</color>
+    <color name="srch_accent">#ff4081</color>
+    <color name="srch_accent_pressed">#f50057</color>
+
 </resources>

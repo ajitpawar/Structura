@@ -34,9 +34,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:src="@drawable/ic_about"
-        fab:fab_colorNormal="@color/del_primary"
-        fab:fab_colorPressed="@color/del_primary_pressed"
+        android:src="@drawable/ic_action_search"
+        fab:fab_colorNormal="@color/srch_primary"
+        fab:fab_colorPressed="@color/srch_primary_pressed"
         fab:fab_colorRipple="@color/del_ripple"
         android:layout_marginRight="143dp"
         android:layout_marginBottom="16dp" />

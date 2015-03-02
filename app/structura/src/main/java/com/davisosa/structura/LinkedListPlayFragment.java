@@ -12,6 +12,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import android.os.Handler;
+import android.widget.Toast;
 
 
 /**
@@ -218,29 +220,48 @@ public class LinkedListPlayFragment extends Fragment {
             int index = 0;
             Handler handler = new Handler();
 
+            final int maxIndex;
+
             while (!found && index < nodeList.size()) {
-                final int finalIndex = index;
+                if (nodeList.get(index).value == value) {
+                    found = true;
+                }
+                index++;
+            }
+
+            final String toastText = (found) ? "Found!" : "Uhoh! We do not have a node with that value.";
+            maxIndex = (found) ? index : nodeList.size();
+
+            for (int i = 0; i < maxIndex; i++) {
+                final int finalIndex = i;
                 Runnable runnable = new Runnable() {
 
                     @Override
                     public void run() {
                         highlightNode(finalIndex);
+                        if (finalIndex == maxIndex - 1) {
+                            Toast.makeText(getActivity(), toastText, Toast.LENGTH_LONG).show();
+                            new CountDownTimer(3500, 1000) {
+                                public void onTick(long millisUntilFinished) {
+
+                                }
+                                public void onFinish() {
+                                    currentSearchNode = null;
+                                    invalidate();
+                                }
+
+                            }.start();
+                        }
                     };
+
                 };
 
-                handler.postDelayed(runnable, 2000*index);
-                if (nodeList.get(index).value == value) {
-                    found = true;
-                    System.out.println("FOUND!!!");
-                    handler.removeCallbacks(runnable);
-                    highlightNode(index);
-
-                }
-                index++;
+                handler.postDelayed(runnable, 2000*i);
             }
         }
 
         public void highlightNode(int index) {
+            System.out.println(index);
             LLNode currentNode = nodeList.get(index);
             Bitmap bitmap = currentNode.bitmap;
 
