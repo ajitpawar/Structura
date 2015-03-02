@@ -1,6 +1,6 @@
 # Semi-weekly Scrum
 
-## Feb 23 (Monday)
+## Mar 2 (Monday)
 
 ####Dhyey Sejpal
 
@@ -9,8 +9,8 @@
 
 ####Ajit Pawar
 
-* Created layout for tabs (issue #17)
-* Created sliding tabs (issue #17)
+* Something
+* Something else
 
 ####Vaishali Deswal
 
@@ -24,24 +24,25 @@
 
 ####Shahin Yousefi
 
-* Opened #30
+* Something
+* Something else
 
 ####Omar Hamdan
 
-* Policing `MainActivity.java`
-
+* Something
+* Something else
+* 
 ####Sean Williams
 
-* Made footer, changed button placement
-* Researching fragment implementation
-* Added fragment for insert/delete buttons
+* Something
+* Something else
 
 ####Amit Prabhakar
 
 * Something
 * Something else
 
-## Feb 27 (Friday)
+## Mar 5 (Thursday)
 
 ####Dhyey Sejpal
 
@@ -50,8 +51,8 @@
 
 ####Ajit Pawar
 
-* Created new activity to handle menu item click (issue #29)
-* Integrated new activity with tabs (issue #29)
+* Something
+* Something else
 
 ####Vaishali Deswal
 
@@ -72,11 +73,11 @@
 
 * Something
 * Something else
-
+* 
 ####Sean Williams
 
-* Implemented new fragment for Play to contain the footer and buttons
-* Integrated fragment into tabs
+* Something
+* Something else
 
 ####Amit Prabhakar
 

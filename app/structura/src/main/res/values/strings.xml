@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Structura</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
@@ -15,9 +16,12 @@
     <string name="title_settings">Settings</string>
     <string name="title_about">About</string>
 
+    <!-- Button text -->
+    <string name="add_node_label">Insert</string>
+    <string name="delete_node_label">Delete</string>
+
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
-
     <string name="desc_landing_img">Landing Image</string>
     <string name="desc_example">Example action</string>
     <string name="desc_settings">Settings</string>
@@ -27,8 +31,6 @@
     <string name="title_summary">Summary</string>
     <string name="title_quiz">Quiz</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nodeValue">Value</string>
     <string name="nodeNext">Next</string>
     <string name="nodeValueDigit">0</string>
