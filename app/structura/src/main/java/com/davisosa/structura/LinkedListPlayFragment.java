@@ -176,7 +176,7 @@ public class LinkedListPlayFragment extends Fragment {
             int rand_num = rand.nextInt((100 - 1) + 1) + 1;
             tvNodeValueDigit.setText(String.format("%02d", rand_num));
 
-            node.measure(MeasureSpec.UNSPECIFIED,MeasureSpec.UNSPECIFIED);
+            node.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
             node.layout(0, 0, node.getMeasuredWidth(), node.getMeasuredHeight());
 
             int width = node.getMeasuredWidth() + 100;
