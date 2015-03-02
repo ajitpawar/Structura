@@ -2,7 +2,9 @@ package com.davisosa.structura;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -15,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,6 +30,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import android.os.Handler;
 
 
 /**
@@ -42,6 +46,7 @@ public class LinkedListPlayFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     FloatingActionButton addNodeBtn;
     FloatingActionButton delNodeBtn;
+    FloatingActionButton searchNodeBtn;
 
     NodeView nv;
 
@@ -93,8 +98,44 @@ public class LinkedListPlayFragment extends Fragment {
             }
         });
 
+        searchNodeBtn = (FloatingActionButton) fl.findViewById(R.id.search);
+        searchNodeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showSearchDialog();
+            }
+        });
 
         return fl;
+    }
+
+    private void showSearchDialog() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+
+        alert.setTitle("Find a Node");
+        alert.setMessage("Enter the value of the node you'd like to find");
+
+        final EditText input = new EditText(getActivity());
+        alert.setView(input);
+
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String value = input.getText().toString();
+                try {
+                    nv.findNode(Integer.parseInt(value));
+                } catch (Exception e) {
+                    // show toast
+                }
+            }
+        });
+
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Canceled.
+            }
+        });
+
+        alert.show();
     }
 
     /**
@@ -117,6 +158,7 @@ public class LinkedListPlayFragment extends Fragment {
         int defaulttNodeTop = 50;
         int defaultNodeLeft = 120;
         List<LLNode> nodeList = new ArrayList<LLNode>();
+        LLNode currentSearchNode = null;
 
         public NodeView(Context context) {
             super(context);
@@ -141,7 +183,10 @@ public class LinkedListPlayFragment extends Fragment {
                     leftOffset = (int) (defaultNodeLeft + (300 * (nodeList.size() - (3 * (Math.floor(nodeList.size() / 3))))));
                 }
             }
-            int value = 1;
+
+            Random rand = new Random();
+            int rand_num = rand.nextInt((100 - 1) + 1) + 1;
+            int value = rand_num;
             // TODO: convert to enum
             int arrowDirection = 0; // -1 -> none, 0 -> horizontal, 1 -> vertical, 3 -> both
             if ( Math.floor(nodeList.size()/3) % 2 == 0 ) {
@@ -155,7 +200,7 @@ public class LinkedListPlayFragment extends Fragment {
                     arrowDirection = -1;
                 }
             }
-            Bitmap bitmap = getNodeBitmap(arrowDirection);
+            Bitmap bitmap = getNodeBitmap(arrowDirection, value);
 
             return new LLNode(bitmap, value, leftOffset, topOffset);
         }
@@ -168,13 +213,50 @@ public class LinkedListPlayFragment extends Fragment {
             invalidate();
         }
 
-        public Bitmap getNodeBitmap(int arrowDirection) {
+        public void findNode(int value) {
+            Boolean found = false;
+            int index = 0;
+            Handler handler = new Handler();
+
+            while (!found && index < nodeList.size()) {
+                final int finalIndex = index;
+                Runnable runnable = new Runnable() {
+
+                    @Override
+                    public void run() {
+                        highlightNode(finalIndex);
+                    };
+                };
+
+                handler.postDelayed(runnable, 2000*index);
+                if (nodeList.get(index).value == value) {
+                    found = true;
+                    System.out.println("FOUND!!!");
+                    handler.removeCallbacks(runnable);
+                    highlightNode(index);
+
+                }
+                index++;
+            }
+        }
+
+        public void highlightNode(int index) {
+            LLNode currentNode = nodeList.get(index);
+            Bitmap bitmap = currentNode.bitmap;
+
+            Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth()-100, bitmap.getHeight(), Bitmap.Config.ARGB_4444);
+            Canvas canvas = new Canvas(newBitmap);
+            canvas.drawColor(Color.argb(100, 57, 202, 116));
+
+            currentSearchNode = new LLNode(newBitmap, 0, currentNode.leftOffset, currentNode.topOffset);
+            invalidate();
+        }
+
+        public Bitmap getNodeBitmap(int arrowDirection, int nodeValue) {
             View node = getActivity().getLayoutInflater().inflate(R.layout.ll_node, null);
 
             TextView tvNodeValueDigit = (TextView) node.findViewById(R.id.tvNodeValueDigit);
-            Random rand = new Random();
-            int rand_num = rand.nextInt((100 - 1) + 1) + 1;
-            tvNodeValueDigit.setText(String.format("%02d", rand_num));
+            tvNodeValueDigit.setText(String.format("%02d", nodeValue));
 
             node.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
             node.layout(0, 0, node.getMeasuredWidth(), node.getMeasuredHeight());
@@ -208,6 +290,9 @@ public class LinkedListPlayFragment extends Fragment {
             canvas.save();
             for (int i = 0; i < nodeList.size(); i++) {
                 canvas.drawBitmap(nodeList.get(i).bitmap, nodeList.get(i).leftOffset, nodeList.get(i).topOffset, null);
+            }
+            if (currentSearchNode != null) {
+                canvas.drawBitmap(currentSearchNode.bitmap, currentSearchNode.leftOffset, currentSearchNode.topOffset, null);
             }
             canvas.restore();
         }
