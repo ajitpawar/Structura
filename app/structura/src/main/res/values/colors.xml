@@ -51,4 +51,18 @@
     <color name="about_libraries_text_openSource">@color/body_text_2</color>
     <color name="about_libraries_dividerDark_openSource">@color/divider_inverse</color>
     <color name="about_libraries_dividerLight_openSource">@color/divider</color>
+
+    <!-- Add Node Button colors -->
+    <color name="add_primary">#39CA74</color>
+    <color name="add_primary_pressed">#89D280</color>
+    <color name="add_ripple">#ff80ab</color>
+    <color name="add_accent">#ff4081</color>
+    <color name="add_accent_pressed">#f50057</color>
+
+    <!-- Delete Node Button colors -->
+    <color name="del_primary">#F3494C</color>
+    <color name="del_primary_pressed">#F3494C</color>
+    <color name="del_ripple">#ff80ab</color>
+    <color name="del_accent">#ff4081</color>
+    <color name="del_accent_pressed">#f50057</color>
 </resources>

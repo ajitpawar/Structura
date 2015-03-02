@@ -26,4 +26,10 @@
     <string name="title_play">Play</string>
     <string name="title_summary">Summary</string>
     <string name="title_quiz">Quiz</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nodeValue">Value</string>
+    <string name="nodeNext">Next</string>
+    <string name="nodeValueDigit">0</string>
 </resources>

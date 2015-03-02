@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.davisosa.structura.LinkedListPlayFragment;
 import com.davisosa.structura.R;
 import com.davisosa.structura.fragments.PageFragment;
 
@@ -32,6 +33,9 @@ public class LLPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         Timber.d("Creating fragment #" + position);
+        if (position == PLAY) {
+            return LinkedListPlayFragment.newInstance();
+        }
         return PageFragment.newInstance(position + 1);
     }
 

@@ -1,14 +1,16 @@
 package com.davisosa.structura.activities;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
+import com.davisosa.structura.LinkedListPlayFragment;
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
 import com.davisosa.structura.adapters.LLPagerAdapter;
 import com.davisosa.structura.widget.SlidingTabLayout;
 
-public class LLActivity extends BaseActivity {
+public class LLActivity extends BaseActivity implements LinkedListPlayFragment.OnFragmentInteractionListener {
     private ViewPager mViewPager;
     private SlidingTabLayout mSlidingTabLayout;
 
@@ -43,5 +45,10 @@ public class LLActivity extends BaseActivity {
         // Center the tabs in the layout.
         mSlidingTabLayout.setDistributeEvenly(true);
         mSlidingTabLayout.setViewPager(mViewPager);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
