@@ -135,10 +135,27 @@ public class LinkedListPlayFragment extends Fragment {
             if (nodeList.size() < 3) {
                 leftOffset = defaultNodeLeft + (300 * (nodeList.size()));
             } else {
-                leftOffset = (int) (defaultNodeLeft + (300 * (nodeList.size() - (3*(Math.floor(nodeList.size()/3))))));
+                if ( Math.floor(nodeList.size()/3) % 2 == 1 ) {
+                    leftOffset = (int) (defaultNodeLeft + (300 * Math.abs(2 - (nodeList.size() - (3 * (Math.floor(nodeList.size() / 3)))))));
+                } else {
+                    leftOffset = (int) (defaultNodeLeft + (300 * (nodeList.size() - (3 * (Math.floor(nodeList.size() / 3))))));
+                }
             }
             int value = 1;
-            Bitmap bitmap = getNodeBitmap();
+            // TODO: convert to enum
+            int arrowDirection = 0; // -1 -> none, 0 -> horizontal, 1 -> vertical, 3 -> both
+            if ( Math.floor(nodeList.size()/3) % 2 == 0 ) {
+                if ( (nodeList.size()+1 - 3) % 3 == 0 ) {
+                    arrowDirection = 1;
+                }
+            } else {
+                if ( (nodeList.size() - (3*(Math.floor(nodeList.size() / 3)))) == 2 ) {
+                    arrowDirection = 3;
+                } else if ( ( nodeList.size() - (3*(Math.floor(nodeList.size() / 3)))) == 0 ) {
+                    arrowDirection = -1;
+                }
+            }
+            Bitmap bitmap = getNodeBitmap(arrowDirection);
 
             return new LLNode(bitmap, value, leftOffset, topOffset);
         }
@@ -151,20 +168,36 @@ public class LinkedListPlayFragment extends Fragment {
             invalidate();
         }
 
-        public Bitmap getNodeBitmap() {
+        public Bitmap getNodeBitmap(int arrowDirection) {
             View node = getActivity().getLayoutInflater().inflate(R.layout.ll_node, null);
 
             TextView tvNodeValueDigit = (TextView) node.findViewById(R.id.tvNodeValueDigit);
             Random rand = new Random();
             int rand_num = rand.nextInt((100 - 1) + 1) + 1;
-            tvNodeValueDigit.setText(String.valueOf(rand_num));
+            tvNodeValueDigit.setText(String.format("%02d", rand_num));
 
             node.measure(MeasureSpec.UNSPECIFIED,MeasureSpec.UNSPECIFIED);
             node.layout(0, 0, node.getMeasuredWidth(), node.getMeasuredHeight());
 
-            Bitmap bitmap = Bitmap.createBitmap(node.getMeasuredWidth(), node.getMeasuredHeight(), Bitmap.Config.ARGB_8888);
+            int width = node.getMeasuredWidth() + 100;
+            int height = (arrowDirection == 1 || arrowDirection == 3) ? node.getMeasuredHeight() + 50 : node.getMeasuredHeight();
+
+            Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
             Canvas canvas = new Canvas(bitmap);
             node.draw(canvas);
+
+            Paint paint = new Paint();
+            paint.setColor(Color.BLACK);
+            paint.setStrokeWidth(6);
+            if (arrowDirection == 0) {
+                canvas.drawLine(node.getMeasuredWidth() - 15, 120, node.getMeasuredWidth() + 70, 120, paint);
+            } else if (arrowDirection == 1) {
+                canvas.drawLine(node.getMeasuredWidth() - 30, 120, node.getMeasuredWidth() - 30, 300, paint);
+            } else if (arrowDirection == 3) {
+                canvas.drawLine(node.getMeasuredWidth() - 15, 120, node.getMeasuredWidth() + 70, 120, paint);
+                canvas.drawLine(node.getMeasuredWidth() - 30, 120, node.getMeasuredWidth() - 30, 300, paint);
+            }
+
 
             return bitmap;
         }
