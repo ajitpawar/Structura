@@ -65,8 +65,9 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Contributed to #26
+* Worked on #18
+* Created _Scrums_ wiki page
 
 ####Omar Hamdan
 
