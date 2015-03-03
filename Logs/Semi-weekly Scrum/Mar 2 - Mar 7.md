@@ -24,8 +24,9 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Reviewed #26 and #32
+* Need review for #31
+* Will make list of components necessary for Play tab
 
 ####Omar Hamdan
 
