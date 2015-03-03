@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
@@ -58,7 +59,7 @@ public class NodeView extends View {
         int rand_num = rand.nextInt((100 - 1) + 1) + 1;
         int value = rand_num;
         // TODO: convert to enum
-        int arrowDirection = 0; // -1 -> none, 0 -> horizontal, 1 -> vertical, 3 -> both
+        int arrowDirection = 0; // -1 -> none, 0 -> right horizontal, 1 -> vertical, 3 -> both, 4 -> left horizontal
         if ( Math.floor(nodeList.size()/3) % 2 == 0 ) {
             if ( (nodeList.size()+1 - 3) % 3 == 0 ) {
                 arrowDirection = 1;
@@ -68,6 +69,8 @@ public class NodeView extends View {
                 arrowDirection = 3;
             } else if ( ( nodeList.size() - (3*(Math.floor(nodeList.size() / 3)))) == 0 ) {
                 arrowDirection = -1;
+            } else {
+                arrowDirection = 4;
             }
         }
         Bitmap bitmap = getNodeBitmap(arrowDirection, value);
@@ -133,7 +136,7 @@ public class NodeView extends View {
         LLNode currentNode = nodeList.get(index);
         Bitmap bitmap = currentNode.bitmap;
 
-        Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth()-100, bitmap.getHeight(), Bitmap.Config.ARGB_4444);
+        Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth()-120, bitmap.getHeight(), Bitmap.Config.ARGB_4444);
         Canvas canvas = new Canvas(newBitmap);
         canvas.drawColor(Color.argb(100, 57, 202, 116));
 
@@ -150,8 +153,8 @@ public class NodeView extends View {
         node.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
         node.layout(0, 0, node.getMeasuredWidth(), node.getMeasuredHeight());
 
-        int width = node.getMeasuredWidth() + 100;
-        int height = (arrowDirection == 1 || arrowDirection == 3) ? node.getMeasuredHeight() + 50 : node.getMeasuredHeight();
+        int width = node.getMeasuredWidth() + 120;
+        int height = (arrowDirection == 1 || arrowDirection == 3) ? node.getMeasuredHeight() + 100 : node.getMeasuredHeight();
 
         Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
@@ -162,11 +165,18 @@ public class NodeView extends View {
         paint.setStrokeWidth(6);
         if (arrowDirection == 0) {
             canvas.drawLine(node.getMeasuredWidth() - 15, 120, node.getMeasuredWidth() + 70, 120, paint);
+            canvas.drawCircle(node.getMeasuredWidth() + 70, 120, 12, paint);
         } else if (arrowDirection == 1) {
-            canvas.drawLine(node.getMeasuredWidth() - 30, 120, node.getMeasuredWidth() - 30, 300, paint);
+            canvas.drawLine(node.getMeasuredWidth() - 35, 120, node.getMeasuredWidth() - 35, 220, paint);
+            canvas.drawCircle(node.getMeasuredWidth() - 35, 220, 12, paint);
         } else if (arrowDirection == 3) {
             canvas.drawLine(node.getMeasuredWidth() - 15, 120, node.getMeasuredWidth() + 70, 120, paint);
-            canvas.drawLine(node.getMeasuredWidth() - 30, 120, node.getMeasuredWidth() - 30, 300, paint);
+            canvas.drawCircle(node.getMeasuredWidth() - 15, 120, 12, paint);
+            canvas.drawLine(node.getMeasuredWidth() - 35, 120, node.getMeasuredWidth() - 35, 220, paint);
+            canvas.drawCircle(node.getMeasuredWidth() - 35, 220, 12, paint);
+        } else if (arrowDirection == 4) {
+            canvas.drawLine(node.getMeasuredWidth() - 15, 120, node.getMeasuredWidth() + 70, 120, paint);
+            canvas.drawCircle(node.getMeasuredWidth() - 15, 120, 12, paint);
         }
 
 
