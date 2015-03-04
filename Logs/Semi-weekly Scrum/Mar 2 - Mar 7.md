@@ -19,8 +19,8 @@
 
 ####Ishan Thukral
 
-* Something
-* Something else
+* Finished #13, #37, #38, #39, #40
+* Need Review for #33
 
 ####Shahin Yousefi
 
