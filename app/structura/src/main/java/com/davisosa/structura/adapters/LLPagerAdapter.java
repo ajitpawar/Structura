@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.davisosa.structura.LinkedListPlayFragment;
 import com.davisosa.structura.R;
 import com.davisosa.structura.fragments.PageFragment;
 import com.davisosa.structura.fragments.PlayFragment;
@@ -35,7 +36,7 @@ public class LLPagerAdapter extends FragmentPagerAdapter {
         switch (position) {
             case PLAY: {
                 Timber.d("Creating Play fragment");
-                return PlayFragment.newInstance();
+                return LinkedListPlayFragment.newInstance();
             } case SUMMARY: {
                 Timber.d("Creating fragment #" + position);
                 return PageFragment.newInstance(position + 1);

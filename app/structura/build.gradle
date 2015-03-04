@@ -58,6 +58,8 @@ dependencies {
     compile('com.mikepenz.aboutlibraries:library:4.5.+@aar') {
         transitive = true
     }
+
+    compile 'com.melnykov:floatingactionbutton:1.2.0'
 }
 
 idea {
