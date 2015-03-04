@@ -9,8 +9,7 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Code review for #33
 
 ####Vaishali Deswal
 
