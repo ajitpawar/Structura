@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="define_int_slidingtabs">year;owner</string>
+    <!-- Author section -->
+    <string name="library_slidingtabs_author">Google</string>
+    <string name="library_slidingtabs_authorWebsite">https://developer.android.com/samples/index.html</string>
+    <!-- Library section -->
+    <string name="library_slidingtabs_libraryName">SlidingTabsColors</string>
+    <string name="library_slidingtabs_libraryDescription">A more advanced sample which shows how to use SlidingTabLayout to display a custom ViewPager title strip, with custom coloring for each tab.</string>
+    <string name="library_slidingtabs_libraryWebsite">https://developer.android.com/samples/SlidingTabsColors/index.html</string>
+    <string name="library_slidingtabs_libraryVersion" />
+    <!-- OpenSource section -->
+    <string name="library_slidingtabs_isOpenSource">true</string>
+    <string name="library_slidingtabs_repositoryLink">https://github.com/googlesamples/android-SlidingTabsColors</string>
+    <!-- ClassPath for autoDetect section -->
+    <string name="library_slidingtabs_classPath" />
+    <!-- License section -->
+    <string name="library_slidingtabs_licenseId">apache_2_0</string>
+    <!-- Custom variables section -->
+    <string name="library_slidingtabs_owner">Google</string>
+    <string name="library_slidingtabs_year">2014</string>
+</resources>
