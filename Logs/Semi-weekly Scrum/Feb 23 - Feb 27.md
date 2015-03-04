@@ -19,8 +19,7 @@
 
 ####Ishan Thukral
 
-* Something
-* Something else
+* Started work on #13
 
 ####Shahin Yousefi
 
@@ -60,8 +59,7 @@
 
 ####Ishan Thukral
 
-* Something
-* Something else
+* Continued work on #13, #37, #38, #39
 
 ####Shahin Yousefi
 
