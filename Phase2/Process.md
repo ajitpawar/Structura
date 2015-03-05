@@ -25,4 +25,6 @@ Highlights of this meeting:
 - Discussed how to handle the application post PR #33. 
 - Discussed implementation of issue #16.
 
+### Other Tools
 
+Our team is using [ZenHub](https://www.zenhub.io/) as our agile project management tool. It is similar to Trello boards, but it integrates natively with GitHub's issue management system.
