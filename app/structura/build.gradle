@@ -4,7 +4,7 @@ apply plugin: 'idea'
 
 // Manifest version information
 def versionMajor = 0
-def versionMinor = 2
+def versionMinor = 3
 def versionPatch = 0
 def versionBuild = 0    // Dogfood builds, public betas, etc.
 
@@ -58,6 +58,8 @@ dependencies {
     compile('com.mikepenz.aboutlibraries:library:4.5.+@aar') {
         transitive = true
     }
+
+    compile 'com.melnykov:floatingactionbutton:1.2.0'
 }
 
 idea {
