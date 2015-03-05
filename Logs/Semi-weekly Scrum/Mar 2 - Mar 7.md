@@ -4,8 +4,8 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Researched for the Binary Search Tree summary.
+* Actually Wrote the summary(Issue #4, and committed the three summaries in pdf format. 
 
 ####Ajit Pawar
 
@@ -46,8 +46,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Working on the Porduct.md and Project.md (Issues #34 and #35)
 
 ####Ajit Pawar
 
