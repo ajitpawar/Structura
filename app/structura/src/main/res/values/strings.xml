@@ -19,6 +19,7 @@
     <!-- Button text -->
     <string name="add_node_label">Insert</string>
     <string name="delete_node_label">Delete</string>
+    <string name="search_node_label">Search</string>
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
