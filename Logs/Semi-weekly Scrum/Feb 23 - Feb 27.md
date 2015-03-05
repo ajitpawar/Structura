@@ -4,8 +4,8 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Researched on the summaries for a Heap.
+* Changed the format of the Linked list summary to point-form. (Issue #16)
 
 ####Ajit Pawar
 
@@ -44,8 +44,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Actually worte the Heaps summary in point form. (Issue #43)
 
 ####Ajit Pawar
 
