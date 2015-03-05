@@ -5,6 +5,7 @@
 _If you haven't already, then please read the Phase 1 handout._
 
 This log contains a summary of the meeting:
+
  * What we decided on for each aspect of Phase 1 (Project Description to MVP)
  * A to-do list of who is doing what
 
@@ -25,6 +26,7 @@ Content for MVP:
  * Singly-linked List: Add, Delete, Search
 
 ## Triage
+
  * Short Bio:	Each person
  * Project Description: Ajit
  * MVP: Dhyey and Shahin

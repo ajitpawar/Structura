@@ -1,6 +1,6 @@
 # Meeting Minutes
 ###### CSC301, Phase 2
-###### March 2, 2015 (BA)
+###### March 2, 2015 (BA 3008)
 
 Node view class
 
