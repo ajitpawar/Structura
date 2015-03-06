@@ -9,6 +9,7 @@ import com.davisosa.structura.LinkedListPlayFragment;
 import com.davisosa.structura.R;
 import com.davisosa.structura.fragments.PageFragment;
 import com.davisosa.structura.fragments.PlayFragment;
+import com.davisosa.structura.fragments.SummaryFragment;
 
 import timber.log.Timber;
 
@@ -39,7 +40,7 @@ public class LLPagerAdapter extends FragmentPagerAdapter {
                 return LinkedListPlayFragment.newInstance();
             } case SUMMARY: {
                 Timber.d("Creating fragment #" + position);
-                return PageFragment.newInstance(position + 1);
+                return SummaryFragment.newInstance(position + 1);
             } case QUIZ: {
                 Timber.d("Creating fragment #" + position);
                 return PageFragment.newInstance(position + 1);
