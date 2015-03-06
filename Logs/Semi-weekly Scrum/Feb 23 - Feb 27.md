@@ -14,8 +14,7 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* Researched adding scrolling feature to tabs
 
 ####Ishan Thukral
 
@@ -53,8 +52,8 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* started working the summary tab #16
+
 
 ####Ishan Thukral
 
