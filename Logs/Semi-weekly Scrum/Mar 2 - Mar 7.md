@@ -46,6 +46,7 @@
 ####Dhyey Sejpal
 
 * Created an XML layout file to show up the summary using ScrollView and added a java file to link it to the summary fragment. Added the actual summary in strings.xml using html tags. Closed #48.
+* Contributed to the Product.md file. (Issue #34)
 
 ####Ajit Pawar
 
