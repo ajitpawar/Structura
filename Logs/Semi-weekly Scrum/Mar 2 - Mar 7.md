@@ -13,8 +13,8 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* re-opened and worked on #16
+
 
 ####Ishan Thukral
 
@@ -55,8 +55,8 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* closed #16
+* reviewed PR #46
 
 ####Ishan Thukral
 
