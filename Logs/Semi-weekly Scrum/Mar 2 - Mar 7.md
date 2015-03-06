@@ -13,8 +13,8 @@
 
 ####Vaishali Deswal
 
-* re-opened and worked on #16
-
+* Something
+* Something else
 
 ####Ishan Thukral
 
@@ -29,9 +29,9 @@
 
 ####Omar Hamdan
 
-* Reviewed pull request #31
-* Created issues #34, #35
-
+* Something
+* Something else
+* 
 ####Sean Williams
 
 * Something
@@ -46,7 +46,7 @@
 
 ####Dhyey Sejpal
 
-* Working on the Porduct.md and Project.md (Issues #34 and #35)
+* Created an XML layout file to show up the summary using ScrollView and added a java file to link it to the summary fragment. Added the actual summary in strings.xml using html tags. Closed #48.
 
 ####Ajit Pawar
 
@@ -55,8 +55,8 @@
 
 ####Vaishali Deswal
 
-* closed #16
-* reviewed PR #46
+* Something
+* Something else
 
 ####Ishan Thukral
 
@@ -70,10 +70,9 @@
 
 ####Omar Hamdan
 
-* Researched search widgets. 
-* Contributed to Product.md
-* Contributed to Process.md 
-
+* Something
+* Something else
+* 
 ####Sean Williams
 
 * Something
