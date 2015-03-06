@@ -13,8 +13,8 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* re-opened and worked on #16
+
 
 ####Ishan Thukral
 
@@ -50,13 +50,13 @@
 
 ####Ajit Pawar
 
-* Worked on team deliverables for Phase 2
-* Tested app for readiness before live demo
+* Something
+* Something else
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* closed #16
+* reviewed PR #46
 
 ####Ishan Thukral
 
