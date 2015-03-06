@@ -13,8 +13,7 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* re-opened #16 and worked on it
 
 ####Ishan Thukral
 
@@ -55,8 +54,8 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* Added the java file for SummaryFragment and Closed #16
+* reviewed PR #46
 
 ####Ishan Thukral
 
