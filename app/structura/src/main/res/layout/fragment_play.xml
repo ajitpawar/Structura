@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/button_height"
         android:text="@string/delete_node_label"
-        android:id="@+id/deleteNode"
+        android:id="@+id/deleteButton"
         android:background="?selectableItemBackground"
         android:clickable="true"
         android:layout_gravity="right|center_vertical"
@@ -60,5 +60,24 @@
         android:layout_toLeftOf="@+id/addButton"
         android:layout_toStartOf="@+id/addButton"
         android:layout_marginRight="@dimen/delete_margin_right" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/search_node_label"
+        android:id="@+id/searchButton"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:layout_gravity="right|center_vertical"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_medium"
+        android:paddingLeft="@dimen/search_button_padding"
+        android:paddingRight="@dimen/search_button_padding"
+        android:textColor="@color/theme_accent_1"
+        android:layout_alignTop="@+id/deleteButton"
+        android:layout_toLeftOf="@+id/deleteButton"
+        android:layout_toStartOf="@+id/deleteButton"
+        android:layout_marginRight="@dimen/search_margin_right" />
 
 </RelativeLayout>
