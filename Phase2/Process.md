@@ -71,6 +71,11 @@ Decisions:
 
 - We can save the state of the application to JSON files.
 	- JSON files are better than plain text files to handle in Android.
+	
+
+### Summary of Scrum Meetings
+
+- Please refer to our [scrum logs](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/tree/master/Logs/Semi-weekly%20Scrum) for detailed logs about our bi-weekly updates.
 
 ### Other Tools
 
