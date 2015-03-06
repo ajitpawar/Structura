@@ -50,8 +50,8 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Worked on team deliverables for Phase 2
+* Tested app for readiness before live demo
 
 ####Vaishali Deswal
 
