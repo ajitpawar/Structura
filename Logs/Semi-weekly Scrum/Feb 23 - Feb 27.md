@@ -68,8 +68,7 @@
 
 ####Omar Hamdan
 
-* Something
-* Something else
+* Reviewed pull requests #26, #28
 
 ####Sean Williams
 

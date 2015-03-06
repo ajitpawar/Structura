@@ -29,9 +29,9 @@
 
 ####Omar Hamdan
 
-* Something
-* Something else
-* 
+* Reviewed pull request #31
+* Created issues #34, #35
+
 ####Sean Williams
 
 * Something
@@ -70,9 +70,10 @@
 
 ####Omar Hamdan
 
-* Something
-* Something else
-* 
+* Researched search widgets. 
+* Contributed to Product.md
+* Contributed to Process.md 
+
 ####Sean Williams
 
 * Something
