@@ -13,8 +13,7 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* re-opened #16 and worked on it
 
 ####Ishan Thukral
 
@@ -46,7 +45,7 @@
 
 ####Dhyey Sejpal
 
-* Working on the Porduct.md and Project.md (Issues #34 and #35)
+* Created an XML layout file to show up the summary using ScrollView and added a java file to link it to the summary fragment. Added the actual summary in strings.xml using html tags. Closed #48.
 
 ####Ajit Pawar
 
@@ -55,8 +54,8 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* Added the java file for SummaryFragment and Closed #16
+* reviewed PR #46
 
 ####Ishan Thukral
 

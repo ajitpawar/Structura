@@ -1,18 +1,9 @@
 package com.davisosa.structura;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,19 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import com.davisosa.structura.R;
-import com.melnykov.fab.FloatingActionButton;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import android.os.Handler;
-import android.widget.Toast;
 
 
 /**
@@ -46,9 +24,9 @@ import android.widget.Toast;
 public class LinkedListPlayFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-    FloatingActionButton addNodeBtn;
-    FloatingActionButton delNodeBtn;
-    FloatingActionButton searchNodeBtn;
+    Button addNodeBtn;
+    Button delNodeBtn;
+    Button searchNodeBtn;
 
     NodeView nv;
 
@@ -84,7 +62,7 @@ public class LinkedListPlayFragment extends Fragment {
         nv = new NodeView(getActivity(), getActivity());
         fl.addView(nv, lp.width, lp.height);
 
-        addNodeBtn = (FloatingActionButton) fl.findViewById(R.id.add);
+        addNodeBtn = (Button) fl.findViewById(R.id.addButton);
         addNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +70,7 @@ public class LinkedListPlayFragment extends Fragment {
             }
         });
 
-        delNodeBtn = (FloatingActionButton) fl.findViewById(R.id.sub);
+        delNodeBtn = (Button) fl.findViewById(R.id.deleteButton);
         delNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +78,7 @@ public class LinkedListPlayFragment extends Fragment {
             }
         });
 
-        searchNodeBtn = (FloatingActionButton) fl.findViewById(R.id.search);
+        searchNodeBtn = (Button) fl.findViewById(R.id.searchButton);
         searchNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

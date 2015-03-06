@@ -5,40 +5,87 @@
     android:layout_height="match_parent"
     tools:context="com.davisosa.structura.LinkedListPlayFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <com.melnykov.fab.FloatingActionButton
-        android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_action_add"
-        fab:fab_colorNormal="@color/add_primary"
-        fab:fab_colorPressed="@color/add_primary_pressed"
-        fab:fab_colorRipple="@color/add_ripple" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <com.melnykov.fab.FloatingActionButton
-        android:id="@+id/sub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:src="@drawable/ic_action_remove"
-        fab:fab_colorNormal="@color/del_primary"
-        fab:fab_colorPressed="@color/del_primary_pressed"
-        fab:fab_colorRipple="@color/del_ripple"
-        android:layout_marginRight="80dp"
-        android:layout_marginBottom="16dp" />
+        <FrameLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/footer_height"
+            android:background="@color/footer_bg"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
-    <com.melnykov.fab.FloatingActionButton
-        android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:src="@drawable/ic_action_search"
-        fab:fab_colorNormal="@color/srch_primary"
-        fab:fab_colorPressed="@color/srch_primary_pressed"
-        fab:fab_colorRipple="@color/del_ripple"
-        android:layout_marginRight="143dp"
-        android:layout_marginBottom="16dp" />
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/footer_separator_height"
+                android:background="@color/footer_separator_color"
+                android:gravity="start|center_vertical"
+                android:id="@+id/view"
+                android:layout_marginBottom="@dimen/footer_height" />
+        </FrameLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/add_node_label"
+            android:id="@+id/addButton"
+            android:layout_gravity="right|center_vertical"
+            android:clickable="true"
+            android:textColor="@color/theme_accent_1"
+            android:textSize="@dimen/text_size_medium"
+            android:background="?selectableItemBackground"
+            android:paddingLeft="@dimen/ins_button_padding"
+            android:paddingRight="@dimen/ins_button_padding"
+            android:singleLine="true"
+            android:layout_marginBottom="@dimen/insert_margin_bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/insert_margin_right" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/delete_node_label"
+            android:id="@+id/deleteButton"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_gravity="right|center_vertical"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingLeft="@dimen/del_button_padding"
+            android:paddingRight="@dimen/del_button_padding"
+            android:textColor="@color/theme_accent_1"
+            android:layout_alignTop="@+id/addButton"
+            android:layout_toLeftOf="@+id/addButton"
+            android:layout_toStartOf="@+id/addButton"
+            android:layout_marginRight="@dimen/delete_margin_right" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/search_node_label"
+            android:id="@+id/searchButton"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_gravity="right|center_vertical"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingLeft="@dimen/search_button_padding"
+            android:paddingRight="@dimen/search_button_padding"
+            android:textColor="@color/theme_accent_1"
+            android:layout_alignTop="@+id/deleteButton"
+            android:layout_toLeftOf="@+id/deleteButton"
+            android:layout_toStartOf="@+id/deleteButton"
+            android:layout_marginRight="@dimen/search_margin_right" />
+    </RelativeLayout>
+
 
 </FrameLayout>
