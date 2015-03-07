@@ -4,13 +4,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
-import com.davisosa.structura.LinkedListPlayFragment;
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
 import com.davisosa.structura.adapters.LLPagerAdapter;
+import com.davisosa.structura.fragments.LLPlayFragment;
 import com.davisosa.structura.widget.SlidingTabLayout;
 
-public class LLActivity extends BaseActivity implements LinkedListPlayFragment.OnFragmentInteractionListener {
+public class LLActivity extends BaseActivity
+        implements LLPlayFragment.OnFragmentInteractionListener {
     private ViewPager mViewPager;
     private SlidingTabLayout mSlidingTabLayout;
 
@@ -25,7 +26,7 @@ public class LLActivity extends BaseActivity implements LinkedListPlayFragment.O
         setContentView(R.layout.activity_linked_list);
 
         getSupportActionBar().setTitle(R.string.title_linked_list);
-         overridePendingTransition(0, 0);
+        overridePendingTransition(0, 0);
 
         // Get the ViewPager and set its PagerAdapter so that it can display items.
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -49,6 +50,5 @@ public class LLActivity extends BaseActivity implements LinkedListPlayFragment.O
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-
     }
 }

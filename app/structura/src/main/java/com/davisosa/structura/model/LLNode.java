@@ -1,4 +1,4 @@
-package com.davisosa.structura;
+package com.davisosa.structura.model;
 
 import android.graphics.Bitmap;
 

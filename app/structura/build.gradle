@@ -5,7 +5,7 @@ apply plugin: 'idea'
 // Manifest version information
 def versionMajor = 0
 def versionMinor = 3
-def versionPatch = 0
+def versionPatch = 5
 def versionBuild = 0    // Dogfood builds, public betas, etc.
 
 android {
@@ -59,7 +59,7 @@ dependencies {
         transitive = true
     }
 
-    compile 'com.melnykov:floatingactionbutton:1.2.0'
+    compile 'com.melnykov:floatingactionbutton:1.2.0'   // TODO: remove
 }
 
 idea {

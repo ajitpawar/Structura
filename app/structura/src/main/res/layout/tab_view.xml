@@ -4,7 +4,7 @@
     style="@style/TabIndicator"
     android:layout_width="wrap_content"
     android:layout_height="@dimen/tab_height"
-    android:background="?android:selectableItemBackground"
+    android:background="?attr/selectableItemBackground"
     android:gravity="center"
     android:paddingLeft="@dimen/content_padding_normal"
     android:paddingRight="@dimen/content_padding_normal"

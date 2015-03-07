@@ -20,6 +20,7 @@
     <!-- Body content -->
     <dimen name="element_spacing_normal">8dp</dimen>
     <dimen name="content_padding_normal">16dp</dimen>
+    <dimen name="content_padding_small">8dp</dimen>
     <dimen name="text_size_xsmall">11sp</dimen>
     <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_medium">14sp</dimen>
@@ -46,16 +47,16 @@
     <!-- Tabs -->
     <dimen name="tab_height">48dp</dimen>
 
-    <!-- Insert/Delete buttons -->
-    <dimen name="footer_height">52dp</dimen>
-    <dimen name="button_height">36dp</dimen>
-    <dimen name="del_button_padding">8dp</dimen>
-    <dimen name="ins_button_padding">8dp</dimen>
-    <dimen name="search_button_padding">8dp</dimen>
-    <dimen name="insert_margin_right">16dp</dimen>
-    <dimen name="insert_margin_bottom">8dp</dimen>
-    <dimen name="delete_margin_right">8dp</dimen>
-    <dimen name="search_margin_right">8dp</dimen>
+    <!-- Footer -->
+    <dimen name="footer_height">48dp</dimen>
     <dimen name="footer_separator_height">1dp</dimen>
 
+    <!-- Buttons -->
+    <dimen name="btn_height">36dp</dimen>
+    <dimen name="btn_padding">8dp</dimen>
+
+    <!-- Play buttons -->
+    <dimen name="btn_insert_margin_right">@dimen/keyline_1</dimen>
+    <dimen name="btn_delete_margin_right">@dimen/element_spacing_normal</dimen>
+    <dimen name="btn_search_margin_right">@dimen/element_spacing_normal</dimen>
 </resources>
