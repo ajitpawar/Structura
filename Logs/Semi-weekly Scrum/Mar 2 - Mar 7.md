@@ -24,7 +24,6 @@
 
 * Reviewed #26 and #32
 * Need review for #31
-* Will make list of components necessary for Play tab
 
 ####Omar Hamdan
 
@@ -65,8 +64,8 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Merged #31, #42
+* Opened #36, #49
 
 ####Omar Hamdan
 
