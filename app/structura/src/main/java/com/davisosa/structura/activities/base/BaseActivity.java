@@ -47,7 +47,7 @@ public abstract class BaseActivity extends ActionBarActivity
     protected static final int DRAWER_ITEM_INVALID = -1;
     protected static final int DRAWER_ITEM_SEPARATOR = -2;
     protected static final int DRAWER_ITEM_SEPARATOR_SPECIAL = -3;
-    protected static final int DRAWER_ITEM_LANDING = -4;
+    protected static final int DRAWER_ITEM_GONE = -4;
 
     // Titles for navigation drawer items (indices must correspond to DRAWER_ITEM_*)
     private static final int[] RES_IDS_DRAWER_TITLE = new int[]{

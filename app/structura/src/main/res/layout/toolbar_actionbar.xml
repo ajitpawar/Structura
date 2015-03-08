@@ -8,4 +8,4 @@
     structura:contentInsetStart="?attr/actionBarInsetStart"
     structura:popupTheme="@style/ActionBarPopupThemeOverlay"
     structura:theme="@style/ActionBarThemeOverlay"
-    structura:titleTextAppearance="@style/ActionBar.TitleText" />
+    structura:titleTextAppearance="@style/TextActionBarTitle" />

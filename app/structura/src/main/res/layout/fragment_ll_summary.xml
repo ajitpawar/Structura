@@ -12,5 +12,6 @@
         android:layout_margin="@dimen/element_spacing_normal"
         android:background="@color/cardview_light_background"
         android:gravity="start|center_vertical"
-        android:padding="@dimen/content_padding_small" />
+        android:padding="@dimen/content_padding_small"
+        android:textAppearance="@style/TextBody1" />
 </ScrollView>

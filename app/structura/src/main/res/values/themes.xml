@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Disable RTL support on older devices -->
+    <!-- Prevents crash on certain devices due to namespace conflict -->
+    <style name="FrameworkRoot.Theme" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="FrameworkRoot.Widget" parent="Theme.AppCompat" />
+
+    <!-- Immediate parent theme to specify base values for custom attributes -->
+    <style name="Theme" parent="FrameworkRoot.Theme">
+        <!-- Only needed for pre-LP -->
+        <item name="android:editTextBackground">@android:drawable/edit_text</item>
+        <item name="android:editTextStyle">@style/Widget.Structura.EditText</item>
+    </style>
+
+    <style name="Base.Theme.Structura" parent="Theme">
+        <item name="actionBarInsetStart">@dimen/keyline_2</item>
+
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent_1</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/theme_window_bg</item>
+
+        <item name="android:popupMenuStyle">@style/Widget.Structura.PopupMenu</item>
+        <item name="android:listPopupWindowStyle">@style/Widget.Structura.PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.Structura.ListView.DropDown</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/TextLargePopupMenu</item>
+
+        <item name="searchViewStyle">@style/Widget.Structura.SearchView</item>
+    </style>
+
+    <!-- Base application theme -->
+    <style name="Theme.Structura" parent="Base.Theme.Structura" />
+
+    <style name="Theme.Structura.WithNavDrawer" parent="Theme.Structura" />
+
+    <style name="Theme.Structura.Widget" parent="FrameworkRoot.Widget">
+        <item name="android:popupMenuStyle">@style/Widget.Structura.PopupMenu</item>
+        <item name="android:listPopupWindowStyle">@style/Widget.Structura.PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.Structura.ListView.DropDown</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/TextLargePopupMenu</item>
+    </style>
+
+    <style name="Theme.Structura.Search" parent="Theme.Structura">
+        <item name="android:windowBackground">@color/theme_window_bg</item>
+        <item name="android:autoCompleteTextViewStyle">
+            @style/Widget.Structura.Search.AutoCompleteTextView
+        </item>
+        <item name="colorControlActivated">@color/theme_accent_1</item>
+    </style>
+
+    <!-- Main activity -->
+    <style name="Theme.Structura.MainActivity" parent="Theme.Structura.WithNavDrawer" />
+
+    <!-- Linked list activity -->
+    <style name="Theme.Structura.LLActivity" parent="Theme.Structura.WithNavDrawer" />
+
+    <!-- About activity -->
+    <style name="Theme.Structura.LibsActivity" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/ripple_material_light</item>
+
+        <item name="android:windowBackground">@color/theme_window_bg</item>
+    </style>
+
+    <style name="ActionBarThemeOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ActionBarPopupThemeOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

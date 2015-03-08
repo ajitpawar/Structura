@@ -37,7 +37,7 @@ public class LLActivity extends BaseActivity
         mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
 
         // Set a custom tab view.
-        mSlidingTabLayout.setCustomTabView(R.layout.tab_view, android.R.id.text1);
+        mSlidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.tab_text);
 
         // Set indicator colors.
         mSlidingTabLayout.setSelectedIndicatorColors(

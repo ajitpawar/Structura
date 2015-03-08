@@ -8,7 +8,7 @@ import com.davisosa.structura.activities.base.BaseActivity;
 public class MainActivity extends BaseActivity {
     @Override
     protected int getSelfDrawerItem() {
-        return DRAWER_ITEM_LANDING;
+        return DRAWER_ITEM_GONE;
     }
 
     @Override
