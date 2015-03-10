@@ -24,8 +24,8 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Need review for #52
+* Opened #50, #51
 
 ####Omar Hamdan
 
