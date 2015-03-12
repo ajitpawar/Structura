@@ -2,6 +2,17 @@
 <resources>
     <!-- Root styles that vary by API level -->
 
+    <style name="Widget.Structura.Toolbar" parent="Widget.AppCompat.Toolbar" />
+
+    <style name="Widget.Structura.Toolbar.ActionBar" parent="Widget.Structura.Toolbar">
+        <item name="android:gravity">center_vertical</item>
+        <item name="contentInsetStart">@dimen/keyline_2</item>
+        <item name="contentInsetEnd">@dimen/keyline_2</item>
+        <item name="elevation">@dimen/headerbar_elevation</item>
+        <item name="theme">@style/ActionBarThemeOverlay</item>
+        <item name="popupTheme">@style/ActionBarPopupThemeOverlay</item>
+    </style>
+
     <style name="Widget.Structura.Search.AutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
         <item name="android:textColorHint">@color/body_text_hint_inverse</item>
     </style>
@@ -34,20 +45,17 @@
 
     <!-- Empty views -->
     <style name="TextEmpty">
-    <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:textColor">@color/body_text_disabled</item>
     </style>
 
     <!-- Body content -->
     <style name="TextTitle" parent="TextAppearance.AppCompat.Title">
-    <item name="android:textStyle">normal</item>
         <item name="android:ellipsize">end</item>
         <item name="android:textIsSelectable">true</item>
     </style>
 
-    <style name="TextSubhead" parent="TextAppearance.AppCompat.Subhead">
-    <item name="android:textStyle">normal</item>
-    </style>
+    <style name="TextSubhead" parent="TextAppearance.AppCompat.Subhead" />
 
     <style name="TextBody1" parent="TextAppearance.AppCompat.Body1">
         <item name="android:textSize">@dimen/text_size_small</item>

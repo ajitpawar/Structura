@@ -9,13 +9,13 @@ def versionPatch = 5
 def versionBuild = 0    // Dogfood builds, public betas, etc.
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 22
+    buildToolsVersion "22"
 
     defaultConfig {
         applicationId "com.davisosa.structura"
         minSdkVersion 15
-        targetSdkVersion 21
+        targetSdkVersion 22
 
         versionCode versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
@@ -50,11 +50,11 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile 'com.android.support:support-v13:21.0.+'
-    compile 'com.android.support:support-annotations:21.0.+'
-    compile 'com.android.support:appcompat-v7:21.0.+'
+    compile 'com.android.support:support-v13:22.0.+'
+    compile 'com.android.support:support-annotations:22.0.+'
+    compile 'com.android.support:appcompat-v7:22.0.+'
 
-    compile 'com.jakewharton.timber:timber:2.5.+'
+    compile 'com.jakewharton.timber:timber:2.7.+'
     compile('com.mikepenz.aboutlibraries:library:4.5.+@aar') {
         transitive = true
     }

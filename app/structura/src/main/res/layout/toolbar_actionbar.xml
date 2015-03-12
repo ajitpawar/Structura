@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:structura="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar_actionbar"
+    style="@style/Widget.Structura.Toolbar.ActionBar"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:background="?attr/colorPrimary"
-    structura:contentInsetStart="?attr/actionBarInsetStart"
-    structura:popupTheme="@style/ActionBarPopupThemeOverlay"
-    structura:theme="@style/ActionBarThemeOverlay"
-    structura:titleTextAppearance="@style/TextActionBarTitle" />
+    android:layout_height="?attr/actionBarSize" />
