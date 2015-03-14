@@ -14,21 +14,21 @@ Dhyey, Shahin, Sean will do Canvas. <br />
 Ajit, Ishan, Vaishali will do Quiz. <br />
 Amit and Omar will do Search, Landing Page and Save State. 
 
-Quiz (Deadline Sunday March 21):
+Quiz (Deadline Sunday March 22):
 
 - Design
 - Layout
 - Logic
 
-Canvas (Deadline Sunday March 21):
+Canvas (Deadline Sunday March 22):
 
 - Linked List
 - BST
 
-Landing Page (Deadline Sunday March 21):
+Landing Page (Deadline Sunday March 22):
 
 - Logo to button, when pressed invokes search.
 
-Save State (Deadline Sunday March 21):
+Save State (Deadline Sunday March 22):
 
 - To be done after Canvas
