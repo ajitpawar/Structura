@@ -50,7 +50,7 @@
     </style>
 
     <!-- Main activity -->
-    <style name="Theme.Structura.MainActivity" parent="Theme.Structura.WithNavDrawer" />
+    <style name="Theme.Structura.MainActivity" parent="MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus" />
 
     <!-- Linked list activity -->
     <style name="Theme.Structura.LLActivity" parent="Theme.Structura.WithNavDrawer" />

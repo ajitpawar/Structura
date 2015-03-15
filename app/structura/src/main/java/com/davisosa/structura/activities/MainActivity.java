@@ -1,13 +1,14 @@
 package com.davisosa.structura.activities;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
     @Override
-    protected int getSelfDrawerItem() {
+    protected int getSelfDrawerItemId() {
         return DRAWER_ITEM_GONE;
     }
 

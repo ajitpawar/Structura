@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Widget.Structura.Toolbar.ActionBar" parent="Widget.Structura.Toolbar">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:transitionName">actionbar</item>
+        <item name="contentInsetStart">@dimen/keyline_2</item>
+        <item name="contentInsetEnd">@dimen/keyline_2</item>
+        <item name="elevation">@dimen/headerbar_elevation</item>
+        <item name="theme">@style/ActionBarThemeOverlay</item>
+        <item name="popupTheme">@style/ActionBarPopupThemeOverlay</item>
+    </style>
 
     <style name="HeaderBar">
         <item name="android:background">?attr/colorPrimary</item>

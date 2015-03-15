@@ -2,22 +2,13 @@ package com.davisosa.structura.activities.base;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.LayoutRes;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.ScrollView;
-import android.widget.TextView;
+import android.widget.AdapterView;
 
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.LLActivity;
@@ -26,9 +17,12 @@ import com.davisosa.structura.util.OverviewStyler;
 import com.davisosa.structura.util.PrefUtils;
 import com.davisosa.structura.util.UIUtils;
 import com.mikepenz.aboutlibraries.Libs;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 import timber.log.Timber;
 
@@ -37,33 +31,15 @@ import timber.log.Timber;
  */
 public abstract class BaseActivity extends ActionBarActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener {
-    /* Symbols for navigation drawer items (indices must correspond to RES_IDS_DRAWER_TITLE).
+    /* Symbols for navigation drawer items.
      * This is a list of all possible items, which are not necessarily present,
      * in the navigation drawer. */
-    protected static final int DRAWER_ITEM_LL = 0;
-    protected static final int DRAWER_ITEM_SEC2 = 1;
-    protected static final int DRAWER_ITEM_SETTINGS = 2;
-    protected static final int DRAWER_ITEM_ABOUT = 3;
+    protected static final int DRAWER_ITEM_LL = 1;
+    protected static final int DRAWER_ITEM_SEC2 = 2;
+    protected static final int DRAWER_ITEM_SETTINGS = 3;
+    protected static final int DRAWER_ITEM_ABOUT = 4;
     protected static final int DRAWER_ITEM_INVALID = -1;
-    protected static final int DRAWER_ITEM_SEPARATOR = -2;
-    protected static final int DRAWER_ITEM_SEPARATOR_SPECIAL = -3;
     protected static final int DRAWER_ITEM_GONE = -4;
-
-    // Titles for navigation drawer items (indices must correspond to DRAWER_ITEM_*)
-    private static final int[] RES_IDS_DRAWER_TITLE = new int[]{
-            R.string.title_linked_list,
-            R.string.title_section2,
-            R.string.title_settings,
-            R.string.title_about
-    };
-
-    // Icons for navigation drawer items (indices must correspond to RES_IDS_DRAWER_TITLE)
-    private static final int[] RES_IDS_DRAWER_ICON = new int[]{
-            0,    // Section 1
-            0,    // Section 2
-            R.drawable.ic_settings,
-            R.drawable.ic_about
-    };
 
     // Delay to launch navigation drawer item, to allow close animation to play
     private static final int DRAWER_LAUNCH_DELAY = 250;
@@ -74,22 +50,9 @@ public abstract class BaseActivity extends ActionBarActivity
     private static final int MAIN_CONTENT_FADEIN_DURATION = 250;
 
     // Navigation drawer
-    private DrawerLayout mDrawerLayout;
-
-    private ViewGroup mDrawerItemsListContainer;
-
-    /**
-     * Helper component that ties the action bar to the navigation drawer.
-     */
-    private ActionBarDrawerToggleWrapper mDrawerToggle;
+    private Drawer.Result mDrawerResult;
 
     private Handler mHandler;
-
-    // List of navigation drawer items that were actually added to the drawer, in order
-    private List<Integer> mDrawerItems = new ArrayList<>();
-
-    // Views that correspond to each navigation drawer item; default null
-    private View[] mDrawerItemViews = null;
 
     // Primary toolbar and drawer toggle
     private Toolbar mActionBarToolbar;
@@ -108,70 +71,12 @@ public abstract class BaseActivity extends ActionBarActivity
         mNormalStatusBarColor = mThemedStatusBarColor;
     }
 
-    protected boolean isDrawerOpen() {
-        return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(Gravity.START);
-    }
-
-    protected void closeDrawer() {
-        if (mDrawerLayout != null) {
-            mDrawerLayout.closeDrawer(Gravity.START);
-        }
-    }
-
-    /**
-     * Populates the navigation drawer with the appropriate items.
-     */
-    private void populateDrawer() {
-        mDrawerItems.clear();
-
-        mDrawerItems.add(DRAWER_ITEM_LL);
-        mDrawerItems.add(DRAWER_ITEM_SEC2);
-
-        mDrawerItems.add(DRAWER_ITEM_SEPARATOR_SPECIAL);
-        mDrawerItems.add(DRAWER_ITEM_SETTINGS);
-        mDrawerItems.add(DRAWER_ITEM_ABOUT);
-
-        createDrawerItems();
-    }
-
     @Override
     public void onBackPressed() {
-        if (isDrawerOpen()) {
-            closeDrawer();
+        if (mDrawerResult != null && mDrawerResult.isDrawerOpen()) {
+            mDrawerResult.closeDrawer();
         } else {
             super.onBackPressed();
-        }
-    }
-
-    private void createDrawerItems() {
-        mDrawerItemsListContainer = (ViewGroup) findViewById(R.id.drawer_items_list);
-        if (mDrawerItemsListContainer == null) {
-            return;
-        }
-
-        mDrawerItemViews = new View[mDrawerItems.size()];
-        mDrawerItemsListContainer.removeAllViews();
-
-        int i = 0;
-        for (int itemId : mDrawerItems) {
-            mDrawerItemViews[i] = createDrawerItem(itemId, mDrawerItemsListContainer);
-            mDrawerItemsListContainer.addView(mDrawerItemViews[i]);
-            i++;
-        }
-    }
-
-    /**
-     * Sets the given navigation drawer item's appearance to the selected state.
-     *
-     * @param itemId selected navigation drawer item
-     */
-    private void setSelectedDrawerItem(int itemId) {
-        if (mDrawerItemViews != null) {
-            int numItems = mDrawerItems.size();
-            for (int i = 0; i < mDrawerItemViews.length && i < numItems; i++) {
-                int thisItemId = mDrawerItems.get(i);
-                formatDrawerItem(mDrawerItemViews[i], thisItemId, itemId == thisItemId);
-            }
         }
     }
 
@@ -184,76 +89,72 @@ public abstract class BaseActivity extends ActionBarActivity
      * @return {@code DRAWER_ITEM_INVALID} to mean that this {@link android.app.Activity} should
      * not have a navigation drawer.
      */
-    protected int getSelfDrawerItem() {
+    protected int getSelfDrawerItemId() {
         return DRAWER_ITEM_INVALID;
     }
 
     /**
      * Sets up the navigation drawer as appropriate.
+     *
+     * @param savedInstanceState saved instance state
      */
-    private void setupNavigationDrawer() {
-        // Selected navigation drawer item
-        int selfItem = getSelfDrawerItem();
-
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (mDrawerLayout == null) {
-            return;
-        }
-        mDrawerLayout.setStatusBarBackgroundColor(
-                getResources().getColor(R.color.theme_primary_dark));
-        ScrollView drawer = (ScrollView) mDrawerLayout.findViewById(R.id.drawer);
-        if (selfItem == DRAWER_ITEM_INVALID) {
+    private void setupNavigationDrawer(Bundle savedInstanceState) {
+        int selfItemId = getSelfDrawerItemId();
+        if (selfItemId == DRAWER_ITEM_INVALID) {
             // Don't show a navigation drawer.
-            if (drawer != null) {
-                ((ViewGroup) drawer.getParent()).removeView(drawer);
-            }
-            mDrawerLayout = null;
             return;
         }
 
-        /* ActionBarDrawerToggle ties together the the proper interactions
-         * between the navigation drawer and the action bar app icon. */
-        mDrawerToggle = setupDrawerToggle(mActionBarToolbar, mDrawerLayout,
-                new DrawerLayout.DrawerListener() {
+        // Create the navigation drawer.
+        mDrawerResult = new Drawer()
+                .withActivity(this)
+                .withToolbar(mActionBarToolbar)
+                .addDrawerItems(
+                        new PrimaryDrawerItem()
+                                .withName(R.string.title_linked_list)
+                                .withIdentifier(DRAWER_ITEM_LL),
+                        new PrimaryDrawerItem()
+                                .withName(R.string.title_section2)
+                                .withIdentifier(DRAWER_ITEM_SEC2),
+                        new DividerDrawerItem(),
+                        new SecondaryDrawerItem()
+                                .withName(R.string.title_about)
+                                .withIcon(R.drawable.ic_about)
+                                .withTintSelectedIcon(true)
+                                .withIdentifier(DRAWER_ITEM_ABOUT)
+                )
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
-                    public void onDrawerClosed(View drawerView) {
-                        invalidateOptionsMenu();    // Calls onPrepareOptionsMenu()
+                    public void onItemClick(AdapterView<?> parent, View view, int pos,
+                                            long id, IDrawerItem drawerItem) {
+                        if (drawerItem != null && drawerItem instanceof Nameable) {
+                            getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
+                            onDrawerItemClick(drawerItem.getIdentifier());
+                        }
                     }
+                })
+                .withFireOnInitialOnClick(true)
+                .withSavedInstance(savedInstanceState)
+                .build();
 
-                    @Override
-                    public void onDrawerOpened(View drawerView) {
-                        invalidateOptionsMenu();    // Calls onPrepareOptionsMenu()
-                    }
-
-                    @Override
-                    public void onDrawerStateChanged(int newState) {
-                    }
-
-                    @Override
-                    public void onDrawerSlide(View drawerView, float slideOffset) {
-                    }
-                });
-
-        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, Gravity.START);
-
-        // Populate the navigation drawer with the correct items.
-        populateDrawer();
-
-        mDrawerToggle.syncState();
+        // Set the active selection if this is a new instance.
+        if (savedInstanceState == null) {
+            if (selfItemId > 0) {
+                mDrawerResult.setSelectionByIdentifier(selfItemId, false);
+            }
+        }
 
         // First run of the app starts with the navigation drawer open.
         if (!PrefUtils.isWelcomeDone(this)) {
             PrefUtils.markWelcomeDone(this);
-            mDrawerLayout.openDrawer(Gravity.START);
+            mDrawerResult.openDrawer();
         }
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if (mDrawerToggle != null) {
-            mDrawerToggle.onConfigurationChanged(newConfig);
-        }
+    protected void onSaveInstanceState(Bundle outState) {
+        outState = mDrawerResult.saveInstanceState(outState);
+        super.onSaveInstanceState(outState);
     }
 
     @Override
@@ -262,9 +163,9 @@ public abstract class BaseActivity extends ActionBarActivity
         getActionBarToolbar();
     }
 
-    public void onDrawerItemClicked(final int itemId) {
-        if (itemId == getSelfDrawerItem()) {
-            mDrawerLayout.closeDrawer(Gravity.START);
+    public void onDrawerItemClick(final int itemId) {
+        if (itemId == getSelfDrawerItemId()) {
+            mDrawerResult.closeDrawer();
             return;
         }
 
@@ -280,7 +181,7 @@ public abstract class BaseActivity extends ActionBarActivity
             }, DRAWER_LAUNCH_DELAY);
 
             // Change the active item on the list so the user can see the item changed.
-            setSelectedDrawerItem(itemId);
+            mDrawerResult.setSelectionByIdentifier(itemId, false);
 
             // Fade out the main content.
             View mainContent = findViewById(R.id.main_content);
@@ -289,53 +190,7 @@ public abstract class BaseActivity extends ActionBarActivity
             }
         }
 
-        mDrawerLayout.closeDrawer(Gravity.START);
-    }
-
-    protected ActionBarDrawerToggleWrapper setupDrawerToggle(
-            Toolbar toolbar, DrawerLayout drawerLayout,
-            final DrawerLayout.DrawerListener drawerListener) {
-        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
-                this,                  /* host Activity */
-                drawerLayout,          /* DrawerLayout object */
-                toolbar,               /* action bar Toolbar */
-                R.string.drawer_open,  /* "open drawer" description for accessibility */
-                R.string.drawer_close  /* "close drawer" description for accessibility */
-        ) {
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-                drawerListener.onDrawerClosed(drawerView);
-            }
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                drawerListener.onDrawerOpened(drawerView);
-            }
-
-            @Override
-            public void onDrawerStateChanged(int newState) {
-                super.onDrawerStateChanged(newState);
-                drawerListener.onDrawerStateChanged(newState);
-            }
-
-            @Override
-            public void onDrawerSlide(View drawerView, float slideOffset) {
-                super.onDrawerSlide(drawerView, slideOffset);
-                drawerListener.onDrawerSlide(drawerView, slideOffset);
-            }
-        };
-
-        drawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mDrawerLayout.openDrawer(Gravity.START);
-            }
-        });
-
-        drawerLayout.setDrawerListener(drawerToggle);
-        return new ActionBarDrawerToggleWrapper(drawerToggle);
+        mDrawerResult.closeDrawer();
     }
 
     private boolean isSpecialItem(int itemId) {
@@ -343,19 +198,21 @@ public abstract class BaseActivity extends ActionBarActivity
     }
 
     /**
-     * Navigates to selected drawer item.
+     * Navigates to the selected drawer item.
      *
-     * @param item selected navigation drawer item
+     * @param itemId selected navigation drawer item
      */
-    public void goToDrawerItem(int item) {
-        switch (item) {
+    public void goToDrawerItem(int itemId) {
+        switch (itemId) {
             case DRAWER_ITEM_LL:
-                startActivity(new Intent(this, LLActivity.class));
+                UIUtils.startActivityWithTransition(this, new Intent(this, LLActivity.class),
+                        mActionBarToolbar, "actionbar");
                 finish();
                 break;
             case DRAWER_ITEM_SEC2:
                 // TODO: new Activity
-                startActivity(new Intent(this, MainActivity.class));
+                UIUtils.startActivityWithTransition(this, new Intent(this, MainActivity.class),
+                        mActionBarToolbar, "actionbar");
                 finish();
                 break;
             case DRAWER_ITEM_SETTINGS:
@@ -378,7 +235,7 @@ public abstract class BaseActivity extends ActionBarActivity
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        setupNavigationDrawer();
+        setupNavigationDrawer(savedInstanceState);
 
         View mainContent = findViewById(R.id.main_content);
         if (mainContent != null) {
@@ -389,24 +246,6 @@ public abstract class BaseActivity extends ActionBarActivity
         }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (mDrawerToggle != null && mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-
-        switch (id) {
-            case R.id.action_settings:
-                // TODO
-                break;
-            case R.id.action_example:
-                // TODO
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     protected Toolbar getActionBarToolbar() {
         if (mActionBarToolbar == null) {
             mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
@@ -415,78 +254,6 @@ public abstract class BaseActivity extends ActionBarActivity
             }
         }
         return mActionBarToolbar;
-    }
-
-    private View createDrawerItem(final int itemId, ViewGroup container) {
-        boolean selected = getSelfDrawerItem() == itemId;
-
-        int layout;
-        if (itemId == DRAWER_ITEM_SEPARATOR) {
-            layout = R.layout.drawer_separator;
-        } else if (itemId == DRAWER_ITEM_SEPARATOR_SPECIAL) {
-            layout = R.layout.drawer_separator;
-        } else {
-            layout = R.layout.drawer_item;
-        }
-        View view = getLayoutInflater().inflate(layout, container, false);
-
-        if (isSeparator(itemId)) {
-            // We're done.
-            UIUtils.setAccessibilityIgnore(view);
-            return view;
-        }
-
-        ImageView iconView = (ImageView) view.findViewById(R.id.icon);
-        TextView titleView = (TextView) view.findViewById(R.id.title);
-        int iconId = itemId >= 0 && itemId < RES_IDS_DRAWER_ICON.length ?
-                RES_IDS_DRAWER_ICON[itemId] : 0;
-        int titleId = itemId >= 0 && itemId < RES_IDS_DRAWER_TITLE.length ?
-                RES_IDS_DRAWER_TITLE[itemId] : 0;
-
-        // Set icon and text.
-        if (iconId > 0) {
-            iconView.setVisibility(View.VISIBLE);
-            iconView.setImageResource(iconId);
-        } else {
-            iconView.setVisibility(View.INVISIBLE);
-        }
-        titleView.setText(getString(titleId));
-
-        formatDrawerItem(view, itemId, selected);
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onDrawerItemClicked(itemId);
-            }
-        });
-
-        return view;
-    }
-
-    private boolean isSeparator(int itemId) {
-        return itemId == DRAWER_ITEM_SEPARATOR || itemId == DRAWER_ITEM_SEPARATOR_SPECIAL;
-    }
-
-    private void formatDrawerItem(View view, int itemId, boolean selected) {
-        if (isSeparator(itemId)) {
-            return;    // N/A
-        }
-
-        ImageView iconView = (ImageView) view.findViewById(R.id.icon);
-        TextView titleView = (TextView) view.findViewById(R.id.title);
-
-        if (selected) {
-            view.setBackgroundResource(R.drawable.drawer_item_bg_selected);
-        }
-
-        // Configure its appearance according to whether or not it's selected.
-        titleView.setTextColor(selected ?
-                getResources().getColor(R.color.drawer_text_color_selected) :
-                getResources().getColor(R.color.drawer_text_color));
-        iconView.setColorFilter(selected ?
-                getResources().getColor(R.color.drawer_icon_tint_selected) :
-                getResources().getColor(R.color.drawer_icon_tint), PorterDuff.Mode.SRC_IN);
     }
 
     @Override
@@ -505,34 +272,5 @@ public abstract class BaseActivity extends ActionBarActivity
 
     public void setNormalStatusBarColor(int color) {
         mNormalStatusBarColor = color;
-        if (mDrawerLayout != null) {
-            mDrawerLayout.setStatusBarBackgroundColor(mNormalStatusBarColor);
-        }
-    }
-
-    public class ActionBarDrawerToggleWrapper {
-        private ActionBarDrawerToggle mDrawerToggle;
-
-        public ActionBarDrawerToggleWrapper(ActionBarDrawerToggle drawerToggle) {
-            mDrawerToggle = drawerToggle;
-        }
-
-        public void syncState() {
-            if (mDrawerToggle != null) {
-                mDrawerToggle.syncState();
-            }
-        }
-
-        public void onConfigurationChanged(Configuration newConfig) {
-            // Forward the new configuration to the drawer toggle component.
-            if (mDrawerToggle != null) {
-                mDrawerToggle.onConfigurationChanged(newConfig);
-            }
-        }
-
-        public boolean onOptionsItemSelected(MenuItem item) {
-            // Toggle navigation drawer on selecting action bar app icon/title.
-            return mDrawerToggle != null && mDrawerToggle.onOptionsItemSelected(item);
-        }
     }
 }

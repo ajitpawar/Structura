@@ -16,7 +16,7 @@ public class LLActivity extends BaseActivity
     private SlidingTabLayout mSlidingTabLayout;
 
     @Override
-    protected int getSelfDrawerItem() {
+    protected int getSelfDrawerItemId() {
         return DRAWER_ITEM_LL;
     }
 
