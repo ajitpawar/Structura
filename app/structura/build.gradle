@@ -58,6 +58,9 @@ dependencies {
     compile('com.mikepenz.aboutlibraries:library:4.5.+@aar') {
         transitive = true
     }
+    compile('com.mikepenz.materialdrawer:library:2.0.+@aar') {
+        transitive = true
+    }
 
     compile 'com.melnykov:floatingactionbutton:1.2.0'
 }

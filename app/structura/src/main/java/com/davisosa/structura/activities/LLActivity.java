@@ -15,7 +15,7 @@ public class LLActivity extends BaseActivity implements LinkedListPlayFragment.O
     private SlidingTabLayout mSlidingTabLayout;
 
     @Override
-    protected int getSelfDrawerItem() {
+    protected int getSelfDrawerItemId() {
         return DRAWER_ITEM_LL;
     }
 
@@ -25,7 +25,7 @@ public class LLActivity extends BaseActivity implements LinkedListPlayFragment.O
         setContentView(R.layout.activity_linked_list);
 
         getSupportActionBar().setTitle(R.string.title_linked_list);
-         overridePendingTransition(0, 0);
+        overridePendingTransition(0, 0);
 
         // Get the ViewPager and set its PagerAdapter so that it can display items.
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
