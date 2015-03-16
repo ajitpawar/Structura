@@ -1,6 +1,6 @@
 # Semi-weekly Scrum
 
-## Mar 2 (Monday)
+## March 2 (Monday)
 
 ####Dhyey Sejpal
 
@@ -40,7 +40,7 @@
 * Something
 * Something else
 
-## Mar 5 (Thursday)
+## March 5 (Thursday)
 
 ####Dhyey Sejpal
 

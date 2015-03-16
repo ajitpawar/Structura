@@ -1,6 +1,6 @@
 # Semi-weekly Scrum
 
-## Feb 23 (Monday)
+## February 23 (Monday)
 
 ####Dhyey Sejpal
 
@@ -39,7 +39,7 @@
 * Something
 * Something else
 
-## Feb 27 (Friday)
+## February 27 (Friday)
 
 ####Dhyey Sejpal
 
