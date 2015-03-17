@@ -24,8 +24,8 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Merged #52.
+* Worked on #30.
 
 ####Omar Hamdan
 
