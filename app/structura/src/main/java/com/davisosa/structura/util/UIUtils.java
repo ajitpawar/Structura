@@ -1,8 +1,8 @@
 package com.davisosa.structura.util;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorRes;
@@ -10,6 +10,7 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
 import android.text.TextUtils;
 import android.view.View;
@@ -49,9 +50,9 @@ public final class UIUtils {
     }
 
     public static Drawable getTintedDrawable(
-            Resources res, @DrawableRes int drawResId, @ColorRes int colResId) {
-        Drawable drawable = res.getDrawable(drawResId, null);
-        drawable.setColorFilter(res.getColor(colResId), PorterDuff.Mode.SRC_IN);
+            Context context, @DrawableRes int drawResId, @ColorRes int colResId) {
+        Drawable drawable = ContextCompat.getDrawable(context, drawResId);
+        drawable.setColorFilter(context.getResources().getColor(colResId), PorterDuff.Mode.SRC_IN);
         return drawable;
     }
 }
