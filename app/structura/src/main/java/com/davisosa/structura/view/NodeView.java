@@ -1,4 +1,4 @@
-package com.davisosa.structura;
+package com.davisosa.structura.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,12 +6,14 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.davisosa.structura.R;
+import com.davisosa.structura.model.LLNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,12 +45,12 @@ public class NodeView extends View {
     }
 
     public LLNode createNewNode() {
-        int topOffset = (int) (defaulttNodeTop + (250 * ( Math.floor((double)nodeList.size()/3) )));
+        int topOffset = (int) (defaulttNodeTop + (250 * (Math.floor((double) nodeList.size() / 3))));
         int leftOffset;
         if (nodeList.size() < 3) {
             leftOffset = defaultNodeLeft + (300 * (nodeList.size()));
         } else {
-            if ( Math.floor(nodeList.size()/3) % 2 == 1 ) {
+            if (Math.floor(nodeList.size() / 3) % 2 == 1) {
                 leftOffset = (int) (defaultNodeLeft + (300 * Math.abs(2 - (nodeList.size() - (3 * (Math.floor(nodeList.size() / 3)))))));
             } else {
                 leftOffset = (int) (defaultNodeLeft + (300 * (nodeList.size() - (3 * (Math.floor(nodeList.size() / 3))))));
@@ -60,14 +62,14 @@ public class NodeView extends View {
         int value = rand_num;
         // TODO: convert to enum
         int arrowDirection = 0; // -1 -> none, 0 -> right horizontal, 1 -> vertical, 3 -> both, 4 -> left horizontal
-        if ( Math.floor(nodeList.size()/3) % 2 == 0 ) {
-            if ( (nodeList.size()+1 - 3) % 3 == 0 ) {
+        if (Math.floor(nodeList.size() / 3) % 2 == 0) {
+            if ((nodeList.size() + 1 - 3) % 3 == 0) {
                 arrowDirection = 1;
             }
         } else {
-            if ( (nodeList.size() - (3*(Math.floor(nodeList.size() / 3)))) == 2 ) {
+            if ((nodeList.size() - (3 * (Math.floor(nodeList.size() / 3)))) == 2) {
                 arrowDirection = 3;
-            } else if ( ( nodeList.size() - (3*(Math.floor(nodeList.size() / 3)))) == 0 ) {
+            } else if ((nodeList.size() - (3 * (Math.floor(nodeList.size() / 3)))) == 0) {
                 arrowDirection = -1;
             } else {
                 arrowDirection = 4;
@@ -116,6 +118,7 @@ public class NodeView extends View {
                             public void onTick(long millisUntilFinished) {
 
                             }
+
                             public void onFinish() {
                                 currentSearchNode = null;
                                 invalidate();
@@ -123,11 +126,13 @@ public class NodeView extends View {
 
                         }.start();
                     }
-                };
+                }
+
+                ;
 
             };
 
-            handler.postDelayed(runnable, 2000*i);
+            handler.postDelayed(runnable, 2000 * i);
         }
     }
 
@@ -136,7 +141,7 @@ public class NodeView extends View {
         LLNode currentNode = nodeList.get(index);
         Bitmap bitmap = currentNode.bitmap;
 
-        Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth()-120, bitmap.getHeight(), Bitmap.Config.ARGB_4444);
+        Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth() - 120, bitmap.getHeight(), Bitmap.Config.ARGB_4444);
         Canvas canvas = new Canvas(newBitmap);
         canvas.drawColor(Color.argb(100, 57, 202, 116));
 

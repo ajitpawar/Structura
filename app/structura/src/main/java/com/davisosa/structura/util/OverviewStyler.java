@@ -11,23 +11,23 @@ import android.os.Build;
 import com.davisosa.structura.R;
 
 /**
- * Helper class that applies the proper icon, title and background color to recent tasks list.
+ * Helper class that applies the proper icon, title and background color to the overview list.
  */
-public class RecentTasksStyler {
+public class OverviewStyler {
     private static Bitmap sIcon = null;
 
-    private RecentTasksStyler() {
+    private OverviewStyler() {
         // Private constructor for helper class
     }
 
     /**
-     * Applies the proper icon, title and background color to recent tasks list
+     * Applies the proper icon, title and background color to the overview list
      * for a given activity.
      *
      * @param act activity
      */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public static void styleRecentTasksEntry(Activity act) {
+    public static void styleOverviewEntry(Activity act) {
         if (!Utils.hasLP()) {
             return;
         }

@@ -1,4 +1,4 @@
-package com.davisosa.structura;
+package com.davisosa.structura.fragments;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -12,39 +12,41 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 
+import com.davisosa.structura.R;
+import com.davisosa.structura.view.NodeView;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link LinkedListPlayFragment.OnFragmentInteractionListener} interface
+ * {@link LLPlayFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link LinkedListPlayFragment#newInstance} factory method to
+ * Use the {@link LLPlayFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LinkedListPlayFragment extends Fragment {
+public class LLPlayFragment extends Fragment {
 
-    private OnFragmentInteractionListener mListener;
     Button addNodeBtn;
     Button delNodeBtn;
     Button searchNodeBtn;
-
     NodeView nv;
+    private OnFragmentInteractionListener mListener;
+
+    public LLPlayFragment() {
+        // Required empty public constructor
+    }
 
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment LinkedListPlayFragment.
+     * @return A new instance of fragment LLPlayFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LinkedListPlayFragment newInstance() {
-        LinkedListPlayFragment fragment = new LinkedListPlayFragment();
+    public static LLPlayFragment newInstance() {
+        LLPlayFragment fragment = new LLPlayFragment();
         Bundle args = new Bundle();
         return fragment;
-    }
-
-    public LinkedListPlayFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -56,13 +58,13 @@ public class LinkedListPlayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_linked_list_play, container, false);
+        FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_ll_play, container, false);
         ViewGroup.LayoutParams lp = fl.getLayoutParams();
 
         nv = new NodeView(getActivity(), getActivity());
         fl.addView(nv, lp.width, lp.height);
 
-        addNodeBtn = (Button) fl.findViewById(R.id.addButton);
+        addNodeBtn = (Button) fl.findViewById(R.id.btn_insert);
         addNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +72,7 @@ public class LinkedListPlayFragment extends Fragment {
             }
         });
 
-        delNodeBtn = (Button) fl.findViewById(R.id.deleteButton);
+        delNodeBtn = (Button) fl.findViewById(R.id.btn_delete);
         delNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +80,7 @@ public class LinkedListPlayFragment extends Fragment {
             }
         });
 
-        searchNodeBtn = (Button) fl.findViewById(R.id.searchButton);
+        searchNodeBtn = (Button) fl.findViewById(R.id.btn_search);
         searchNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

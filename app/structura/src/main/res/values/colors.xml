@@ -9,7 +9,7 @@
     <!-- 20% alpha white -->
     <color name="pressed_color">#3FFF</color>
 
-    <!-- Branding colors -->
+    <!-- Branding -->
     <color name="theme_primary">@color/teal_500</color>
     <color name="theme_primary_dark">@color/teal_700</color>
     <color name="theme_primary_light">@color/teal_100</color>
@@ -19,22 +19,22 @@
 
     <color name="divider">@color/black_dividers</color>
     <color name="divider_inverse">@color/white_dividers</color>
-    <color name="icons">@color/body_text_2</color>
-    <color name="icons_inverse">@color/body_text_1_inverse</color>
+    <color name="icons">@color/body_text_secondary</color>
+    <color name="icons_inverse">@color/body_text_inverse</color>
 
-    <!-- Body text colors -->
-    <color name="body_text_1">@color/black_text</color>
-    <color name="body_text_1_inverse">@color/white_text</color>
-    <color name="body_text_2">@color/black_text_secondary</color>
-    <color name="body_text_2_inverse">@color/white_text_secondary</color>
+    <!-- Body text -->
+    <color name="body_text">@color/black_text</color>
+    <color name="body_text_inverse">@color/white_text</color>
+    <color name="body_text_secondary">@color/black_text_secondary</color>
+    <color name="body_text_secondary_inverse">@color/white_text_secondary</color>
     <color name="body_text_disabled">@color/black_text_disabled</color>
     <color name="body_text_disabled_inverse">@color/white_text_disabled</color>
     <color name="body_text_hint">@color/body_text_disabled</color>
     <color name="body_text_hint_inverse">@color/body_text_disabled_inverse</color>
 
-    <!-- Navigation drawer colors -->
+    <!-- Navigation drawer -->
     <color name="drawer_bg">@color/theme_window_bg</color>
-    <color name="drawer_text_color">@color/body_text_1</color>
+    <color name="drawer_text_color">@color/body_text</color>
     <color name="drawer_text_color_selected">@color/theme_primary</color>
     <color name="drawer_icon_tint">@color/icons</color>
     <color name="drawer_icon_tint_selected">@color/theme_primary</color>
@@ -45,36 +45,40 @@
     <color name="tab_text_disabled">#9FFF</color>
     <color name="tab_indicator_color">@color/theme_accent_1</color>
 
-    <!-- Play Fragment colours -->
-    <color name="footer_bg">@color/white</color>
+    <!-- Footer -->
+    <color name="footer_bg">@color/grey_50</color>
     <color name="footer_separator_color">@color/divider</color>
 
-    <!-- AboutLibraries colors -->
-    <color name="about_libraries_card">@color/cardview_light_background</color>
-    <color name="about_libraries_title_openSource">@color/body_text_1</color>
-    <color name="about_libraries_text_openSource">@color/body_text_2</color>
-    <color name="about_libraries_dividerDark_openSource">@color/divider_inverse</color>
-    <color name="about_libraries_dividerLight_openSource">@color/divider</color>
+    <!-- Play buttons -->
+    <color name="btn_insert_text_color">@color/green_A400</color>
+    <color name="btn_delete_text_color">@color/red_A400</color>
+    <color name="btn_search_text_color">@color/blue_A400</color>
 
-    <!-- Add Node Button colors -->
+    <!-- Add Node Button colors TODO: remove -->
     <color name="add_primary">#39CA74</color>
     <color name="add_primary_pressed">#89D280</color>
     <color name="add_ripple">#ff80ab</color>
     <color name="add_accent">#ff4081</color>
     <color name="add_accent_pressed">#f50057</color>
 
-    <!-- Delete Node Button colors -->
+    <!-- Delete Node Button colors TODO: remove -->
     <color name="del_primary">#F3494C</color>
     <color name="del_primary_pressed">#F3494C</color>
     <color name="del_ripple">#ff80ab</color>
     <color name="del_accent">#ff4081</color>
     <color name="del_accent_pressed">#f50057</color>
 
-    <!-- Search Node Button colors -->
+    <!-- Search Node Button colors TODO: remove -->
     <color name="srch_primary">#466EB1</color>
     <color name="srch_primary_pressed">#5DACE1</color>
     <color name="srch_ripple">#ff80ab</color>
     <color name="srch_accent">#ff4081</color>
     <color name="srch_accent_pressed">#f50057</color>
 
+    <!-- AboutLibraries -->
+    <color name="about_libraries_card">@color/cardview_light_background</color>
+    <color name="about_libraries_title_openSource">@color/body_text</color>
+    <color name="about_libraries_text_openSource">@color/body_text_secondary</color>
+    <color name="about_libraries_dividerDark_openSource">@color/divider_inverse</color>
+    <color name="about_libraries_dividerLight_openSource">@color/divider</color>
 </resources>

@@ -44,19 +44,6 @@
                 android:src="@drawable/structura_logo" />
 
             <TextView
-                android:id="@+id/landing_body_txt_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/element_spacing_normal"
-                android:paddingLeft="@dimen/content_padding_normal"
-                android:paddingRight="@dimen/content_padding_normal"
-                android:text="@string/landing_body_txt_1"
-                android:textColor="@color/body_text_1"
-                android:textIsSelectable="false"
-                android:textSize="@dimen/text_size_large" />
-
-            <TextView
                 android:id="@+id/landing_body_txt_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,10 +51,21 @@
                 android:layout_marginTop="@dimen/element_spacing_normal"
                 android:paddingLeft="@dimen/content_padding_normal"
                 android:paddingRight="@dimen/content_padding_normal"
+                android:text="@string/landing_body_txt_1"
+                android:textAppearance="@style/TextBody2"
+                android:textIsSelectable="false" />
+
+            <TextView
+                android:id="@+id/landing_body_txt_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/element_spacing_normal"
+                android:paddingLeft="@dimen/content_padding_normal"
+                android:paddingRight="@dimen/content_padding_normal"
                 android:text="@string/landing_body_txt_2"
-                android:textColor="@color/body_text_2"
-                android:textIsSelectable="false"
-                android:textSize="@dimen/text_size_large" />
+                android:textAppearance="@style/TextBody1"
+                android:textIsSelectable="false" />
         </LinearLayout>
 
     </FrameLayout>

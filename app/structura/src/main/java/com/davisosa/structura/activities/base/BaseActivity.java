@@ -22,8 +22,8 @@ import android.widget.TextView;
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.LLActivity;
 import com.davisosa.structura.activities.MainActivity;
+import com.davisosa.structura.util.OverviewStyler;
 import com.davisosa.structura.util.PrefUtils;
-import com.davisosa.structura.util.RecentTasksStyler;
 import com.davisosa.structura.util.UIUtils;
 import com.mikepenz.aboutlibraries.Libs;
 
@@ -47,7 +47,7 @@ public abstract class BaseActivity extends ActionBarActivity
     protected static final int DRAWER_ITEM_INVALID = -1;
     protected static final int DRAWER_ITEM_SEPARATOR = -2;
     protected static final int DRAWER_ITEM_SEPARATOR_SPECIAL = -3;
-    protected static final int DRAWER_ITEM_LANDING = -4;
+    protected static final int DRAWER_ITEM_GONE = -4;
 
     // Titles for navigation drawer items (indices must correspond to DRAWER_ITEM_*)
     private static final int[] RES_IDS_DRAWER_TITLE = new int[]{
@@ -100,7 +100,7 @@ public abstract class BaseActivity extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RecentTasksStyler.styleRecentTasksEntry(this);
+        OverviewStyler.styleOverviewEntry(this);
         PrefUtils.registerOnSharedPreferenceChangeListener(this, this);
 
         mHandler = new Handler();
