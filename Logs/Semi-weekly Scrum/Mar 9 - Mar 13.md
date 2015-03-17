@@ -66,14 +66,13 @@
 
 ####Shahin Yousefi
 
-* Something
-* Something else
+* Worked more on #52.
 
 ####Omar Hamdan
 
 * Something
 * Something else
-* 
+
 ####Sean Williams
 
 * Something
