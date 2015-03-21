@@ -7,8 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.davisosa.structura.R;
 import com.davisosa.structura.fragments.LLPlayFragment;
+import com.davisosa.structura.fragments.LLQuizFragment;
 import com.davisosa.structura.fragments.LLSummaryFragment;
-import com.davisosa.structura.fragments.PageFragment;
 
 import timber.log.Timber;
 
@@ -41,8 +41,8 @@ public class LLPagerAdapter extends FragmentPagerAdapter {
                 Timber.d("Creating Summary fragment");
                 return LLSummaryFragment.newInstance(position + 1);
             case QUIZ:
-                Timber.d("Creating fragment #" + position + 1);
-                return PageFragment.newInstance(position + 1);
+                Timber.d("Creating Quiz fragment");
+                return LLQuizFragment.newInstance(position + 2);
             default:
                 return null;
         }
