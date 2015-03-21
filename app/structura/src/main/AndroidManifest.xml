@@ -27,11 +27,5 @@
             android:label="@string/title_linked_list"
             android:theme="@style/Theme.Structura.LLActivity"></activity>
 
-        <activity
-                android:name=".activities.QuizActivity"
-                android:label="@string/title_quiz"
-                android:theme="@style/Theme.Structura.QuizActivity">
-        </activity>
-
     </application>
 </manifest>

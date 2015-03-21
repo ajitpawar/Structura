@@ -1,5 +1,7 @@
 package com.davisosa.structura.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RadioGroup;
 import com.davisosa.structura.R;
 
 
@@ -16,24 +19,8 @@ public class LLQuizFragment extends Fragment {
 
     private Button btnSubmitQuiz;
     int score,ans1,ans2, ans3;
+    int qCount = 5;
 
-/*
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mPage = getArguments().getInt(ARG_PAGE);
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_page, container, false);
-        TextView textView = (TextView) view;
-        textView.setText("Fragment #55" + mPage); // default text for each fragment
-        return view;
-    }
-
-*/
 
     public static LLQuizFragment newInstance(int quiz) {
         Bundle args = new Bundle();
@@ -57,16 +44,7 @@ public class LLQuizFragment extends Fragment {
         FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_quiz, container, false);
         ViewGroup.LayoutParams lp = fl.getLayoutParams();
 
-
-        return fl;
-    }
-
- /*
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
-        RadioGroup champ=(RadioGroup)findViewById(R.id.answer1);
+        RadioGroup champ=(RadioGroup) fl.findViewById(R.id.answer1);
         champ.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // TODO Auto-generated method stub
@@ -83,7 +61,8 @@ public class LLQuizFragment extends Fragment {
                 }
             }
         });
-        RadioGroup gBall=(RadioGroup)findViewById(R.id.answer2);
+
+        RadioGroup gBall=(RadioGroup) fl.findViewById(R.id.answer2);
         gBall.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // TODO Auto-generated method stub
@@ -100,7 +79,8 @@ public class LLQuizFragment extends Fragment {
                 }
             }
         });
-        RadioGroup gBoot = (RadioGroup)findViewById(R.id.answer3);
+
+        RadioGroup gBoot = (RadioGroup) fl.findViewById(R.id.answer3);
         gBoot.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // TODO Auto-generated method stub
@@ -117,7 +97,8 @@ public class LLQuizFragment extends Fragment {
                 }
             }
         });
-        btnSubmitQuiz = (Button) findViewById(R.id.submit);
+
+        btnSubmitQuiz = (Button) fl.findViewById(R.id.submit);
         btnSubmitQuiz.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 score =0;
@@ -128,10 +109,27 @@ public class LLQuizFragment extends Fragment {
                     score++;
                 if(ans3 == 1)
                     score++;
-                Toast.makeText(QuizActivity.this, "Your score is:" + score + " out of 3", Toast.LENGTH_LONG).show();
+                //Toast.makeText(QuizActivity.this, "Your score is:" + score + " out of 3", Toast.LENGTH_LONG).show();
+                showScore(score);
             }
         });
-    }
-  */
 
+        return fl;
+    }
+
+    private void showScore(int score){
+        AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+
+        alert.setTitle("Your Score");
+        alert.setMessage("Your score is: " + score + " out of " + qCount);
+
+        alert.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Canceled.
+            }
+        });
+
+        alert.show();
+    }
+    
 }
