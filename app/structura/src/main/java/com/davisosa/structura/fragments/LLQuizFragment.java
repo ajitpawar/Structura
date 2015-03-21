@@ -14,13 +14,12 @@ import com.davisosa.structura.R;
 
 
 public class LLQuizFragment extends Fragment {
+
     public static final String ARG_PAGE = "ARG_PAGE";
-    private int mPage;
 
     private Button btnSubmitQuiz;
     int score,ans1,ans2, ans3;
-    int qCount = 5;
-
+    int qCount = 3;
 
     public static LLQuizFragment newInstance(int quiz) {
         Bundle args = new Bundle();
@@ -44,28 +43,30 @@ public class LLQuizFragment extends Fragment {
         FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_quiz, container, false);
         ViewGroup.LayoutParams lp = fl.getLayoutParams();
 
-        RadioGroup champ=(RadioGroup) fl.findViewById(R.id.answer1);
-        champ.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        // Question 1
+        RadioGroup q1=(RadioGroup) fl.findViewById(R.id.answer1);
+        q1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // TODO Auto-generated method stub
+
                 switch(checkedId) {
                     case R.id.answer1A:
-                        ans1 =1;
+                        ans1 = 1;
                         break;
                     case R.id.answer1B:
-                        ans1 =2;
+                        ans1 = 2;
                         break;
                     case R.id.answer1C:
-                        ans1 =3;
+                        ans1 = 3;
                         break;
                 }
             }
         });
 
-        RadioGroup gBall=(RadioGroup) fl.findViewById(R.id.answer2);
-        gBall.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        // Question 2
+        RadioGroup q2=(RadioGroup) fl.findViewById(R.id.answer2);
+        q2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // TODO Auto-generated method stub
+
                 switch(checkedId) {
                     case R.id.answer2A:
                         ans2 = 1;
@@ -80,10 +81,11 @@ public class LLQuizFragment extends Fragment {
             }
         });
 
-        RadioGroup gBoot = (RadioGroup) fl.findViewById(R.id.answer3);
-        gBoot.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        // Question 3
+        RadioGroup q3 = (RadioGroup) fl.findViewById(R.id.answer3);
+        q3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // TODO Auto-generated method stub
+
                 switch(checkedId) {
                     case R.id.answer3A:
                         ans3 = 1;
@@ -92,24 +94,22 @@ public class LLQuizFragment extends Fragment {
                         ans3 = 2;
                         break;
                     case R.id.answer3C:
-                        ans3 =3;
+                        ans3 = 3;
                         break;
                 }
             }
         });
 
+        // Submit Button
         btnSubmitQuiz = (Button) fl.findViewById(R.id.submit);
         btnSubmitQuiz.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                score =0;
-                // TODO Auto-generated method stub
-                if(ans1 == 2)
-                    score++;
-                if(ans2 == 3)
-                    score++;
-                if(ans3 == 1)
-                    score++;
-                //Toast.makeText(QuizActivity.this, "Your score is:" + score + " out of 3", Toast.LENGTH_LONG).show();
+                score = 0;
+                if(ans1 == 1) score++;
+                if(ans2 == 3) score++;
+                if(ans3 == 2) score++;
+
+                // display score to user
                 showScore(score);
             }
         });
@@ -117,6 +117,8 @@ public class LLQuizFragment extends Fragment {
         return fl;
     }
 
+
+    // Display score alert
     private void showScore(int score){
         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
@@ -125,11 +127,11 @@ public class LLQuizFragment extends Fragment {
 
         alert.setNegativeButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                // Canceled.
+                // OK. Do nothing.
             }
         });
 
         alert.show();
     }
-    
+
 }

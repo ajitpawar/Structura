@@ -50,4 +50,22 @@
         <p>In each iteration of the loop, we check if the current node\'s data is equal to the input value, if it is not, we make the current node equal to current <em>node.next</em>.</p>
         ]]>
     </string>
+
+    <!-- Quiz questions -->
+    <string name="q1">1. Who won the world cup?</string>
+    <string name="q1_optionA">Germany</string>
+    <string name="q1_optionB">Brazil</string>
+    <string name="q1_optionC">Canada</string>
+
+    <string name="q2">2. Who won the golden boot?</string>
+    <string name="q2_optionA">Ajit Pawar</string>
+    <string name="q2_optionB">Lionel Messi</string>
+    <string name="q2_optionC">James Rodríguez</string>
+
+    <string name="q3">3. Who won the golden glove?</string>
+    <string name="q3_optionA">Keylor Navas</string>
+    <string name="q3_optionB">Manuel Neuer</string>
+    <string name="q3_optionC">Ajit Pawar</string>
+
+
 </resources>
