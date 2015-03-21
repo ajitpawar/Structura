@@ -7,7 +7,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:shrinkColumns="*"  android:stretchColumns="*" android:background="#ffffff">
-        <!-- Row 1 with single column -->
+
+        <!-- Question 1 text -->
         <TableRow
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -18,13 +19,14 @@
                     android:padding="18dip"
                     android:textColor="#000000"/>
         </TableRow>
-        <!-- Row 2 with 3 columns -->
+
+        <!-- Question 1 options -->
         <TableRow
                 android:id="@+id/tableRow1"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
             <RadioGroup
-                    android:id="@+id/answer1"
+                    android:id="@+id/q1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.4" >
@@ -33,21 +35,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q1_optionA" />
+                        android:text="@string/q1_optionA"
+                        android:tag="@string/q1_ans"/>
                 <RadioButton
                         android:id="@+id/answer1B"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q1_optionB" />
+                        android:text="@string/q1_optionB"
+                        android:tag="@string/q1_ans"/>
                 <RadioButton
                         android:id="@+id/answer1C"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q1_optionC" />
+                        android:text="@string/q1_optionC"
+                        android:tag="@string/q1_ans"/>
             </RadioGroup>
         </TableRow>
+
+        <!-- Question 2 text -->
         <TableRow
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -58,13 +65,14 @@
                     android:padding="18dip"
                     android:textColor="#000000"/>
         </TableRow>
-        <!-- Row 2 with 3 columns -->
+
+        <!-- Question 2 options -->
         <TableRow
                 android:id="@+id/tableRow2"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
             <RadioGroup
-                    android:id="@+id/answer2"
+                    android:id="@+id/q2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.4" >
@@ -73,21 +81,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q2_optionA" />
+                        android:text="@string/q2_optionA"
+                        android:tag="@string/q2_ans"/>
                 <RadioButton
                         android:id="@+id/answer2B"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q2_optionB" />
+                        android:text="@string/q2_optionB"
+                        android:tag="@string/q2_ans"/>
                 <RadioButton
                         android:id="@+id/answer2C"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q2_optionC" />
+                        android:text="@string/q2_optionC"
+                        android:tag="@string/q2_ans"/>
             </RadioGroup>
         </TableRow>
+
+        <!-- Question 3 text -->
         <TableRow
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -98,13 +111,14 @@
                     android:padding="18dip"
                     android:textColor="#000000"/>
         </TableRow>
-        <!-- Row 2 with 3 columns -->
+
+        <!-- Question 3 options -->
         <TableRow
                 android:id="@+id/tableRow3"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
             <RadioGroup
-                    android:id="@+id/answer3"
+                    android:id="@+id/q3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.4" >
@@ -113,21 +127,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q3_optionA" />
+                        android:text="@string/q3_optionA"
+                        android:tag="@string/q3_ans"/>
                 <RadioButton
                         android:id="@+id/answer3B"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q3_optionB" />
+                        android:text="@string/q3_optionB"
+                        android:tag="@string/q3_ans"/>
                 <RadioButton
                         android:id="@+id/answer3C"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="@string/q3_optionC" />
+                        android:text="@string/q3_optionC"
+                        android:tag="@string/q3_ans"/>
             </RadioGroup>
         </TableRow>
+
+        <!-- Submit button -->
         <TableRow
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -142,5 +161,6 @@
                     android:text="Submit"
                     />
         </TableRow>
+
     </TableLayout>
 </ScrollView>
