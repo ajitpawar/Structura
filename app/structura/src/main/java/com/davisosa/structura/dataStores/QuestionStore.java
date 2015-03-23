@@ -24,7 +24,7 @@ public class QuestionStore {
         // TODO: possibly create a xml/json file and read the data from there
 
         // q1
-        String one_question = "1. Some text here. More text maybe. Some more here as well.";
+        String one_question = "Some text here. More text maybe. Some more here as well.";
         String one_answer_string_1  = "One Answer";
         String one_answer_string_2  = "Two Answer";
         String one_answer_string_3  = "Three Answer";
@@ -43,7 +43,7 @@ public class QuestionStore {
         Question q1 = new Question(one_question, one_answers, one_correct_answer);
 
         // q2
-        String two_question = "2. Some text here. More text maybe. Some more here as well.";
+        String two_question = "Some text here. More text maybe. Some more here as well.";
         String two_answer_string_1  = "One Answer";
         String two_answer_string_2  = "Two Answer";
         String two_answer_string_3  = "Three Answer";
@@ -62,7 +62,7 @@ public class QuestionStore {
         Question q2 = new Question(two_question, two_answers, two_correct_answer);
 
         // q3
-        String three_question = "3. Some text here. More text maybe. Some more here as well.";
+        String three_question = "Some text here. More text maybe. Some more here as well.";
         String three_answer_string_1  = "One Answer";
         String three_answer_string_2  = "Two Answer";
         String three_answer_string_3  = "Three Answer";

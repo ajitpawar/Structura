@@ -1,6 +1,7 @@
 package com.davisosa.structura.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import com.davisosa.structura.Structura;
 import com.davisosa.structura.model.Answer;
 import com.davisosa.structura.model.Question;
 import com.davisosa.structura.view.StructuraRadioButton;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -36,6 +39,9 @@ public class QAListAdapter extends ArrayAdapter<Question> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_qa, parent, false);
         }
+
+        TextView tvQuestionNumber = (TextView) convertView.findViewById(R.id.tvQuestionNumber);
+        tvQuestionNumber.setText(String.format("QUESTION %d", position+1));
 
         TextView tvQuestion = (TextView) convertView.findViewById(R.id.tvQuestion);
         tvQuestion.setText(currentQ.question);
