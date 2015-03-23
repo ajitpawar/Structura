@@ -112,9 +112,11 @@ public abstract class BaseActivity extends ActionBarActivity
                 .addDrawerItems(
                         new PrimaryDrawerItem()
                                 .withName(R.string.title_linked_list)
+                                .withIcon(android.R.color.transparent)
                                 .withIdentifier(DRAWER_ITEM_LL),
                         new PrimaryDrawerItem()
                                 .withName(R.string.title_section2)
+                                .withIcon(android.R.color.transparent)
                                 .withIdentifier(DRAWER_ITEM_SEC2),
                         new DividerDrawerItem(),
                         new SecondaryDrawerItem()
@@ -133,7 +135,6 @@ public abstract class BaseActivity extends ActionBarActivity
                         }
                     }
                 })
-                .withFireOnInitialOnClick(true)
                 .withSavedInstance(savedInstanceState)
                 .build();
 
@@ -169,8 +170,20 @@ public abstract class BaseActivity extends ActionBarActivity
             return;
         }
 
+        // Change the active item on the list so the user can see the item changed.
+        mDrawerResult.setSelectionByIdentifier(itemId, false);
+        mDrawerResult.closeDrawer();
+
+        // Fade out the main content.
+        View mainContent = findViewById(R.id.main_content);
+        if (mainContent != null) {
+            mainContent.animate().alpha(0).setDuration(MAIN_CONTENT_FADEOUT_DURATION);
+        }
+
+        goToDrawerItem(itemId);
+
+/*
         if (isSpecialItem(itemId)) {
-            goToDrawerItem(itemId);
         } else {
             // Launch the target activity after a short delay, to allow the close animation to play.
             mHandler.postDelayed(new Runnable() {
@@ -180,17 +193,8 @@ public abstract class BaseActivity extends ActionBarActivity
                 }
             }, DRAWER_LAUNCH_DELAY);
 
-            // Change the active item on the list so the user can see the item changed.
-            mDrawerResult.setSelectionByIdentifier(itemId, false);
-
-            // Fade out the main content.
-            View mainContent = findViewById(R.id.main_content);
-            if (mainContent != null) {
-                mainContent.animate().alpha(0).setDuration(MAIN_CONTENT_FADEOUT_DURATION);
-            }
         }
-
-        mDrawerResult.closeDrawer();
+*/
     }
 
     private boolean isSpecialItem(int itemId) {
