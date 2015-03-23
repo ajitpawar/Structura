@@ -57,7 +57,7 @@ public class QuestionStore {
         two_answers.add(two_answer_2);
         two_answers.add(two_answer_3);
 
-        Answer two_correct_answer = two_answer_2;
+        Answer two_correct_answer = two_answer_3;
 
         Question q2 = new Question(two_question, two_answers, two_correct_answer);
 
