@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 
 import com.davisosa.structura.R;
-import com.davisosa.structura.view.NodeView;
+import com.davisosa.structura.view.NodeViewOld;
 
 
 /**
@@ -29,7 +29,7 @@ public class LLPlayFragment extends Fragment {
     Button addNodeBtn;
     Button delNodeBtn;
     Button searchNodeBtn;
-    NodeView nv;
+    NodeViewOld nv;
     private OnFragmentInteractionListener mListener;
 
     public LLPlayFragment() {
@@ -61,7 +61,7 @@ public class LLPlayFragment extends Fragment {
         FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_ll_play, container, false);
         ViewGroup.LayoutParams lp = fl.getLayoutParams();
 
-        nv = new NodeView(getActivity(), getActivity());
+        nv = new NodeViewOld(getActivity(), getActivity());
         fl.addView(nv, lp.width, lp.height);
 
         addNodeBtn = (Button) fl.findViewById(R.id.btn_insert);
