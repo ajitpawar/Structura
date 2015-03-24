@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 
 import com.davisosa.structura.R;
-import com.davisosa.structura.view.NodeViewOld;
 
 
 /**
@@ -29,7 +28,6 @@ public class LLPlayFragment extends Fragment {
     Button addNodeBtn;
     Button delNodeBtn;
     Button searchNodeBtn;
-    NodeViewOld nv;
     private OnFragmentInteractionListener mListener;
 
     public LLPlayFragment() {
@@ -59,6 +57,7 @@ public class LLPlayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_ll_play, container, false);
+/*
         ViewGroup.LayoutParams lp = fl.getLayoutParams();
 
         nv = new NodeViewOld(getActivity(), getActivity());
@@ -87,6 +86,7 @@ public class LLPlayFragment extends Fragment {
                 showSearchDialog();
             }
         });
+*/
 
         return fl;
     }
@@ -104,7 +104,9 @@ public class LLPlayFragment extends Fragment {
             public void onClick(DialogInterface dialog, int whichButton) {
                 String value = input.getText().toString();
                 try {
+/*
                     nv.findNode(Integer.parseInt(value));
+*/
                 } catch (Exception e) {
                     // show toast
                 }

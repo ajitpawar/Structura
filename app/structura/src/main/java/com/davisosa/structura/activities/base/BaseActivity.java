@@ -3,6 +3,7 @@ package com.davisosa.structura.activities.base;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
@@ -481,12 +482,13 @@ public abstract class BaseActivity extends ActionBarActivity
         }
 
         // Configure its appearance according to whether or not it's selected.
+        Resources res = getResources();
         titleView.setTextColor(selected ?
-                getResources().getColor(R.color.drawer_text_color_selected) :
-                getResources().getColor(R.color.drawer_text_color));
+                res.getColor(R.color.drawer_text_color_selected) :
+                res.getColor(R.color.drawer_text_color));
         iconView.setColorFilter(selected ?
-                getResources().getColor(R.color.drawer_icon_tint_selected) :
-                getResources().getColor(R.color.drawer_icon_tint), PorterDuff.Mode.SRC_IN);
+                res.getColor(R.color.drawer_icon_tint_selected) :
+                res.getColor(R.color.drawer_icon_tint), PorterDuff.Mode.SRC_IN);
     }
 
     @Override

@@ -1,8 +1,8 @@
 package com.davisosa.structura.view;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -10,8 +10,7 @@ import android.widget.FrameLayout;
 
 import com.davisosa.structura.R;
 
-public class NodeViewNew extends FrameLayout
-{
+public class NodeView extends FrameLayout {
     private final NodeDrawable mDrawable;
     private final Paint mPaint = new Paint();
 
@@ -19,13 +18,17 @@ public class NodeViewNew extends FrameLayout
     private int mWidth;
     private int mHeight;
 
-    public NodeViewNew(Context context, AttributeSet attrs)
+    public NodeView(Context context, AttributeSet attrs)
     {
         super(context, attrs);
         setWillNotDraw(false);
-        mBackgroundColor = Color.GRAY;
+
+        Resources res = getResources();
+        mBackgroundColor = res.getColor(R.color.blue_grey_200);
+
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.FILL);
+
         mDrawable = new NodeDrawable(context);
         mDrawable.setCallback(this);
     }
@@ -47,12 +50,13 @@ public class NodeViewNew extends FrameLayout
         mHeight = h;
     }
 
+    private int getColor() {
+        return mBackgroundColor;
+    }
+
     private void setColor(int color) {
         mBackgroundColor = color;
         invalidate();
-    }
-    private int getColor() {
-        return mBackgroundColor;
     }
 
     @Override

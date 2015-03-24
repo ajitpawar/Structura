@@ -3,27 +3,40 @@ package com.davisosa.structura.view;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.text.TextPaint;
+
+import com.davisosa.structura.R;
 
 public class NodeDrawable extends Drawable
 {
-    private final Paint mPaint = new Paint();
+    private final TextPaint mTextPaint = new TextPaint();
     private final RectF mBounds = new RectF();
+
+    private final int mTextColor;
+    private final int mTextSize;
 
     private float mWidth;
     private float mHeight;
 
     public NodeDrawable(Context context) {
-        final Resources res = context.getResources();
-        mPaint.setAntiAlias(true);
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setColor(Color.WHITE);
+        Resources res = context.getResources();
+
+        mTextPaint.setAntiAlias(true);
+        mTextPaint.setLinearText(true);
+        mTextPaint.setSubpixelText(true);
+        mTextPaint.setTextAlign(Paint.Align.CENTER);
+
+        mTextColor = res.getColor(R.color.black_text);
+        mTextSize = res.getDimensionPixelSize(R.dimen.text_size_large);
+
+        mTextPaint.setColor(mTextColor);
+        mTextPaint.setTextSize(mTextSize);
     }
 
 
@@ -39,18 +52,27 @@ public class NodeDrawable extends Drawable
     public void draw(Canvas canvas)
     {
         canvas.save();
-        // TODO Fill in if needed
+
+        // TODO: Fill in if needed
+        canvas.translate(mBounds.centerX(), mBounds.centerY());
+
+        // Draw centered text.
+        float textHeight = mTextPaint.descent() - mTextPaint.ascent();
+        float textOffset = (textHeight / 2) - mTextPaint.descent();
+        canvas.drawText("42", 0, textOffset, mTextPaint);
+
         canvas.restore();
     }
 
     @Override
     public void setAlpha(int alpha) {
-        mPaint.setAlpha(alpha);
+        mTextPaint.setAlpha(alpha);
         invalidateSelf();
     }
+
     @Override
     public void setColorFilter(ColorFilter cf) {
-        mPaint.setColorFilter(cf);
+        mTextPaint.setColorFilter(cf);
         invalidateSelf();
     }
 
