@@ -11,7 +11,7 @@
 
     <!-- Navigation drawer sections -->
     <string name="title_linked_list">Linked List</string>
-    <string name="title_section2">Section 2</string>
+    <string name="title_bst">Binary Search Tree</string>
     <string name="title_settings">Settings</string>
     <string name="title_about">About</string>
 
