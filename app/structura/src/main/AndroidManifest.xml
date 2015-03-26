@@ -25,6 +25,12 @@
         <activity
             android:name=".activities.LLActivity"
             android:label="@string/title_linked_list"
-            android:theme="@style/Theme.Structura.LLActivity"></activity>
+            android:theme="@style/Theme.Structura.LLActivity"/>
+
+        <activity
+            android:name=".activities.BSTActivity"
+            android:label="@string/title_bst"
+            android:theme="@style/Theme.Structura.BSTActivity"/>
+
     </application>
 </manifest>
