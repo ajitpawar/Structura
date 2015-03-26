@@ -2,6 +2,7 @@ package com.davisosa.structura.fragments;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,8 +12,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.davisosa.structura.R;
+import com.davisosa.structura.view.EdgeView;
+import com.davisosa.structura.view.NodeView;
+
+import java.util.LinkedList;
 
 
 /**
@@ -29,6 +35,10 @@ public class LLPlayFragment extends Fragment {
     Button delNodeBtn;
     Button searchNodeBtn;
     private OnFragmentInteractionListener mListener;
+
+
+    LinkedList ll = new LinkedList();
+    private int ctr = 0;
 
     public LLPlayFragment() {
         // Required empty public constructor
@@ -57,21 +67,28 @@ public class LLPlayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_ll_play, container, false);
-/*
-        ViewGroup.LayoutParams lp = fl.getLayoutParams();
 
-        nv = new NodeViewOld(getActivity(), getActivity());
-        fl.addView(nv, lp.width, lp.height);
+        final LinearLayout nodeLayout = (LinearLayout)fl.findViewById(R.id.node_layout);
+
 
         addNodeBtn = (Button) fl.findViewById(R.id.btn_insert);
         addNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nv.addNewNodeToCanvas();
+                if (nodeLayout.getChildCount() >= 1)
+                {
+                    EdgeView ev = new EdgeView(getActivity());
+                    nodeLayout.addView(ev,5,100);
+                }
+                NodeView nv = new NodeView(getActivity());
+                nv.setId(++ctr);
+                Resources res = getResources();
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(res.getDimensionPixelSize(R.dimen.node_width),res.getDimensionPixelSize(R.dimen.node_height));
+                nodeLayout.addView(nv,lp);
             }
         });
 
-        delNodeBtn = (Button) fl.findViewById(R.id.btn_delete);
+       /* delNodeBtn = (Button) fl.findViewById(R.id.btn_delete);
         delNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

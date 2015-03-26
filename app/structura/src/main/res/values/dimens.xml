@@ -59,4 +59,9 @@
     <dimen name="btn_insert_margin_right">@dimen/keyline_1</dimen>
     <dimen name="btn_delete_margin_right">@dimen/element_spacing_normal</dimen>
     <dimen name="btn_search_margin_right">@dimen/element_spacing_normal</dimen>
+
+    <!--Node Parameters -->
+    <dimen name="node_width">56dp</dimen>
+    <dimen name="node_height">56dp</dimen>
+
 </resources>

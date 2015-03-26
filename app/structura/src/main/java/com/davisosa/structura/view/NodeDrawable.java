@@ -24,6 +24,16 @@ public class NodeDrawable extends Drawable
     private float mWidth;
     private float mHeight;
 
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
+    }
+
+    private int mId = 0;
+
     public NodeDrawable(Context context) {
         Resources res = context.getResources();
 
@@ -59,8 +69,7 @@ public class NodeDrawable extends Drawable
         // Draw centered text.
         float textHeight = mTextPaint.descent() - mTextPaint.ascent();
         float textOffset = (textHeight / 2) - mTextPaint.descent();
-        canvas.drawText("42", 0, textOffset, mTextPaint);
-
+        canvas.drawText(String.valueOf(mId), 0, textOffset, mTextPaint);
         canvas.restore();
     }
 
