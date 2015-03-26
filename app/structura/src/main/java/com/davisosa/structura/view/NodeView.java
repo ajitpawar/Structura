@@ -50,11 +50,11 @@ public class NodeView extends View {
         mHeight = h;
     }
 
-    private int getColor() {
+    public int getColor() {
         return mBackgroundColor;
     }
 
-    private void setColor(int color) {
+    public void setColor(int color) {
         mBackgroundColor = color;
         invalidate();
     }
@@ -76,5 +76,10 @@ public class NodeView extends View {
     public void setId(int id)
     {
         mDrawable.setId(id);
+    }
+
+    public int getId()
+    {
+        return mDrawable.getId();
     }
 }

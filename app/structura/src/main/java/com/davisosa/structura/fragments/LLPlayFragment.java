@@ -3,9 +3,11 @@ package com.davisosa.structura.fragments;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +37,7 @@ public class LLPlayFragment extends Fragment {
     Button addNodeBtn;
     Button delNodeBtn;
     Button searchNodeBtn;
-    LinkedList ll = new LinkedList();
+    LinkedList<Pair<NodeView,EdgeView>> ll = new LinkedList<>();
     private OnFragmentInteractionListener mListener;
     private Sequencer mSequencer = new Sequencer();
 
@@ -62,7 +64,7 @@ public class LLPlayFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_ll_play, container, false);
@@ -73,9 +75,10 @@ public class LLPlayFragment extends Fragment {
         addNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EdgeView ev = null;
                 if (nodeLayout.getChildCount() > 0)
                 {
-                    EdgeView ev = new EdgeView(getActivity());
+                    ev = new EdgeView(getActivity());
                     nodeLayout.addView(ev,5,100);
                 }
                 NodeView nv = new NodeView(getActivity());
@@ -83,25 +86,67 @@ public class LLPlayFragment extends Fragment {
                 Resources res = getResources();
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(res.getDimensionPixelSize(R.dimen.node_width),res.getDimensionPixelSize(R.dimen.node_height));
                 nodeLayout.addView(nv,lp);
+                ll.add(Pair.create(nv,ev));
             }
         });
 
-       /* delNodeBtn = (Button) fl.findViewById(R.id.btn_delete);
-        delNodeBtn.setOnClickListener(new View.OnClickListener() {
+        delNodeBtn = (Button) fl.findViewById(R.id.btn_delete);
+        delNodeBtn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                nv.deleteNode();
+            public void onClick(View v)
+            {
+                int id = 5;   //TODO change it to user input
+                Pair<NodeView,EdgeView> p = findPairById(id,true);
+                if(p != null)
+                {
+                    p.first.setColor(Color.RED);
+                    try
+                    {
+                        Thread.sleep(5000);     //TODO fix the thread
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    nodeLayout.removeView(p.second);
+                    nodeLayout.removeView(p.first);
+                }
+                else
+                {
+                    //TODO alert user when node not in list
+                }
             }
         });
 
         searchNodeBtn = (Button) fl.findViewById(R.id.btn_search);
         searchNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                showSearchDialog();
+            public void onClick(View v)
+            {
+                int id = 4;   //TODO change it to user input
+                Pair<NodeView,EdgeView> p = findPairById(id,false);
+//                if(p != null)
+//                {
+//                     p.first.setColor(Color.RED);
+//                   try
+//                    {
+//                        Thread.sleep(5000);     //TODO fix the thread
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//
+//                    nodeLayout.removeView(p.second);
+//                    nodeLayout.removeView(p.first);
+//
+//                }
+//                else
+//                {
+//                    //TODO alert user when node not in list
+//                }
             }
+
         });
-*/
+
 
         return fl;
     }
@@ -137,6 +182,24 @@ public class LLPlayFragment extends Fragment {
         alert.show();
     }
 
+    public Pair<NodeView,EdgeView> findPairById(int id, boolean del)
+    {
+        for (Pair<NodeView,EdgeView> pair : ll)
+        {
+          if (pair.first.getId() == id)
+          {
+              if(del)
+                pair.first.setColor(Color.RED);
+              else
+                  pair.first.setColor(Color.BLUE);
+              return pair;
+          }
+          else
+              pair.first.setColor(Color.GRAY);
+        }
+        return null;
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -155,7 +218,7 @@ public class LLPlayFragment extends Fragment {
         private final AtomicInteger mSequenceNumber = new AtomicInteger(0);
 
         public int next() {
-            return mSequenceNumber.getAndIncrement();
+            return mSequenceNumber.incrementAndGet();
         }
     }
 }
