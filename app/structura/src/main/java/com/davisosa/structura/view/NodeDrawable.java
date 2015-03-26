@@ -24,14 +24,6 @@ public class NodeDrawable extends Drawable
     private float mWidth;
     private float mHeight;
 
-    public int getId() {
-        return mId;
-    }
-
-    public void setId(int id) {
-        mId = id;
-    }
-
     private int mId = 0;
 
     public NodeDrawable(Context context) {
@@ -62,14 +54,13 @@ public class NodeDrawable extends Drawable
     public void draw(Canvas canvas)
     {
         canvas.save();
-
-        // TODO: Fill in if needed
         canvas.translate(mBounds.centerX(), mBounds.centerY());
 
         // Draw centered text.
         float textHeight = mTextPaint.descent() - mTextPaint.ascent();
         float textOffset = (textHeight / 2) - mTextPaint.descent();
         canvas.drawText(String.valueOf(mId), 0, textOffset, mTextPaint);
+
         canvas.restore();
     }
 
@@ -90,4 +81,11 @@ public class NodeDrawable extends Drawable
         return PixelFormat.OPAQUE;
     }
 
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
+    }
 }

@@ -19,6 +19,7 @@ import com.davisosa.structura.view.EdgeView;
 import com.davisosa.structura.view.NodeView;
 
 import java.util.LinkedList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 /**
@@ -34,11 +35,9 @@ public class LLPlayFragment extends Fragment {
     Button addNodeBtn;
     Button delNodeBtn;
     Button searchNodeBtn;
-    private OnFragmentInteractionListener mListener;
-
-
     LinkedList ll = new LinkedList();
-    private int ctr = 0;
+    private OnFragmentInteractionListener mListener;
+    private Sequencer mSequencer = new Sequencer();
 
     public LLPlayFragment() {
         // Required empty public constructor
@@ -70,18 +69,17 @@ public class LLPlayFragment extends Fragment {
 
         final LinearLayout nodeLayout = (LinearLayout)fl.findViewById(R.id.node_layout);
 
-
         addNodeBtn = (Button) fl.findViewById(R.id.btn_insert);
         addNodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (nodeLayout.getChildCount() >= 1)
+                if (nodeLayout.getChildCount() > 0)
                 {
                     EdgeView ev = new EdgeView(getActivity());
                     nodeLayout.addView(ev,5,100);
                 }
                 NodeView nv = new NodeView(getActivity());
-                nv.setId(++ctr);
+                nv.setId(mSequencer.next());
                 Resources res = getResources();
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(res.getDimensionPixelSize(R.dimen.node_width),res.getDimensionPixelSize(R.dimen.node_height));
                 nodeLayout.addView(nv,lp);
@@ -153,4 +151,11 @@ public class LLPlayFragment extends Fragment {
         public void onFragmentInteraction(Uri uri);
     }
 
+    private class Sequencer {
+        private final AtomicInteger mSequenceNumber = new AtomicInteger(0);
+
+        public int next() {
+            return mSequenceNumber.getAndIncrement();
+        }
+    }
 }
