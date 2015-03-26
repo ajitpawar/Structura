@@ -6,11 +6,11 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.widget.FrameLayout;
+import android.view.View;
 
 import com.davisosa.structura.R;
 
-public class NodeView extends FrameLayout {
+public class NodeView extends View {
     private final NodeDrawable mDrawable;
     private final Paint mPaint = new Paint();
 
