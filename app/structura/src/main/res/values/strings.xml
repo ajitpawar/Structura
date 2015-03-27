@@ -31,6 +31,11 @@
     <string name="title_summary">Summary</string>
     <string name="title_quiz">Quiz</string>
 
+    <!-- Dialogs -->
+    <string name="dialog_insert_title">Insert node</string>
+    <string name="dialog_delete_title">Delete which node?</string>
+    <string name="dialog_search_title">Find which node?</string>
+
     <string name="nodeValue">Value</string>
     <string name="nodeNext">Next</string>
     <string name="nodeValueDigit">0</string>

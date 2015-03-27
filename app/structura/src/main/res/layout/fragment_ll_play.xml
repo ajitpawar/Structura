@@ -48,11 +48,12 @@
                 android:layout_marginEnd="@dimen/btn_search_margin_right"
                 android:layout_marginRight="@dimen/btn_search_margin_right"
                 android:background="?attr/selectableItemBackground"
+                android:enabled="false"
                 android:paddingLeft="@dimen/btn_padding"
                 android:paddingRight="@dimen/btn_padding"
                 android:text="@string/btn_search_label"
                 android:textAppearance="@style/TextButton"
-                android:textColor="@color/btn_search_text_color" />
+                android:textColor="@drawable/btn_search_text_color" />
 
             <Button
                 android:id="@+id/btn_delete"
@@ -62,11 +63,12 @@
                 android:layout_marginEnd="@dimen/btn_delete_margin_right"
                 android:layout_marginRight="@dimen/btn_delete_margin_right"
                 android:background="?attr/selectableItemBackground"
+                android:enabled="false"
                 android:paddingLeft="@dimen/btn_padding"
                 android:paddingRight="@dimen/btn_padding"
                 android:text="@string/btn_delete_label"
                 android:textAppearance="@style/TextButton"
-                android:textColor="@color/btn_delete_text_color" />
+                android:textColor="@drawable/btn_delete_text_color" />
 
             <Button
                 android:id="@+id/btn_insert"
@@ -80,7 +82,7 @@
                 android:paddingRight="@dimen/btn_padding"
                 android:text="@string/btn_insert_label"
                 android:textAppearance="@style/TextButton"
-                android:textColor="@color/btn_insert_text_color" />
+                android:textColor="@drawable/btn_insert_text_color" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/content_padding_dialog"
+    android:paddingRight="@dimen/content_padding_dialog">
+
+    <EditText
+        android:id="@+id/input"
+        style="@style/Widget.Structura.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+
+        <requestFocus />
+    </EditText>
+</FrameLayout>

@@ -5,7 +5,6 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
-import android.util.AttributeSet;
 import android.view.View;
 
 import com.davisosa.structura.R;
@@ -15,16 +14,17 @@ public class NodeView extends View {
     private final Paint mPaint = new Paint();
 
     private int mBackgroundColor;
+    private int mNormalColor;
     private int mWidth;
     private int mHeight;
 
-    public NodeView(Context context)
-    {
+    public NodeView(Context context) {
         super(context);
         setWillNotDraw(false);
 
         Resources res = getResources();
         mBackgroundColor = res.getColor(R.color.blue_grey_200);
+        mNormalColor = mBackgroundColor;
 
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.FILL);
@@ -34,16 +34,14 @@ public class NodeView extends View {
     }
 
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
-    {
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         final int size = Math.min(getMeasuredWidth(), getMeasuredHeight());
         setMeasuredDimension(size, size);
     }
 
     @Override
-    protected void onSizeChanged(final int w, final int h, int oldw, int oldh)
-    {
+    protected void onSizeChanged(final int w, final int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         mDrawable.setBounds(0, 0, w, h);
         mWidth = w;
@@ -56,6 +54,11 @@ public class NodeView extends View {
 
     public void setColor(int color) {
         mBackgroundColor = color;
+        invalidate();
+    }
+
+    public void resetColor() {
+        mBackgroundColor = mNormalColor;
         invalidate();
     }
 
@@ -73,13 +76,11 @@ public class NodeView extends View {
         mDrawable.draw(canvas);
     }
 
-    public void setId(int id)
-    {
-        mDrawable.setId(id);
+    public int getId() {
+        return mDrawable.getId();
     }
 
-    public int getId()
-    {
-        return mDrawable.getId();
+    public void setId(int id) {
+        mDrawable.setId(id);
     }
 }
