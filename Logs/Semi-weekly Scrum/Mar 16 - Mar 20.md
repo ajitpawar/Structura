@@ -4,8 +4,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Discussed on the logic of implementing the Linked Lists and BSTs, using the built in data linked list in Java.
 
 ####Ajit Pawar
 
@@ -46,8 +45,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* No significant progress
 
 ####Ajit Pawar
 
