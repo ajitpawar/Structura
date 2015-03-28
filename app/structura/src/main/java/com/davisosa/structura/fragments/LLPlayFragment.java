@@ -18,6 +18,8 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.davisosa.structura.R;
 import com.davisosa.structura.view.EdgeView;
 import com.davisosa.structura.view.NodeView;
+import com.nispok.snackbar.Snackbar;
+import com.nispok.snackbar.SnackbarManager;
 
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -137,11 +139,18 @@ public class LLPlayFragment extends Fragment {
                         try {
                             id = Integer.valueOf(input.getText().toString());
                         } catch (NumberFormatException nfe) {
-                            Timber.w(nfe, "User didn't input number.");
+                            Timber.w("User didn't input node value.");
+                            SnackbarManager.show(
+                                    Snackbar.with(getActivity())
+                                            .text("No node value entered")
+                                            .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
 
-                        if (!removeNodePair(id)) {
-                            //TODO alert user when node not in list
+                        if (id > 0 && !removeNodePair(id)) {
+                            SnackbarManager.show(
+                                    Snackbar.with(getActivity())
+                                            .text(String.format("Node %d not found", id))
+                                            .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
                     }
                 })
@@ -163,11 +172,18 @@ public class LLPlayFragment extends Fragment {
                         try {
                             id = Integer.valueOf(input.getText().toString());
                         } catch (NumberFormatException nfe) {
-                            Timber.w(nfe, "User didn't input number.");
+                            Timber.w("User didn't input node value.");
+                            SnackbarManager.show(
+                                    Snackbar.with(getActivity())
+                                            .text("No node value entered")
+                                            .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
 
-                        if (!findNodePair(id)) {
-                            //TODO alert user when node not in list
+                        if (id > 0 && !findNodePair(id)) {
+                            SnackbarManager.show(
+                                    Snackbar.with(getActivity())
+                                            .text(String.format("Node %d not found", id))
+                                            .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
                     }
                 })

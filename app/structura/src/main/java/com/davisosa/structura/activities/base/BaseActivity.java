@@ -352,7 +352,7 @@ public abstract class BaseActivity extends ActionBarActivity
                 new Libs.Builder()
                         .withFields(R.string.class.getFields())
                         .withLibraries("materialdesignicons", "mdiexpanded", "slidingtabs",
-                                "materialdialogs")
+                                "materialdialogs", "snackbar")
                         .withExcludedLibraries("materialicons")
                         .withLicenseShown(true)
                         .withVersionShown(false)
