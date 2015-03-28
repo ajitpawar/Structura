@@ -26,7 +26,6 @@ public class LLActivity extends BaseActivity
         setContentView(R.layout.activity_linked_list);
 
         getSupportActionBar().setTitle(R.string.title_linked_list);
-        overridePendingTransition(0, 0);
 
         // Get the ViewPager and set its PagerAdapter so that it can display items.
         mViewPager = (ViewPager) findViewById(R.id.viewpager);

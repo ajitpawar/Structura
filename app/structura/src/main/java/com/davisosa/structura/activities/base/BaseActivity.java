@@ -31,8 +31,6 @@ import com.mikepenz.aboutlibraries.Libs;
 import java.util.ArrayList;
 import java.util.List;
 
-import timber.log.Timber;
-
 /**
  * A base {@link android.app.Activity} that handles common functionality in the app.
  */
@@ -68,11 +66,6 @@ public abstract class BaseActivity extends ActionBarActivity
 
     // Delay to launch navigation drawer item, to allow close animation to play
     private static final int DRAWER_LAUNCH_DELAY = 250;
-
-    /* Fade-in and fade-out durations for the main content when switching between
-     * different activities of the app through the navigation drawer */
-    private static final int MAIN_CONTENT_FADEOUT_DURATION = 150;
-    private static final int MAIN_CONTENT_FADEIN_DURATION = 250;
 
     // Navigation drawer
     private DrawerLayout mDrawerLayout;
@@ -282,12 +275,6 @@ public abstract class BaseActivity extends ActionBarActivity
 
             // Change the active item on the list so the user can see the item changed.
             setSelectedDrawerItem(itemId);
-
-            // Fade out the main content.
-            View mainContent = findViewById(R.id.main_content);
-            if (mainContent != null) {
-                mainContent.animate().alpha(0).setDuration(MAIN_CONTENT_FADEOUT_DURATION);
-            }
         }
 
         mDrawerLayout.closeDrawer(Gravity.START);
@@ -351,12 +338,11 @@ public abstract class BaseActivity extends ActionBarActivity
     public void goToDrawerItem(int item) {
         switch (item) {
             case DRAWER_ITEM_LL:
-                startActivity(new Intent(this, LLActivity.class));
+                UIUtils.startActivityWithTransition(this, new Intent(this, LLActivity.class));
                 finish();
                 break;
             case DRAWER_ITEM_BST:
-                // TODO: new Activity
-                startActivity(new Intent(this, BSTActivity.class));
+                UIUtils.startActivityWithTransition(this, new Intent(this, BSTActivity.class));
                 finish();
                 break;
             case DRAWER_ITEM_SETTINGS:
@@ -365,7 +351,8 @@ public abstract class BaseActivity extends ActionBarActivity
             case DRAWER_ITEM_ABOUT:
                 new Libs.Builder()
                         .withFields(R.string.class.getFields())
-                        .withLibraries("materialdesignicons", "mdiexpanded", "slidingtabs")
+                        .withLibraries("materialdesignicons", "mdiexpanded", "slidingtabs",
+                                "materialdialogs")
                         .withExcludedLibraries("materialicons")
                         .withLicenseShown(true)
                         .withVersionShown(false)
@@ -380,14 +367,6 @@ public abstract class BaseActivity extends ActionBarActivity
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         setupNavigationDrawer();
-
-        View mainContent = findViewById(R.id.main_content);
-        if (mainContent != null) {
-            mainContent.setAlpha(0);
-            mainContent.animate().alpha(1).setDuration(MAIN_CONTENT_FADEIN_DURATION);
-        } else {
-            Timber.w("No view with ID main_content to fade in.");
-        }
     }
 
     @Override
