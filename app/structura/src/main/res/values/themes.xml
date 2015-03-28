@@ -55,6 +55,9 @@
     <!-- Linked list activity -->
     <style name="Theme.Structura.LLActivity" parent="Theme.Structura.WithNavDrawer" />
 
+    <!-- BST activity -->
+    <style name="Theme.Structura.BSTActivity" parent="Theme.Structura.WithNavDrawer" />
+
     <!-- About activity -->
     <style name="Theme.Structura.LibsActivity" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/theme_primary</item>

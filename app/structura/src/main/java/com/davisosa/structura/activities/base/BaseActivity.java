@@ -3,6 +3,7 @@ package com.davisosa.structura.activities.base;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,8 +21,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.davisosa.structura.R;
+import com.davisosa.structura.activities.BSTActivity;
 import com.davisosa.structura.activities.LLActivity;
-import com.davisosa.structura.activities.MainActivity;
 import com.davisosa.structura.util.OverviewStyler;
 import com.davisosa.structura.util.PrefUtils;
 import com.davisosa.structura.util.UIUtils;
@@ -41,7 +42,7 @@ public abstract class BaseActivity extends ActionBarActivity
      * This is a list of all possible items, which are not necessarily present,
      * in the navigation drawer. */
     protected static final int DRAWER_ITEM_LL = 0;
-    protected static final int DRAWER_ITEM_SEC2 = 1;
+    protected static final int DRAWER_ITEM_BST = 1;
     protected static final int DRAWER_ITEM_SETTINGS = 2;
     protected static final int DRAWER_ITEM_ABOUT = 3;
     protected static final int DRAWER_ITEM_INVALID = -1;
@@ -52,7 +53,7 @@ public abstract class BaseActivity extends ActionBarActivity
     // Titles for navigation drawer items (indices must correspond to DRAWER_ITEM_*)
     private static final int[] RES_IDS_DRAWER_TITLE = new int[]{
             R.string.title_linked_list,
-            R.string.title_section2,
+            R.string.title_bst,
             R.string.title_settings,
             R.string.title_about
     };
@@ -125,7 +126,7 @@ public abstract class BaseActivity extends ActionBarActivity
         mDrawerItems.clear();
 
         mDrawerItems.add(DRAWER_ITEM_LL);
-        mDrawerItems.add(DRAWER_ITEM_SEC2);
+        mDrawerItems.add(DRAWER_ITEM_BST);
 
         mDrawerItems.add(DRAWER_ITEM_SEPARATOR_SPECIAL);
         mDrawerItems.add(DRAWER_ITEM_SETTINGS);
@@ -353,9 +354,9 @@ public abstract class BaseActivity extends ActionBarActivity
                 startActivity(new Intent(this, LLActivity.class));
                 finish();
                 break;
-            case DRAWER_ITEM_SEC2:
+            case DRAWER_ITEM_BST:
                 // TODO: new Activity
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, BSTActivity.class));
                 finish();
                 break;
             case DRAWER_ITEM_SETTINGS:
@@ -481,12 +482,13 @@ public abstract class BaseActivity extends ActionBarActivity
         }
 
         // Configure its appearance according to whether or not it's selected.
+        Resources res = getResources();
         titleView.setTextColor(selected ?
-                getResources().getColor(R.color.drawer_text_color_selected) :
-                getResources().getColor(R.color.drawer_text_color));
+                res.getColor(R.color.drawer_text_color_selected) :
+                res.getColor(R.color.drawer_text_color));
         iconView.setColorFilter(selected ?
-                getResources().getColor(R.color.drawer_icon_tint_selected) :
-                getResources().getColor(R.color.drawer_icon_tint), PorterDuff.Mode.SRC_IN);
+                res.getColor(R.color.drawer_icon_tint_selected) :
+                res.getColor(R.color.drawer_icon_tint), PorterDuff.Mode.SRC_IN);
     }
 
     @Override
