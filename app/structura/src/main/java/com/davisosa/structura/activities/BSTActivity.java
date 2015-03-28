@@ -6,12 +6,12 @@ import android.support.v4.view.ViewPager;
 
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
-import com.davisosa.structura.adapters.BSTPagerAdapter;
-import com.davisosa.structura.fragments.BSTPlayFragment;
+import com.davisosa.structura.adapters.LLPagerAdapter;
+import com.davisosa.structura.fragments.LLPlayFragment;
 import com.davisosa.structura.widget.SlidingTabLayout;
 
 public class BSTActivity extends BaseActivity
-        implements BSTPlayFragment.OnFragmentInteractionListener {
+        implements LLPlayFragment.OnFragmentInteractionListener {
     private ViewPager mViewPager;
     private SlidingTabLayout mSlidingTabLayout;
 
@@ -30,7 +30,7 @@ public class BSTActivity extends BaseActivity
 
         // Get the ViewPager and set its PagerAdapter so that it can display items.
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
-        mViewPager.setAdapter(new BSTPagerAdapter(getSupportFragmentManager(),
+        mViewPager.setAdapter(new LLPagerAdapter(getSupportFragmentManager(),
                 BSTActivity.this));
 
         // Give the SlidingTabLayout the ViewPager.
