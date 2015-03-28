@@ -135,7 +135,6 @@ public class LLPlayFragment extends Fragment {
                     public void onPositive(MaterialDialog dialog) {
                         FrameLayout root = (FrameLayout) dialog.getCustomView();
                         EditText input = (EditText) root.findViewById(R.id.input);
-                        Resources res = getResources();
                         int id = 0;
                         try {
                             id = Integer.valueOf(input.getText().toString());
@@ -143,14 +142,14 @@ public class LLPlayFragment extends Fragment {
                             Timber.w("User didn't input node value.");
                             SnackbarManager.show(
                                     Snackbar.with(getActivity())
-                                            .text(res.getString(R.string.err_no_node_value))
+                                            .text("No node value entered")
                                             .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
 
                         if (id > 0 && !removeNodePair(id)) {
                             SnackbarManager.show(
                                     Snackbar.with(getActivity())
-                                            .text(res.getString(R.string.err_node_not_found, id))
+                                            .text(String.format("Node %d not found", id))
                                             .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
                     }
@@ -169,7 +168,6 @@ public class LLPlayFragment extends Fragment {
                     public void onPositive(MaterialDialog dialog) {
                         FrameLayout root = (FrameLayout) dialog.getCustomView();
                         EditText input = (EditText) root.findViewById(R.id.input);
-                        Resources res = getResources();
                         int id = 0;
                         try {
                             id = Integer.valueOf(input.getText().toString());
@@ -177,14 +175,14 @@ public class LLPlayFragment extends Fragment {
                             Timber.w("User didn't input node value.");
                             SnackbarManager.show(
                                     Snackbar.with(getActivity())
-                                            .text(res.getString(R.string.err_no_node_value))
+                                            .text("No node value entered")
                                             .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
 
                         if (id > 0 && !findNodePair(id)) {
                             SnackbarManager.show(
                                     Snackbar.with(getActivity())
-                                            .text(res.getString(R.string.err_node_not_found, id))
+                                            .text(String.format("Node %d not found", id))
                                             .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
                     }
