@@ -4,8 +4,8 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Divided the work for phase 3
+* Decided to implement the play fragment (#55)
 
 ####Ajit Pawar
 
@@ -46,8 +46,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Started researching the canvas to learn drawing on it
 
 ####Ajit Pawar
 
