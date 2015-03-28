@@ -4,8 +4,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Decided to open #55 and start working on the play fragment.
 
 ####Ajit Pawar
 
@@ -46,8 +45,7 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Finished LLPlayFragment and working on BSTPlay.
 
 ####Ajit Pawar
 
