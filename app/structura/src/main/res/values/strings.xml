@@ -44,7 +44,7 @@
         <p>The SLL supports the following operations:</p>
         <p><strong>Insert:</strong> We insert a new node = (<em>d</em>, <em>null</em>) to the end of an SLL. Here, <em>d</em> is its data value and its <em>next</em> parameter is <em>null</em> at the moment.</p>
         <p>We first make the <em>next</em> pointer of this node to point to the current head, and then the head pointer to point to the new node. This way, we insert the node to the front of the SLL.</p>
-        <p><strong>Delete:</strong> We take the node as input that has to be deleted. We traverse through the linked list to find the node 'n' which is the node before the node to be deleted. Then, we just set the value of <em>n.next</em> to <em>n.next.next</em>, and destroy <em>n.next</em>.</p>
+        <p><strong>Delete:</strong> We take the node as input that has to be deleted. We traverse through the linked list to find the node 'n', such that n.next is the node to be deleted. Then, we just set the value of <em>n.next</em> to <em>n.next.next</em>, and destroy <em>n.next</em>.</p>
         <p><strong>Search:</strong> In order to search the SLL for a value, we start with the head, and loop until the value is found, that is, <em>node.data</em> = <em>value</em>, or return <em>False</em> otherwise.</p>
         <p>In each iteration of the loop, we check if the current node\'s data is equal to the input value, if it is not, we make the current node equal to current <em>node.next</em>.</p>
         ]]>
