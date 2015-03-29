@@ -7,6 +7,8 @@ import com.davisosa.structura.view.NodeView;
 
 import java.util.Stack;
 
+import timber.log.Timber;
+
 
 /**
  * Created by Sean on 28/03/2015.
@@ -51,8 +53,8 @@ public class BST {
         BSTNode x = this.root;
         while (x != null && x.pair.first.getId() != id){
             if (x.pair.first.getId() < id){
-                x = x.left;
-            } else x = x.right;
+                x = x.right;
+            } else x = x.left;
         }
         return x.pair;
     }
@@ -72,8 +74,11 @@ public class BST {
             x.pair.first.setColor(search);
             colored.push(x);
             if (x.pair.first.getId() < id){
+                x = x.right;
+            }
+            else {
                 x = x.left;
-            } else x = x.right;
+            }
         }
         if (x != null){
             x.pair.first.setColor(found);
@@ -112,6 +117,8 @@ public class BST {
             x.parent = parent;
             parent.right = x;
         }
+
+        printout(root);
     }
 
     /**
@@ -122,10 +129,10 @@ public class BST {
      */
     public boolean delete(int id){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
-            if (x.view.first.getId() < id){
-                x = x.left;
-            } else x = x.right;
+        while (x != null && x.pair.first.getId() != id){
+            if (x.pair.first.getId() < id){
+                x = x.right;
+            } else x = x.left;
         }
         if (x != null) {
             remove(x);
@@ -146,12 +153,12 @@ public class BST {
      */
     public boolean delete(int id, int search, int remove){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
-            x.view.first.setColor(search);
+        while (x != null && x.pair.first.getId() != id){
+            x.pair.first.setColor(search);
             colored.push(x);
             if (x.pair.first.getId() < id){
-                x = x.left;
-            } else x = x.right;
+                x = x.right;
+            } else x = x.left;
         }
         if (x != null) {
             x.pair.first.setColor(remove);
@@ -225,4 +232,19 @@ public class BST {
         }
     }
 
+    public void printout(BSTNode x){
+        if (x != null) {
+            if (x.pair.first.getId() == root.pair.first.getId()){
+                Timber.d("This is the root: " + String.valueOf(x.pair.first.getId()));
+            }
+            Timber.d(String.valueOf(x.pair.first.getId()));
+            printout(x.left);
+            printout(x.right);
+        }
+        else {
+            Timber.d("NULL");
+        }
+
+
+    }
 }

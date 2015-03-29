@@ -200,14 +200,21 @@ public class BSTPlayFragment extends Fragment {
      * @return {@code true} if node was found, {@code false} otherwise.
      */
     private boolean removeNode(int id) {
+
+        if (!findNode(id)){
+            return false;
+        }
+
         final Resources res = getResources();
         Pair<NodeView,EdgeView> pair = mNodes.search(id);
         boolean removed = mNodes.delete(id, res.getColor(R.color.grey_500),
-                                        res.getColor(R.color.red_400));
+                res.getColor(R.color.red_400));
 
-        if (pair.second == null)
+        if (pair.second == null && mNodes.root != null)
         {
-            mNodes.root.pair = new Pair<>(pair.first, (EdgeView) null);
+            mNodeLayout.removeView(pair.first);
+            mNodeLayout.removeView(mNodes.root.pair.second);
+            mNodes.root.pair = new Pair<>(mNodes.root.pair.first, (EdgeView) null);
         }
 
         else
