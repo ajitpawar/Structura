@@ -66,3 +66,6 @@
 
 * If I had more experience in app development, I could have contributed to implementing more interactive features for our app. And I need to brush up my Java a little bit :)
 
+---
+
+### Vaishali Deswal (vdeswal)
