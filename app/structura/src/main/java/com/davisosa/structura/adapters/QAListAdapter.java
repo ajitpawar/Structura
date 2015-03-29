@@ -27,11 +27,15 @@ import java.util.ArrayList;
  */
 public class QAListAdapter extends ArrayAdapter<Question> {
 
-    public QAListAdapter(Context context, ArrayList<Question> objects) {
+    private AdapterCallback mAdapterCallback;
+
+    public QAListAdapter(Context context, ArrayList<Question> objects, AdapterCallback mAdapterCallback) {
         super(context, android.R.layout.simple_list_item_1, objects);
+        this.mAdapterCallback = mAdapterCallback;
     }
 
     @Override
+
     public View getView(int position, View convertView, ViewGroup parent) {
 
         final Question currentQ = getItem(position);
@@ -62,14 +66,14 @@ public class QAListAdapter extends ArrayAdapter<Question> {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 StructuraRadioButton checkedRadioButton = (StructuraRadioButton) group.findViewById(checkedId);
-                if (checkedRadioButton.getAnswer() == currentQ.correctAnswer) {
-                    Toast.makeText(getContext(), "Correct Answer", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getContext(), "Wrong Answer", Toast.LENGTH_SHORT).show();
-                }
+                mAdapterCallback.onRadioButtonPressed(currentQ, checkedRadioButton.getAnswer());
             }
         });
 
         return convertView;
+    }
+
+    public static interface AdapterCallback {
+        void onRadioButtonPressed(Question question, Answer selectedAnswer);
     }
 }

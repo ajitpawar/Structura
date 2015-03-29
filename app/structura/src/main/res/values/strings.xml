@@ -69,5 +69,6 @@
     <string name="q3_optionA">Ajit Pawar</string>
     <string name="q3_optionB">Manuel Neuer</string>
     <string name="q3_optionC">Ajit Pawar</string>
+    <string name="btnSubmit">Submit</string>
 
 </resources>
