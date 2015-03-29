@@ -30,7 +30,7 @@ public class BST {
     }
 
     public BST(){
-        this.colored = new Stack<BSTNode>();
+        this.colored = new Stack<>();
     }
 
     /**
@@ -41,15 +41,12 @@ public class BST {
      */
     public boolean search(int id){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
+        while (x != null && x.view.first.getId() != id){
             if (x.view.first.getId() < id){
                 x = x.left;
             } else x = x.right;
         }
-        if (x != null){
-            return true;
-        }
-        return false;
+        return x != null;
     }
 
     /**
@@ -63,7 +60,7 @@ public class BST {
      */
     public boolean search(int id, int search, int found){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
+        while (x != null && x.view.first.getId() != id){
             x.view.first.setColor(search);
             colored.push(x);
             if (x.view.first.getId() < id){
@@ -117,10 +114,12 @@ public class BST {
      */
     public boolean delete(int id){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
+        while (x != null && x.view.first.getId() != id){
             if (x.view.first.getId() < id){
                 x = x.left;
-            } else x = x.right;
+            } else {
+                x = x.right;
+            }
         }
         if (x != null) {
             remove(x);
@@ -141,7 +140,7 @@ public class BST {
      */
     public boolean delete(int id, int search, int remove){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
+        while (x != null && x.view.first.getId() != id){
             x.view.first.setColor(search);
             colored.push(x);
             if (x.view.first.getId() < id){
@@ -178,7 +177,7 @@ public class BST {
     /**
      * Removes the given node from the tree.
      *
-     * @param x
+     * @param x the node to be removed
      */
     private void remove(BSTNode x){
         if(x.left == null){
