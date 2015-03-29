@@ -7,11 +7,11 @@ import android.support.v4.view.ViewPager;
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
 import com.davisosa.structura.adapters.BSTPagerAdapter;
-import com.davisosa.structura.fragments.LLPlayFragment;
+import com.davisosa.structura.fragments.BSTPlayFragment;
 import com.davisosa.structura.widget.SlidingTabLayout;
 
 public class BSTActivity extends BaseActivity
-        implements LLPlayFragment.OnFragmentInteractionListener {
+        implements BSTPlayFragment.OnFragmentInteractionListener {
     private ViewPager mViewPager;
     private SlidingTabLayout mSlidingTabLayout;
 

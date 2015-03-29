@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.davisosa.structura.R;
+import com.davisosa.structura.fragments.BSTPlayFragment;
 import com.davisosa.structura.fragments.BSTSummaryFragment;
-import com.davisosa.structura.fragments.LLPlayFragment;
 import com.davisosa.structura.fragments.PageFragment;
 
 import timber.log.Timber;
@@ -36,7 +36,7 @@ public class BSTPagerAdapter extends FragmentPagerAdapter {
         switch (position) {
             case PLAY:
                 Timber.d("Creating Play fragment");
-                return LLPlayFragment.newInstance();
+                return BSTPlayFragment.newInstance();
             case SUMMARY:
                 Timber.d("Creating Summary fragment");
                 return BSTSummaryFragment.newInstance(position + 1);
