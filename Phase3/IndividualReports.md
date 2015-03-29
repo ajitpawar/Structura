@@ -10,6 +10,8 @@
 
 •	My main weakness as a team member was being a bit miscommunicated with the other team members. I was not able to allot enough time to the project in its early phase and also wasn’t actively participating in the code reviews, and felt disconnected. I tried to improve on the third phase and feel that I did a better job than phase 2.
 
+---
+
 ### Amit Prabhakar (Slammedskyline)
 
 •	My most significant individual contribution came in Phase 3. I worked on the BST play fragment which allowed us to draw a BST including search, insert, and delete. I also did the live demo and presentation along with Dhyey and process.md and Architecture.md.
@@ -19,6 +21,8 @@
 •	As a team member, my main strength was communication. I was constantly talking to team members and getting up dates on specific features and conflicts. I also assisted, where I could, with other team members work which included testing, proof reading, and general reviewing of written documents.
 
 •	My main weakness as a team member was time management. Unfortunately, I was not about to give enough time to certain aspects of the project due to time constraints. I feel like I did a better job of this during phase 2 but definitely could have done more during phase 3.
+
+---
 
 ### Omar hamdan (un2n)
  
@@ -30,6 +34,8 @@
 
 - I didn't expect Android development to advance greatly in one year. My knowledge from CSC207 wasn't sufficient to understand some of the newer stuff so the project was a new learning process for me. Thankfully, it was a positive learning process. 
 
+---
+
 ### Ishan Thukral (ishanthukral) 
 
 * I had two significant contributions. Firstly, I implemented the Linked List interactivity in Phase 2. This included the ability to add a node, delete it and search through the linked list to find a specific node. This primarily involved the use of the Android Canvas API. In Phase 3, I worked on the Quiz section of the app. Along with Ajit, we implemented the quiz fragment. I worked on setting up the adapter to control the list view of question and the singleton question store class. I also worked on improving the UI of the Quiz layout. 
@@ -40,6 +46,8 @@
 
 * I feel I could have been more active and frequent on Github and code reviews. 
 
+---
+
 ### Sean Williams (SeanWiz)
 
 - My most significant individual contribution came in Phase 3, where I implemented the binary search tree data structure, which was needed for the play function to work properly. I also contributed towards the building of the necessary activity, page adapter and play fragment for the binary search tree section.
@@ -47,10 +55,12 @@
 - As a team member, I was always committed to ensuring I accomplished the tasks that I had been given. I would always put in an effort to make sure I was able to do my part, and if I had an issue, I tried to resolve it as soon as possible, be it through finding a solution or asking for help, so as not to hold up the rest of the group.
 - I felt my main weakness was communication. There were times where I felt I was out of touch with the rest of the group and what they were doing, and I feel I may have been able to have contributed more if I communicated better.
 
+---
+
 ### Ajit Pawar (ajitpawar)
 * My biggest contribution came in Phase 3 where I implemented the "Quiz" section of the app. My work can be seen here on my branch 53-quiz and issue [#53](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/issues/53). I was responsible for designing the layout and implementing the  functionality. Parts of the Quiz was refactored by Ishan Thukral in #54. Also, in Phase 2, I had a minor contribution in creating the sliding tabs.
 
-* Since this was my first Android project, I faced a learning curve in understanding the different components of an Adroid app and how they interacted with each other. In Phase 2, when I implemented sliding tabs [#26](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/pull/26), I learnt a lot about Fragments, Adapters, Views, XML Layouts and Adapters. As such, it was a good opportunity to apply the design patterns and OOP principles learnt in class to an Android project. Also, this was an excellent way for me to learn how the Scrum process really works.
+* Since this was my first Android project, I faced a learning curve in understanding the different components of an Adroid app and how they interacted with each other. In Phase 2, when I implemented sliding tabs [#26](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/pull/26), I learnt a lot about Fragments, Adapters, Views, Activity and XML Layouts. As such, it was a good opportunity to apply the design patterns learnt in class to an Android project. It was also an excellent way for me to learn how the Scrum process really works.
 
 * I kept myself upto date with new commits and breaking changes in our code so that I can be active in the decision making process. I helped with code reviews and pointed out bugs and glitches whenever I [spotted them](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/pull/59#issuecomment-87448736).
 
