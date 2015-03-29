@@ -9,95 +9,106 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import com.davisosa.structura.R;
+import com.davisosa.structura.adapters.QAListAdapter;
+import com.davisosa.structura.dataStores.QuestionStore;
+import com.davisosa.structura.model.Answer;
+import com.davisosa.structura.model.Question;
 
-public class LLQuizFragment extends Fragment {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
-    public static final String ARG_PAGE = "ARG_PAGE";
-    private int mPage;
+public class LLQuizFragment extends Fragment implements QAListAdapter.AdapterCallback {
 
-    private Button btnSubmitQuiz;
-    private int score = 0;
-    private int qCount = 3;
+    private ArrayList<Question> qList;
+    private QAListAdapter aQaList;
 
+    private Map<Question, Answer> selectedAnswers;
+
+    private Button btnSubmit;
 
     public static LLQuizFragment newInstance(int quiz) {
-        Bundle args = new Bundle();
-        args.putInt(ARG_PAGE, quiz);
         LLQuizFragment fragment = new LLQuizFragment();
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPage = getArguments().getInt(ARG_PAGE);
+        qList   = new ArrayList<>();
+        aQaList = new QAListAdapter(getActivity(), qList, this);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // Inflate the layout
-        FrameLayout fl = (FrameLayout) inflater.inflate(R.layout.fragment_quiz, container, false);
+        View v = inflater.inflate(R.layout.fragment_quiz, container, false);
 
-        // Attach listeners to all buttons
-        attachListeners(fl, qCount);       // DO NOT forget to change qCount
-                                           // when you add new questions
+        ListView lvQa = (ListView) v.findViewById(R.id.lvQa);
+        lvQa.setAdapter(aQaList);
 
-        // Submit Button
-        btnSubmitQuiz = (Button) fl.findViewById(R.id.submit);
-        btnSubmitQuiz.setOnClickListener(new View.OnClickListener() {
+        // get footer
+        View footerView = inflater.inflate(R.layout.footer_qa_list, null, false);
+        lvQa.addFooterView(footerView);
+
+        btnSubmit = (Button) footerView.findViewById(R.id.btnSubmit);
+        // disable until, all questions have been answered
+        btnSubmit.setEnabled(false);
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                showScore(score);    // display score to user
+                checkAnswers();
             }
         });
 
-        return fl;
+        // get initial question list
+        fetchQuestions();
+
+        System.out.println(lvQa.getAdapter().getItemViewType(0));
+
+        return v;
     }
 
+    private void checkAnswers() {
+        int score = 0;
+        for (Map.Entry<Question, Answer> entry : selectedAnswers.entrySet()) {
+            Question question = entry.getKey();
+            Answer answer = entry.getValue();
+            if (question.correctAnswer == answer) { score ++; }
+        }
+        // show dialog
+        new AlertDialog.Builder(getActivity())
+                .setTitle("Quiz Score")
+                .setMessage(String.format("You scored %d out of %d", score, qList.size()))
+                .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                })
+                .show();
+    }
 
-    // Attach listeners to all radio buttons
-    private void attachListeners(FrameLayout fl, int count){
+    private void fetchQuestions() {
+        qList.clear();
+        ArrayList<Question> defaultStore = QuestionStore.getDefaultLLStore();
+        for (int i = 0; i < defaultStore.size(); i++) {
+            Question currQ = defaultStore.get(i);
+            qList.add(currQ);
+        }
+        aQaList.notifyDataSetChanged();
+    }
 
-        // index starts at 1, not 0
-        for(int i=1; i<=count; i++){
-            int qid = getResources().getIdentifier("q"+i, "id", fl.getContext().getPackageName());
-            RadioGroup rg =(RadioGroup) fl.findViewById(qid);
-            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    checkAnswer(group, checkedId);
-                }
-            });
+    @Override
+    public void onRadioButtonPressed(Question question, Answer selectedAnswer) {
+        if (selectedAnswers == null) {
+            selectedAnswers = new HashMap<Question, Answer>();
+        }
+        selectedAnswers.put(question, selectedAnswer);
+        if (selectedAnswers.size() == qList.size()) {
+            btnSubmit.setEnabled(true);
         }
     }
-
-    // Tally the score
-    private void checkAnswer(RadioGroup group, int checkedId){
-
-        RadioButton btn = (RadioButton) group.findViewById(checkedId);
-        int index = group.indexOfChild(btn) + 1;
-        String answer = btn.getTag().toString();
-
-        if(answer.equals(Integer.toString(index))){
-            score++;
-        }
-    }
-
-    // Display the score as an alert
-    private void showScore(int score){
-        AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-
-        alert.setTitle("Your Score");
-        alert.setMessage("Your score is: " + score + " out of " + qCount);
-
-        alert.setNegativeButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                // OK. Do nothing.
-            }
-        });
-
-        alert.show();
-    }
-
 }

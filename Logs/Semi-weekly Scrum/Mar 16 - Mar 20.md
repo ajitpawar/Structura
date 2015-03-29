@@ -4,13 +4,12 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Discussed on the logic of implementing the Linked Lists and BSTs, using the built in data linked list in Java.
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Open #53
+* Create basic layout and design for Quiz
 
 ####Vaishali Deswal
 
@@ -46,13 +45,12 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* No significant progress
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Work on #53
+* Implement logic for Quiz
 
 ####Vaishali Deswal
 
