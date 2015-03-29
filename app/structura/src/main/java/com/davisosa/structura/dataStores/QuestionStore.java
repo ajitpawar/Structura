@@ -12,11 +12,36 @@ public class QuestionStore {
 
     private static ArrayList<Question> defaultStore;
 
+    private static ArrayList<Question> defaultLLStore;
+    private static ArrayList<Question> defaultBSTStore;
+
     public static ArrayList<Question> getDefaultStore() {
         if (QuestionStore.defaultStore == null) {
             setDefaultStore();
         }
         return defaultStore;
+    }
+
+    public ArrayList<Question> getDefaultLLStore() {
+        if (QuestionStore.defaultLLStore == null) {
+            setDefaultLLStore();
+        }
+        return defaultLLStore;
+    }
+
+    private void setDefaultLLStore() {
+
+    }
+
+    public ArrayList<Question> getDefaultBSTStore() {
+        if (QuestionStore.defaultBSTStore == null) {
+            setDefaultBSTStore();
+        }
+        return defaultBSTStore;
+    }
+
+    private void setDefaultBSTStore() {
+        
     }
 
     private static void setDefaultStore() {
