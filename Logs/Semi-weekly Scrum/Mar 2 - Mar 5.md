@@ -10,6 +10,7 @@
 ####Ajit Pawar
 
 * Code review for #33
+* Phase 2 writeup
 
 ####Vaishali Deswal
 
