@@ -12,13 +12,13 @@
 
 ### Amit Prabhakar (Slammedskyline)
 
-•	My most significant individual contribution came in Phase 3. I worked on the BST play fragment which allowed us to draw a BST including search, insert, and delete.
+•	My most significant individual contribution came in Phase 3. I worked on the BST play fragment which allowed us to draw a BST including search, insert, and delete. I also did the live demo and presentation along with Dhyey and process.md and Architecture.md.
 
-•	During this phase I learned a lot about the android development sturcture. Also I learned about git and the development cycle that being pulls and pushes as well as pull requests. 
+•	During this phase I learned a lot about the android development sturcture including views, activities, intents, and styling. Also I learned about git and the development cycle that being pulls and pushes as well as pull requests. 
 
-•	As a team member, my main strength was communication. I was constantly talking to team members and getting up dates on specific features and conflicts.
+•	As a team member, my main strength was communication. I was constantly talking to team members and getting up dates on specific features and conflicts. I also assisted, where I could, with other team members work which included testing, proof reading, and general reviewing of written documents.
 
-•	My main weakness as a team member was time management. Unfortunately, I was not about to give enough time to certain aspects of the project due to time retraints. 
+•	My main weakness as a team member was time management. Unfortunately, I was not about to give enough time to certain aspects of the project due to time constraints. I feel like I did a better job of this during phase 2 but definitly could have done more during phase 3.
 
 ### Omar hamdan (un2n)
 Here is an example of a fake report, just to give you an idea of the format we are 
