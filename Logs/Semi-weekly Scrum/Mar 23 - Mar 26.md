@@ -8,8 +8,8 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Further work on #53
+* Externalize data to XML
 
 ####Vaishali Deswal
 
@@ -48,8 +48,8 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* #53 refactored in #54
+* Needs list of actual questions on Linked Lists
 
 ####Vaishali Deswal
 
