@@ -8,8 +8,8 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Open #53
+* Create basic layout and design for Quiz
 
 ####Vaishali Deswal
 
@@ -49,8 +49,8 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Work on #53
+* Implement logic for Quiz
 
 ####Vaishali Deswal
 
