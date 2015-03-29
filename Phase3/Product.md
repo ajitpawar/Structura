@@ -15,10 +15,10 @@ So these were the features that we chose to implement in Structura. They provide
 
 These features not only meet most of the needs of a user, but they also meet specific needs of most of the users. Some of the scenarios that we can have are as follows:
 
-a) Mario is a first year Computer Science student and he wants to get a head start on the topics taught in courses like CSC263. He downloads Structura and plays with the data structures of his liking in order to get a visual, interactive introduction to it. He enjoys how Structura enables him to do things that his textbook can’t.
+a)  Mario is a first year Computer Science student and he wants to get a head start on the topics taught in courses like CSC263. He downloads Structura and plays with the data structures of his liking in order to get a visual, interactive introduction to it. He enjoys how Structura enables him to do things that his textbook can’t.
 
 b)  Lana is a second year student in majoring in Computer Science and Cognitive Science, and wants to quickly revise some concepts from the topics taught at the beginning of the semester. She uses Structura’s summary feature to read about the operations on a Binary Search Tree, and uses them in problems on AVL trees.
 
-c) Steve is a third year Computer Engineering student preparing for his interviews at Google. He has revised everything but is nervous whether what he has done is enough or not. He is aware about Structura, and thus pulls it out on his phone, and attempts the quizzes on various data structures. He gets an average of 90% on them and now he feels much more confident about his interview.
+c)  Steve is a third year Computer Engineering student preparing for his interviews at Google. He has revised everything but is nervous whether what he has done is enough or not. He is aware about Structura, and thus pulls it out on his phone, and attempts the quizzes on various data structures. He gets an average of 90% on them and now he feels much more confident about his interview.
 
 So these were some times when an app like Sturctura comes in handy. We being students ourselves, understand the needs of one, and thus have tried to implement some useful features that act as tools that aid learning. Hope our effort is useful for someone.
