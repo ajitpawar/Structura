@@ -4,18 +4,17 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Decided to open #55 and start working on the play fragment.
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Further work on #53
+* Externalize data to XML
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* compiled a list of questions on Singly linked list
+* opened #56
 
 ####Ishan Thukral
 
@@ -34,8 +33,7 @@
  
 ####Sean Williams
 
-* Something
-* Something else
+* BSTActivity
 
 ####Amit Prabhakar
 
@@ -46,13 +44,12 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Finished LLPlayFragment and working on BSTPlay.
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* #53 refactored in #54
+* Needs list of actual questions on Linked Lists
 
 ####Vaishali Deswal
 
