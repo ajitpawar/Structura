@@ -47,16 +47,12 @@
 - As a team member, I was always committed to ensuring I accomplished the tasks that I had been given. I would always put in an effort to make sure I was able to do my part, and if I had an issue, I tried to resolve it as soon as possible, be it through finding a solution or asking for help, so as not to hold up the rest of the group.
 - I felt my main weakness was communication. There were times where I felt I was out of touch with the rest of the group and what they were doing, and I feel I may have been able to have contributed more if I communicated better.
 
-### Name (GitHub username) 
-Here is an example of a fake report, just to give you an idea of the format we are 
-expecting. We would like you to be concise yet informative. 
-* My most significant contribution was the design and implementation of 
-Component X (links to relevant and interesting source­files/commits/issues). 
-* While working on our Android app (and then later in class), I learned about 
-adapters (links to relevant and interesting source­files/commits/issues).
-* I am always helping my teammates ­ I am the most experienced coder on the 
-team, and I helped other teammates set up their development environment, and 
-get up to speed with the tools we've used (give examples of specific tools). 
-* I could keep people more informed of what I am doing ­ I made a few large 
-commits that conflicted with everybody else's code, and merging everything 
-wasted a lot of our time. 
+### Ajit Pawar (ajitpawar)
+* My biggest contribution came in Phase 3 where I implemented the "Quiz" section of the app. My work can be seen here on my branch 53-quiz and issue [#53](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/issues/53). I was responsible for designing the layout and implementing the  functionality. Parts of the Quiz was refactored by Ishan Thukral in #54. Also, in Phase 2, I had a minor contribution in creating the sliding tabs.
+
+* Since this was my first Android project, I faced a learning curve in understanding the different components of an Adroid app and how they interacted with each other. In Phase 2, when I implemented sliding tabs [#26](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/pull/26), I learnt a lot about Fragments, Adapters, Views, XML Layouts and Adapters. As such, it was a good opportunity to apply the design patterns and OOP principles learnt in class to an Android project. Also, this was an excellent way for me to learn how the Scrum process really works.
+
+* I kept myself upto date with new commits and breaking changes in our code so that I can be active in the decision making process. I helped with code reviews and pointed out bugs and glitches whenever I [spotted them](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/pull/59#issuecomment-87448736).
+
+* If I had more experience in app development, I could have contributed to implementing more interactive features for our app. And I need to brush up my Java a little bit :)
+
