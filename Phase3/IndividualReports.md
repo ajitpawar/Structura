@@ -21,16 +21,14 @@
 •	My main weakness as a team member was time management. Unfortunately, I was not about to give enough time to certain aspects of the project due to time constraints. I feel like I did a better job of this during phase 2 but definitly could have done more during phase 3.
 
 ### Omar hamdan (un2n)
-Here is an example of a fake report, just to give you an idea of the format we are 
-expecting. We would like you to be concise yet informative. 
-* My most significant contribution was the design and implementation of 
-Component X (links to relevant and interesting source­files/commits/issues). 
-* While working on our Android app (and then later in class), I learned about 
-adapters (links to relevant and interesting source­files/commits/issues).
-* I am always helping my teammates ­ I am the most experienced coder on the 
-team, and I helped other teammates set up their development environment, and 
-get up to speed with the tools we've used (give examples of specific tools). 
-* I could keep people more informed of what I am doing ­ I made a few large 
+ 
+- My most significant individual contribution came in Phase 2. I worked on the start page which the app welcomes the user with. Furthermore, I acquired Zenhub licenses for the repository so that the team can enjoy and enhanced Github experience. 
+
+- While working on our Android app, I learned much about activities, views, fragments, git branching, modern app development with scrum (I had a waterfall background) and Markdown.
+
+- I try to keep myself up to date with important issues and code changes so I can be a reference to anyone asking about anything regarding the application. I have extensive knowledge about development tools and virtual machines so I aided in distributing alternative emulators to the default Eclipse emulator. 
+
+- I could keep people more informed of what I am doing ­ I made a few large 
 commits that conflicted with everybody else's code, and merging everything 
 wasted a lot of our time. 
 
