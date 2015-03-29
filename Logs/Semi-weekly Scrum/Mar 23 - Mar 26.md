@@ -33,8 +33,7 @@
  
 ####Sean Williams
 
-* Something
-* Something else
+* BSTActivity
 
 ####Amit Prabhakar
 
