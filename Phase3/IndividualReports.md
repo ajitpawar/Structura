@@ -30,6 +30,16 @@
 
 - I didn't expect Android development to advance greatly in one year. My knowledge from CSC207 wasn't sufficient to understand some of the newer stuff so the project was a new learning process for me. Thankfully, it was a positive learning process. 
 
+### Ishan Thukral (ishanthukral) 
+
+* I had two significant contributions. Firstly, I implemented the Linked List interactivity in Phase 2. This included the ability to add a node, delete it and search through the linked list to find a specific node. This primarily involved the use of the Android Canvas API. In Phase 3, I worked on the Quiz section of the app. Along with Ajit, we implemented the quiz fragment. I worked on setting up the adapter to control the list view of question and the singleton question store class. I also worked on improving the UI of the Quiz layout. 
+
+* This phase was a good opportunity to implement some of the object oriented principles we have been learning in class. While implementing the quiz section I made sure to use classes that were single use and even ended up using the singleton design pattern. In addition I learnt a lot about Android development - canvas, adapters, list views, fragments, activities etc.
+
+* I tried to help my teammates with Android issues. Over the course of the semester I tried to arrange regular meeting so everyone was up-to-date with each other's work on the project. I participated in code reviews and implemented major core portions of the app. 
+
+* I feel I could have been more active and frequent on Github and code reviews. 
+
 ### Name (GitHub username) 
 Here is an example of a fake report, just to give you an idea of the format we are 
 expecting. We would like you to be concise yet informative. 

@@ -30,7 +30,7 @@ The only need for storage in our app was to store the list of questions and answ
 
 <b>Good decision?:</b> Yes, by doing this we eliminate the need to decode our structra app icon every time the activity changes.
 
-##### Decision: Use template method for the base activity.
-<b>Reasons:</b>: We used this design patter on the base activity because it is a  abstract acivity that handles common fuctionality like the navigation drawer.
+##### Decision: Used template method for the base activity.
+<b>Reasons:</b>: We used this design pattern on the base activity because it is an abstract activity that handles common functionality like the navigation drawer.
 
-<b>Good decision?:</b> Yes, this reduced the code burden on the developer making changes to the base activity which allows us to make some good additions to our app such as navigation drawer.
+<b>Good decision?:</b> Yes, this reduces the code burden on the developer making changes to the base activity and allows us to make some neat additions to our app such as navigation drawer.
