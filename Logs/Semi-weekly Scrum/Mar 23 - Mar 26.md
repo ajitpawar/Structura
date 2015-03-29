@@ -13,7 +13,7 @@
 
 ####Vaishali Deswal
 
-* opened #56 to add Quiz questions
+* Comipled questions for the quiz feature for Binary Search tree
 
 ####Ishan Thukral
 
@@ -52,7 +52,7 @@
 
 ####Vaishali Deswal
 
-* compiled a list of questions on Singly linked list
+* Closed #56
 
 ####Ishan Thukral
 
