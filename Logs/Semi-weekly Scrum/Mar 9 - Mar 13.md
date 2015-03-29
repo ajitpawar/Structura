@@ -9,8 +9,7 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Code review for #33
 
 ####Vaishali Deswal
 
@@ -50,8 +49,7 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* More work on #33
 
 ####Vaishali Deswal
 
