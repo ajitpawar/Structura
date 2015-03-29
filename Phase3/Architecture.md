@@ -33,4 +33,4 @@ The only need for storage in our app was to store the list of questions and answ
 ##### Decision: Use template method for the base activity.
 <b>Reasons:</b>: We used this design patter on the base activity because it is a  abstract acivity that handles common fuctionality like the navigation drawer.
 
-<b>Good decision?:</b> Yes, this reduced the code burden on the developer making changes to the base activity which allows us to make some good additions to out app such as navigation drawer.
+<b>Good decision?:</b> Yes, this reduced the code burden on the developer making changes to the base activity which allows us to make some good additions to our app such as navigation drawer.
