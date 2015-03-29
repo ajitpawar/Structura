@@ -19,55 +19,6 @@ public class BST {
         public BSTNode(Pair<NodeView, EdgeView> view){
             this.view = view;
         }
-
-       /** public BSTNode treeSearch(int id){
-            if (this.view.first.getId() == id){
-                return this;
-            } else if (this.view.first.getId() < id){
-                if (this.left == null){
-                    return this.left;
-                }
-                return this.left.treeSearch(id);
-            } else {
-                if (this.right == null){
-                    return this.right;
-                }
-                return this.right.treeSearch(id);
-            }
-        }
-
-        public BSTNode treeInsert(Pair<NodeView, EdgeView> view){
-            if (this.view.first.getId() == view.first.getId()){
-                this.view = view;
-                return this;
-            } else if (this.view.first.getId() < view.first.getId()){
-                if (this.left == null){
-                    this.left = new BSTNode(view);
-                    return this.left;
-                } else {
-                    return this.left.treeInsert(view);
-                }
-            } else {
-                if (this.right == null){
-                    this.right = new BSTNode(view);
-                    return this.right;
-                } else {
-                    return this.right.treeInsert(view);
-                }
-            }
-        }
-
-        public BSTNode treeDelete(int id){
-
-        }
-
-        public Pair<NodeView, EdgeView> removeMin(){
-            if (this.left.left == null){
-                BSTNode x = this.left;
-                this.left = this.left.right;
-                return x.view;
-            } else return this.left.removeMin();
-        }**/
     }
 
     public BST(){
@@ -80,10 +31,6 @@ public class BST {
                 x = x.left;
             } else x = x.right;
         } return x;
-        /*if (this.root == null){
-            return this.root;
-        }
-        return this.root.treeSearch(id);*/
     }
 
     public BSTNode insert(Pair<NodeView, EdgeView> view){
@@ -113,40 +60,56 @@ public class BST {
             parent.right = x;
             return parent.right;
         }
-
-        /*if (this.root == null){
-            this.root = new BSTNode(view);
-            return this.root;
-        }
-        return this.root.treeInsert(view);*/
     }
 
-    private void transplant(){
 
-    }
 
     public BSTNode delete(int id){
+        BSTNode x = this.root;
+        while (x != null || x.view.first.getId() != id){
+            if (x.view.first.getId() < id){
+                x = x.left;
+            } else x = x.right;
+        }
+        remove(x);
+        return x;
+    }
 
-
-        /*if (this.root == null){
-            return this.root;
-        } else if (this.root.view.first.getId() == id){
-            BSTNode x = this.root;
-            if (this.root.left == null || this.root.right == null){
-                if (this.root.left == null){
-                    this.root = root.right;
-                } else {
-                    this.root = root.left;
-                }
-            } else {
-                this.root.view = this.root.right.removeMin();
-            }
-            return x;
-        } else if (this.root.view.first.getId() < id){
-            if (root.lef)
+    private void transplant(BSTNode x, BSTNode z){
+        if (x.parent == null){
+            this.root = z;
+        } else if (x == x.parent.left){
+            x.parent.left = z;
         } else {
-            return this.root.treeDelete(id);
-        }*/
+            x.parent.right = z;
+        }
+        if (z != null){
+            z.parent = x.parent;
+        }
+    }
+
+    private void remove(BSTNode x){
+        if(x.left == null){
+            transplant(x, x.right);
+        } else if (x.right == null){
+            transplant(x, x.left);
+        } else {
+            BSTNode n = treeMinimum(x.right);
+            if (n.parent != x){
+                transplant(n, n.right);
+                n.right = x.right;
+                n.right.parent = n;
+            }
+            transplant(x, n);
+            n.left = x.left;
+            x.left.parent = n;
+        }
+    }
+
+    private BSTNode treeMinimum(BSTNode x){
+        while (x.left != null){
+            x = x.left;
+        } return x;
     }
 
 }
