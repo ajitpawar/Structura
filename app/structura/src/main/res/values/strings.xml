@@ -36,9 +36,9 @@
     <string name="dialog_delete_title">Delete which node?</string>
     <string name="dialog_search_title">Find which node?</string>
 
-    <string name="nodeValue">Value</string>
-    <string name="nodeNext">Next</string>
-    <string name="nodeValueDigit">0</string>
+    <!-- Errors -->
+    <string name="err_no_node_value">No node value entered</string>
+    <string name="err_node_not_found">Node %d not found</string>
 
     <!-- Summaries -->
     <string name="ll_summary_body">
