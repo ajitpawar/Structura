@@ -50,26 +50,6 @@
         ]]>
     </string>
 
-    <!-- Quiz questions -->
-    <string name="q1">1. Who won the world cup?</string>
-    <string name="q1_ans">1</string>
-    <string name="q1_optionA">Germany</string>
-    <string name="q1_optionB">United States of Ajit</string>
-    <string name="q1_optionC">United State of Ajit</string>
-
-    <string name="q2">2. Who won the golden boot?</string>
-    <string name="q2_ans">3</string>
-    <string name="q2_optionA">Ajit Pawar</string>
-    <string name="q2_optionB">Ajit Pawar</string>
-    <string name="q2_optionC">James Rodríguez</string>
-
-    <string name="q3">3. Who won the golden glove?</string>
-    <string name="q3_ans">2</string>
-    <string name="q3_optionA">Ajit Pawar</string>
-    <string name="q3_optionB">Manuel Neuer</string>
-    <string name="q3_optionC">Ajit Pawar</string>
-    <string name="btnSubmit">Submit</string>
-    
     <string name="bst_summary_body">
         <![CDATA[
         <p>A binary search tree (BST) is a node-based binary tree data structure where each node has a comparable key (and an associated value).</p>
