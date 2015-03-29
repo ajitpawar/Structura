@@ -10,6 +10,16 @@
 
 •	My main weakness as a team member was being a bit miscommunicated with the other team members. I was not able to allot enough time to the project in its early phase and also wasn’t actively participating in the code reviews, and felt disconnected. I tried to improve on the third phase and feel that I did a better job than phase 2.
 
+### Amit Prabhakar (Slammedskyline)
+
+•	My most significant individual contribution came in Phase 3. I worked on the BST play fragment which allowed us to draw a BST including search, insert, and delete.
+
+•	During this phase I learned a lot about the android development sturcture. Also I learned about git and the development cycle that being pulls and pushes as well as pull requests. 
+
+•	As a team member, my main strength was communication. I was constantly talking to team members and getting up dates on specific features and conflicts.
+
+•	My main weakness as a team member was time management. Unfortunately, I was not about to give enough time to certain aspects of the project due to time retraints. 
+
 ### Name (GitHub username) 
 Here is an example of a fake report, just to give you an idea of the format we are 
 expecting. We would like you to be concise yet informative. 
