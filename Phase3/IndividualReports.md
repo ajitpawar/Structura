@@ -14,23 +14,21 @@
 
 •	My most significant individual contribution came in Phase 3. I worked on the BST play fragment which allowed us to draw a BST including search, insert, and delete. I also did the live demo and presentation along with Dhyey and process.md and Architecture.md.
 
-•	During this phase I learned a lot about the android development sturcture including views, activities, intents, and styling. Also I learned about git and the development cycle that being pulls and pushes as well as pull requests. 
+•	During this phase I learned a lot about the android development structure including views, activities, intents, and styling. Also I learned about git and the development cycle that being pulls and pushes as well as pull requests. 
 
 •	As a team member, my main strength was communication. I was constantly talking to team members and getting up dates on specific features and conflicts. I also assisted, where I could, with other team members work which included testing, proof reading, and general reviewing of written documents.
 
-•	My main weakness as a team member was time management. Unfortunately, I was not about to give enough time to certain aspects of the project due to time constraints. I feel like I did a better job of this during phase 2 but definitly could have done more during phase 3.
+•	My main weakness as a team member was time management. Unfortunately, I was not about to give enough time to certain aspects of the project due to time constraints. I feel like I did a better job of this during phase 2 but definitely could have done more during phase 3.
 
 ### Omar hamdan (un2n)
  
-- My most significant individual contribution came in Phase 2. I worked on the start page which the app welcomes the user with. Furthermore, I acquired Zenhub licenses for the repository so that the team can enjoy and enhanced Github experience. 
+- My most significant individual contribution came in Phase 2. I worked on the start page which the app welcomes the user with. Furthermore, I acquired Zenhub.io licenses for the repository so that the team can enjoy and enhanced Github experience. 
 
 - While working on our Android app, I learned much about activities, views, fragments, git branching, modern app development with scrum (I had a waterfall background) and Markdown.
 
 - I try to keep myself up to date with important issues and code changes so I can be a reference to anyone asking about anything regarding the application. I have extensive knowledge about development tools and virtual machines so I aided in distributing alternative emulators to the default Eclipse emulator. 
 
-- I could keep people more informed of what I am doing ­ I made a few large 
-commits that conflicted with everybody else's code, and merging everything 
-wasted a lot of our time. 
+- I didn't expect Android development to advance greatly in one year. My knowledge from CSC207 wasn't sufficient to understand some of the newer stuff so the project was a new learning process for me. Thankfully, it was a positive learning process. 
 
 ### Name (GitHub username) 
 Here is an example of a fake report, just to give you an idea of the format we are 
