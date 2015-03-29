@@ -21,6 +21,8 @@ import com.davisosa.structura.view.StructuraRadioButton;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ishan on 15-03-23.
@@ -28,10 +30,12 @@ import java.util.ArrayList;
 public class QAListAdapter extends ArrayAdapter<Question> {
 
     private AdapterCallback mAdapterCallback;
+    private Map<Question, Answer> selectedAnswers;
 
     public QAListAdapter(Context context, ArrayList<Question> objects, AdapterCallback mAdapterCallback) {
         super(context, android.R.layout.simple_list_item_1, objects);
         this.mAdapterCallback = mAdapterCallback;
+        this.selectedAnswers = new HashMap<Question, Answer>();
     }
 
     @Override
@@ -62,11 +66,26 @@ public class QAListAdapter extends ArrayAdapter<Question> {
             rgAnswers.addView(rbAnswer, i);
         }
 
+        int childCount = rgAnswers.getChildCount();
+        for (int i=0; i < childCount; i++) {
+            View view = rgAnswers.getChildAt(i);
+            if (view instanceof StructuraRadioButton) {
+                StructuraRadioButton srb = (StructuraRadioButton) view;
+                if (srb.getAnswer() == selectedAnswers.get(currentQ)) {
+                    srb.setChecked(true);
+                    break;
+                }
+            }
+        }
+
         rgAnswers.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 StructuraRadioButton checkedRadioButton = (StructuraRadioButton) group.findViewById(checkedId);
-                mAdapterCallback.onRadioButtonPressed(currentQ, checkedRadioButton.getAnswer());
+                if (checkedRadioButton != null) {
+                    mAdapterCallback.onRadioButtonPressed(currentQ, checkedRadioButton.getAnswer());
+                    selectedAnswers.put(currentQ, checkedRadioButton.getAnswer());
+                }
             }
         });
 
