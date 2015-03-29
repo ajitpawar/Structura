@@ -71,7 +71,9 @@ public class BST {
                 x = x.left;
             } else x = x.right;
         }
-        remove(x);
+        if (x != null) {
+            remove(x);
+        }
         return x;
     }
 
