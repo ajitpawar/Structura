@@ -13,8 +13,8 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* compiled a list of questions on Singly linked list
+* opened #56
 
 ####Ishan Thukral
 
