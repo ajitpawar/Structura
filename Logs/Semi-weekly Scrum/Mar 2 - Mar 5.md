@@ -49,8 +49,7 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Finishing up #33
 
 ####Vaishali Deswal
 
