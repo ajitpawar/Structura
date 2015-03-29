@@ -21,16 +21,19 @@ The only need for storage in our app was to store the list of questions and answ
 ---
 
 ### Architecture decisions
-##### Decision: Choosing to do a mobile app
-<b>Reasons:</b> A major architecture decision we made was to make our application a mobile app. We did this because we felt that the Android environment gave us the flexibility needed to create an app with multiple screens and data structures. Also, the syntax for UI styling is very familiar to our team. Morever, Android was chosen over iOS or Windows to make our app available to a larger market.
+##### Decision 1: Choosing to do a mobile app
+Reasons: A major architecture decision we made was to make our application a mobile app. We did this because we felt that the Android environment gave us the flexibility needed to create an app with multiple screens and data structures. Also, the syntax for UI styling is very familiar to our team. Morever, Android was chosen over iOS or Windows to make our app available to a larger market.
 
-<b>Good decision?:</b> Yes, we believe this was a very good decision since this level of immersive interactivity could not have been achieved with a web app
-##### Decision: Using singleton design pattern for overview styler.
-<b>Reasons:</b> We made this decsion because we needed to apply color to the title bar of the app in the overview screen.
+Good decision?: Yes, we believe this was a very good decision since this level of immersive interactivity could not have been achieved with a web app
 
-<b>Good decision?:</b> Yes, by doing this we eliminate the need to decode our structra app icon every time the activity changes.
 
-##### Decision: Used template method for the base activity.
-<b>Reasons:</b>: We used this design pattern on the base activity because it is an abstract activity that handles common functionality like the navigation drawer.
+##### Decision 2: Using singleton design pattern for overview styler.
+Reasons: We made this decsion because we needed to apply color to the title bar of the app in the overview screen.
 
-<b>Good decision?:</b> Yes, this reduces the code burden on the developer making changes to the base activity and allows us to make some neat additions to our app such as navigation drawer.
+Good decision?: Yes, by doing this we eliminate the need to decode our structra app icon every time the activity changes.
+
+
+##### Decision 3: Used template method for the base activity.
+Reasons: We used this design pattern on the base activity because it is an abstract activity that handles common functionality like the navigation drawer.
+
+Good decision?: Yes, this reduces the code burden on the developer making changes to the base activity and allows us to make some neat additions to our app such as navigation drawer.
