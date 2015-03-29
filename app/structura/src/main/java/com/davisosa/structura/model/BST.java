@@ -38,14 +38,14 @@ public class BST {
     }
 
     public BST(){
-        this.colored = new Stack<BSTNode>();
+        this.colored = new Stack<>();
     }
 
     /**
      * Finds the node in the BST with the given ID.
      *
      * @param id node ID
-     * @return {@code true}
+     * @return {@code true} if node was found, {@code false} otherwise.
      */
     public Pair<NodeView, EdgeView> search(int id){
         BSTNode x = this.root;
@@ -122,8 +122,8 @@ public class BST {
      */
     public boolean delete(int id){
         BSTNode x = this.root;
-        while (x != null && x.pair.first.getId() != id){
-            if (x.pair.first.getId() < id){
+        while (x != null || x.view.first.getId() != id){
+            if (x.view.first.getId() < id){
                 x = x.left;
             } else x = x.right;
         }
@@ -146,8 +146,8 @@ public class BST {
      */
     public boolean delete(int id, int search, int remove){
         BSTNode x = this.root;
-        while (x != null && x.pair.first.getId() != id){
-            x.pair.first.setColor(search);
+        while (x != null || x.view.first.getId() != id){
+            x.view.first.setColor(search);
             colored.push(x);
             if (x.pair.first.getId() < id){
                 x = x.left;
@@ -183,7 +183,7 @@ public class BST {
     /**
      * Removes the given node from the tree.
      *
-     * @param x
+     * @param x the node to be removed
      */
     private void remove(BSTNode x){
         if(x.left == null){
