@@ -55,4 +55,25 @@
         <p>In each iteration of the loop, we check if the current node\'s data is equal to the input value, if it is not, we make the current node equal to current <em>node.next</em>.</p>
         ]]>
     </string>
+
+    <string name="bst_summary_body">
+        <![CDATA[
+        <p>A binary search tree (BST) is a node-based binary tree data structure where each node has a comparable key (and an associated value).</p>
+        <p> Each node has no more than two child nodes. The left sub-tree contains only nodes with keys less than the parent node; the right sub-tree contains only nodes with keys greater than the parent node. </p>
+        <p>Binary search tree is a fundamental data structure used to construct more abstract data structures such as sets, multisets, and associative arrays.</p>
+        <p>A BST supports the following operations:</p>
+        <p><strong>Insert:</strong> In order to insert a new node in the tree, its key is first compared with that of the root. </p>
+        <p>If its key is less than the root\'s, it is then compared with the key of the root\'s left child. If its key is greater, it is compared with the root\'s right child.</p>
+        <p>This process continues, until the new node is compared with a leaf node, and then it is added as this node\'s right or left child, depending on its key.</p>
+        <p><strong>Delete:</strong> There are three possible cases to consider:</p>
+        <p>Deleting a node with no children: simply remove the node from the tree.</p>
+        <p>Deleting a node with one child: remove the node and replace it with its child.</p>
+        <p>Deleting a node with two children: call the node to be deleted N. Do not delete N. Instead, choose either its in-order successor node or its in-order predecessor node, R.</p>
+        <p>Copy the value of R to N, then recursively call delete on R until reaching one of the first two cases.</p>
+        <p><strong>Search:</strong> We begin by examining the root node. If the key equals that of the root, we return the node.</p>
+        <p>If the key is less than that of the root, we search the left subtree. Else, we search the right subtree.</p>
+        <p>This process is repeated until the key is found or the remaining subtree is null.</p>
+        <p>On average, this means that each comparison allows the operations to skip over half of the tree.</p>
+        ]]>
+    </string>
 </resources>
