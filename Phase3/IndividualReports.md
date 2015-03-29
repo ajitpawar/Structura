@@ -2,7 +2,7 @@
 
 ### Dhyey Sejpal (dhyeysejpal)
 
-•	My most significant individual contribution came in Phase 3. I worked on redesigning the Linked list play fragment, which was implemented by drawing stuff on canvas using a drawable. I helped designing the views, and wrote the functions to search through the linked list, which formed the base of the search and delete operations. Then, I also helped in extending the same functions for implementing the operations for a binary search tree. The commits are in the branch 55-play-canvas.
+•	My most significant individual contribution came in Phase 3. I worked on redesigning the Linked list play fragment, which was implemented by drawing stuff on canvas using a drawable. I helped designing the views, and wrote the functions to search through the linked list, which formed the base of the search and delete operations. Then, I also helped in extending the same functions for implementing the operations for a binary search tree. The commits are in the branch 55-play-canvas. Debugged search BST function.
 
 •	This project was a big opportunity to learn many technical issues. The biggest was using git. I was familiar with version control system before but this project helped me learn a lot of new things like code reviews, pull requests, etc. Other than that, I learnt many Android concepts like canvas drawing, views and fragments, etc.
 
@@ -26,7 +26,7 @@
 
 ### Omar hamdan (un2n)
  
-- My most significant individual contribution came in Phase 2. I worked on the start page which the app welcomes the user with. Furthermore, I acquired Zenhub.io licenses for the repository so that the team can enjoy and enhanced Github experience. 
+- My most significant individual contribution came in Phase 2. I worked on the start page which the app welcomes the user with. Furthermore, I acquired Zenhub.io licenses for the repository so that the team can enjoy and enhanced Github experience. Debugged search BST function.
 
 - While working on our Android app, I learned much about activities, views, fragments, git branching, modern app development with scrum (I had a waterfall background) and Markdown.
 
