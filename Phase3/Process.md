@@ -12,4 +12,4 @@ Although the Scrum process was an important part of our development cycle, we re
 
 ### Ideal process
 Evidently, an ideal process for us might be a mix of Scrum and Kanban. Scrum will allow us to split our work into small, concrete deliverables while Kanban will allow us to visualize the workflow and limit WIP (Work In Progress). An example of how Kanban process might look like for us is shown below:
-![](https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/tree/master/Phase3/img/Kanban-Board.png)
+![](img/kanban.png)
