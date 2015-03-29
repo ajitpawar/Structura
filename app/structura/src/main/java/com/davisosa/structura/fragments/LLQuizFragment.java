@@ -93,7 +93,7 @@ public class LLQuizFragment extends Fragment implements QAListAdapter.AdapterCal
 
     private void fetchQuestions() {
         qList.clear();
-        ArrayList<Question> defaultStore = QuestionStore.getDefaultStore();
+        ArrayList<Question> defaultStore = QuestionStore.getDefaultLLStore();
         for (int i = 0; i < defaultStore.size(); i++) {
             Question currQ = defaultStore.get(i);
             qList.add(currQ);
