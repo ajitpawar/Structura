@@ -41,11 +41,10 @@
         <p>Linked list is a common data structure used in computer science. There are many kinds of linked lists, but we will discuss singly linked lists (SLL) here.</p>
         <p>In an SLL, each node is composed of a value <em>data</em> and a pointer <em>next</em> to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence.</p>
         <p>SLLs can be used to implement several other common abstract data types, including lists (the abstract data type), stacks, queues, associative arrays (dictionaries), etc.</p>
-        <p>Generally, we also store a pointer <em>head</em> which points to the first element of the linked list.</p>
         <p>The SLL supports the following operations:</p>
-        <p><strong>Insert:</strong> We insert a new node = (<em>d</em>, <em>null</em>) into an SLL. Here, <em>d</em> is its data value and its <em>next</em> parameter is <em>null</em> at the moment.</p>
+        <p><strong>Insert:</strong> We insert a new node = (<em>d</em>, <em>null</em>) to the end of an SLL. Here, <em>d</em> is its data value and its <em>next</em> parameter is <em>null</em> at the moment.</p>
         <p>We first make the <em>next</em> pointer of this node to point to the current head, and then the head pointer to point to the new node. This way, we insert the node to the front of the SLL.</p>
-        <p><strong>Delete:</strong> We take the node as input whose next node has to be deleted. That way, we just set the value of <em>node.next</em> to <em>node.next.next</em>, and destroy <em>node.next</em>.</p>
+        <p><strong>Delete:</strong> We take the node as input that has to be deleted. We traverse through the linked list to find the node 'n' which is the node before the node to be deleted. Then, we just set the value of <em>n.next</em> to <em>n.next.next</em>, and destroy <em>n.next</em>.</p>
         <p><strong>Search:</strong> In order to search the SLL for a value, we start with the head, and loop until the value is found, that is, <em>node.data</em> = <em>value</em>, or return <em>False</em> otherwise.</p>
         <p>In each iteration of the loop, we check if the current node\'s data is equal to the input value, if it is not, we make the current node equal to current <em>node.next</em>.</p>
         ]]>
