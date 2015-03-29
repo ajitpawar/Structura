@@ -13,8 +13,7 @@
 
 ####Vaishali Deswal
 
-* compiled a list of questions on Singly linked list
-* opened #56
+* opened #56 to add Quiz questions
 
 ####Ishan Thukral
 
@@ -53,8 +52,7 @@
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* compiled a list of questions on Singly linked list
 
 ####Ishan Thukral
 
