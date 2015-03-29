@@ -16,16 +16,14 @@ public class BSTActivity extends BaseActivity
     private SlidingTabLayout mSlidingTabLayout;
 
     @Override
-    protected int getSelfDrawerItem() {
-        return DRAWER_ITEM_LL;
-    }
+    protected int getSelfDrawerItem() { return DRAWER_ITEM_BST; }
 
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_bst);
 
-        getSupportActionBar().setTitle(R.string.title_linked_list);
+        getSupportActionBar().setTitle(R.string.title_bst);
         overridePendingTransition(0, 0);
 
         // Get the ViewPager and set its PagerAdapter so that it can display items.
