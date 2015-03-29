@@ -1,5 +1,5 @@
 ### Android Components in our app
-There are 4 major components to our Android app: Activities, Views, Model, Database
+There are 4 major components to our Android app: Activities, Views, Model, Storage
 ###### Activities
 An Activity in Android represents a screen that the user can interact with. An activity interacts with the user to do one and only one thing. Since our app covers two types of data structures (Linked List and BST), we created main two activities; one for each data structure.
 
