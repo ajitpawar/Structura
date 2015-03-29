@@ -40,6 +40,13 @@
 
 * I feel I could have been more active and frequent on Github and code reviews. 
 
+### Sean Williams (SeanWiz)
+
+- My most significant individual contribution came in Phase 3, where I implemented the binary search tree data structure, which was needed for the play function to work properly. I also contributed towards the building of the necessary activity, page adapter and play fragment for the binary search tree section.
+- While working on our project, I learned a lot more about how an Android application works, what activities, fragments and resource files do and how they interact with one another to produce a working product. I also learned about the different features of Git, such as working with and rebasing branches.
+- As a team member, I was always committed to ensuring I accomplished the tasks that I had been given. I would always put in an effort to make sure I was able to do my part, and if I had an issue, I tried to resolve it as soon as possible, be it through finding a solution or asking for help, so as not to hold up the rest of the group.
+- I felt my main weakness was communication. There were times where I felt I was out of touch with the rest of the group and what they were doing, and I feel I may have been able to have contributed more if I communicated better.
+
 ### Name (GitHub username) 
 Here is an example of a fake report, just to give you an idea of the format we are 
 expecting. We would like you to be concise yet informative. 
