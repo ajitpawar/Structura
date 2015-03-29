@@ -13,19 +13,27 @@ import java.util.Stack;
  */
 public class BST {
 
-    private BSTNode root;
+    public BSTNode getRoot() {
+        return root;
+    }
+
+    public void setRoot(BSTNode root) {
+        this.root = root;
+    }
+
+    public BSTNode root;
     private Stack<BSTNode> colored;
 
-    private class BSTNode {
-        private Pair<NodeView, EdgeView> view;
-        private BSTNode left, right, parent;
+    public class BSTNode {
+        public Pair<NodeView, EdgeView> pair;
+        public BSTNode left, right, parent;
 
-        public BSTNode(Pair<NodeView, EdgeView> view){
-            this.view = view;
+        public BSTNode(Pair<NodeView, EdgeView> pair){
+            this.pair = pair;
         }
 
         public void resetColor(){
-            this.view.first.resetColor();
+            this.pair.first.resetColor();
         }
     }
 
@@ -37,19 +45,16 @@ public class BST {
      * Finds the node in the BST with the given ID.
      *
      * @param id node ID
-     * @return {@code true} if node was found, {@code false} otherwise.
+     * @return {@code true}
      */
-    public boolean search(int id){
+    public Pair<NodeView, EdgeView> search(int id){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
-            if (x.view.first.getId() < id){
+        while (x != null && x.pair.first.getId() != id){
+            if (x.pair.first.getId() < id){
                 x = x.left;
             } else x = x.right;
         }
-        if (x != null){
-            return true;
-        }
-        return false;
+        return x.pair;
     }
 
     /**
@@ -63,15 +68,15 @@ public class BST {
      */
     public boolean search(int id, int search, int found){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
-            x.view.first.setColor(search);
+        while (x != null && x.pair.first.getId() != id){
+            x.pair.first.setColor(search);
             colored.push(x);
-            if (x.view.first.getId() < id){
+            if (x.pair.first.getId() < id){
                 x = x.left;
             } else x = x.right;
         }
         if (x != null){
-            x.view.first.setColor(found);
+            x.pair.first.setColor(found);
             colored.push(x);
             return true;
         }
@@ -82,25 +87,25 @@ public class BST {
      * Creates a new node from a given NodeView, EdgeView pair, then
      * returns it upon insertion into the BST.
      *
-     * @param view the NodeView, EdgeView pair
+     * @param pair the NodeView, EdgeView pair
      */
-    public void insert(Pair<NodeView, EdgeView> view){
-        BSTNode x = new BSTNode(view);
+    public void insert(Pair<NodeView, EdgeView> pair){
+        BSTNode x = new BSTNode(pair);
         BSTNode parent = null;
         BSTNode n = this.root;
         while (n != null){
             parent = n;
-            if (x.view.first.getId() < n.view.first.getId()){
+            if (x.pair.first.getId() < n.pair.first.getId()){
                 n = n.left;
-            } else if (x.view.first.getId() > n.view.first.getId()){
+            } else if (x.pair.first.getId() > n.pair.first.getId()){
                 n = n.right;
             } else {
-                n.view = x.view;
+                n.pair = x.pair;
             }
         }
         if (parent == null){ // then this.root == null
             this.root = x;
-        } else if (x.view.first.getId() < parent.view.first.getId()){
+        } else if (x.pair.first.getId() < parent.pair.first.getId()){
             x.parent = parent;
             parent.left = x;
         } else {
@@ -117,8 +122,8 @@ public class BST {
      */
     public boolean delete(int id){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
-            if (x.view.first.getId() < id){
+        while (x != null && x.pair.first.getId() != id){
+            if (x.pair.first.getId() < id){
                 x = x.left;
             } else x = x.right;
         }
@@ -141,15 +146,15 @@ public class BST {
      */
     public boolean delete(int id, int search, int remove){
         BSTNode x = this.root;
-        while (x != null || x.view.first.getId() != id){
-            x.view.first.setColor(search);
+        while (x != null && x.pair.first.getId() != id){
+            x.pair.first.setColor(search);
             colored.push(x);
-            if (x.view.first.getId() < id){
+            if (x.pair.first.getId() < id){
                 x = x.left;
             } else x = x.right;
         }
         if (x != null) {
-            x.view.first.setColor(remove);
+            x.pair.first.setColor(remove);
             remove(x);
             return true;
         }

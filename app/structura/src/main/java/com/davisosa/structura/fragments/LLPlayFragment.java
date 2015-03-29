@@ -209,7 +209,7 @@ public class LLPlayFragment extends Fragment {
                     public void run() {
                         pair.first.setColor(res.getColor(R.color.red_400));
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
 
                 mHandler.postDelayed(new Runnable() {
                     @Override
@@ -227,7 +227,7 @@ public class LLPlayFragment extends Fragment {
                         mDelBtn.setEnabled(mNodeLayout.getChildCount() > 0);
                         mSearchBtn.setEnabled(mNodeLayout.getChildCount() > 0);
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
 
                 return true;
             } else {
@@ -236,7 +236,7 @@ public class LLPlayFragment extends Fragment {
                     public void run() {
                         pair.first.setColor(res.getColor(R.color.grey_500));
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
             }
         }
         return false;
@@ -259,7 +259,7 @@ public class LLPlayFragment extends Fragment {
                     public void run() {
                         pair.first.setColor(res.getColor(R.color.blue_400));
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
                 return true;
             } else {
                 mHandler.postDelayed(new Runnable() {
@@ -267,7 +267,7 @@ public class LLPlayFragment extends Fragment {
                     public void run() {
                         pair.first.setColor(res.getColor(R.color.grey_500));
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
             }
         }
         return false;

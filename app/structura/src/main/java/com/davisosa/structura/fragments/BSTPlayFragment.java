@@ -3,6 +3,7 @@ package com.davisosa.structura.fragments;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Pair;
 import android.view.LayoutInflater;
@@ -41,7 +42,7 @@ public class BSTPlayFragment extends Fragment {
     private Button mSearchBtn;
 
     private BST mNodes = new BST();
-    //private Handler mHandler = new Handler();
+    private Handler mHandler = new Handler();
     private Sequencer mSequencer = new Sequencer();
 
     private OnFragmentInteractionListener mListener;
@@ -200,48 +201,21 @@ public class BSTPlayFragment extends Fragment {
      */
     private boolean removeNode(int id) {
         final Resources res = getResources();
+        Pair<NodeView,EdgeView> pair = mNodes.search(id);
         boolean removed = mNodes.delete(id, res.getColor(R.color.grey_500),
                                         res.getColor(R.color.red_400));
-        return removed;
-        /*int count = 0;
-        for (final Pair<NodeView, EdgeView> pair : mNodes) {
-            if (pair.first.getId() == id) {
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        pair.first.setColor(res.getColor(R.color.red_400));
-                    }
-                }, 500 * ++count);Ca
 
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mNodeLayout.removeView(pair.second);
-                        mNodeLayout.removeView(pair.first);
-
-                        if (pair.equals(mNodes.element()) && mNodes.size() > 1) {
-                            Pair<NodeView, EdgeView> nextPair = mNodes.get(1);
-                            mNodeLayout.removeView(nextPair.second);
-                            mNodes.set(1, new Pair<>(nextPair.first, (EdgeView) null));
-                        }
-                        mNodes.remove(pair);
-
-                        mDelBtn.setEnabled(mNodeLayout.getChildCount() > 0);
-                        mSearchBtn.setEnabled(mNodeLayout.getChildCount() > 0);
-                    }
-                }, 500 * ++count);
-
-                return true;
-            } else {
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        pair.first.setColor(res.getColor(R.color.grey_500));
-                    }
-                }, 500 * ++count);
-            }
+        if (pair.second == null)
+        {
+            mNodes.root.pair = new Pair<>(pair.first, (EdgeView) null);
         }
-        return false;*/
+
+        else
+        {
+            mNodeLayout.removeView(pair.second);
+            mNodeLayout.removeView(pair.first);
+        }
+        return removed;
     }
 
     /**
@@ -253,29 +227,9 @@ public class BSTPlayFragment extends Fragment {
      */
     private boolean findNode(int id) {
         final Resources res = getResources();
-        boolean found = mNodes.delete(id, res.getColor(R.color.grey_500),
+        boolean found = mNodes.search(id, res.getColor(R.color.grey_500),
                 res.getColor(R.color.blue_400));
         return found;
-        /*int count = 0;
-        for (final Pair<NodeView, EdgeView> pair : mNodes) {
-            if (pair.first.getId() == id) {
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        pair.first.setColor(res.getColor(R.color.blue_400));
-                    }
-                }, 500 * ++count);
-                return true;
-            } else {
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        pair.first.setColor(res.getColor(R.color.grey_500));
-                    }
-                }, 500 * ++count);
-            }
-        }
-        return false;*/
     }
 
     private void resetNodeColors() {
