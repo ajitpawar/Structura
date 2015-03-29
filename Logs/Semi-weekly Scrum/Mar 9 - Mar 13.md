@@ -9,13 +9,11 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Code review for #33
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* opened #56 to add Quiz questions
 
 ####Ishan Thukral
 
@@ -50,13 +48,11 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* More work on #33
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* compiled a list of questions on Singly linked list
 
 ####Ishan Thukral
 

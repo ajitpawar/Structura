@@ -8,13 +8,12 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Further work on #53
+* Externalize data to XML
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* Comipled questions for the quiz feature for Binary Search tree
 
 ####Ishan Thukral
 
@@ -48,13 +47,12 @@
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* #53 refactored in #54
+* Needs list of actual questions on Linked Lists
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* Closed #56
 
 ####Ishan Thukral
 
