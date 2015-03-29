@@ -35,6 +35,9 @@
     <string name="nodeNext">Next</string>
     <string name="nodeValueDigit">0</string>
 
+    <!-- Quiz -->
+    <string name="btnSubmit">Submit</string>
+    
     <!-- Summaries -->
     <string name="ll_summary_body">
         <![CDATA[
