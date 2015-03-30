@@ -77,3 +77,12 @@
 * As a team member, I would say my strength is communication and being a team player. Throughout the project, I have effectively communicated with my group members on planning and implementing various features of the app. I also work with the goal being efficient and timely completion of various phases of the project.
 
 * My main weakness as a team member would be that I did not contribute as much technical inputs as I would have liked to due to my lack of experience in mobile app development and being a bit outdated with Java.
+
+---
+
+### Shahin Yousefi (shayousefi)
+
+* My most significant contribution was making the Play fragments in P3. I implemented this using the Model–View–Presenter architectural pattern. I had previously created the base app in P2.
+* I learned about Drawables, Views, and Layouts along with the canvas. Drawing custom components on screen enhanced my skillset as a UI designer.
+* I have great attention to detail in both coding and designing. I always consult documentation in order to write correct and efficient code. These traits make me the go-to person on the team for resolving various issues.
+* I tend to be picky and expect more of other team members, even when they may think their work is good enough for the task. This inevitably leads to some friction.
