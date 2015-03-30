@@ -74,6 +74,6 @@
 
 * This course was a great opportunity to learn many technical concepts that are critical in the software engineering industry. The main tool being able to use git properly. Initially, this was a challenge for me as I only ever used git/github for personal projects and not for a collaborative project. This led me to learn various features such as Pull Requests, code reviews and resolving merge conflicts. Another issue was learning Android development. I learned about the different components that make up the app such as the UI layouts, views, fragments, etc. 
 
-* As a team member, I would say my strength is communication and being a team player. Throughout the project, I have effectively communicated with my group members on planning and implementing various features of the app. I also work with the goal being efficent and timely completion of various phases of the project.
+* As a team member, I would say my strength is communication and being a team player. Throughout the project, I have effectively communicated with my group members on planning and implementing various features of the app. I also work with the goal being efficient and timely completion of various phases of the project.
 
-* My main weakness as a team member would be that I did not contributed as much technical inputs as I would have liked to due to my lack of experience in mobile app development and being a bit outdated with Java.
+* My main weakness as a team member would be that I did not contribute as much technical inputs as I would have liked to due to my lack of experience in mobile app development and being a bit outdated with Java.
