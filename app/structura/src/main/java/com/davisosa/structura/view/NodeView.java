@@ -76,11 +76,11 @@ public class NodeView extends View {
         mDrawable.draw(canvas);
     }
 
-    public int getId() {
+    public int getNodeId() {
         return mDrawable.getId();
     }
 
-    public void setId(int id) {
+    public void setNodeId(int id) {
         mDrawable.setId(id);
     }
 }

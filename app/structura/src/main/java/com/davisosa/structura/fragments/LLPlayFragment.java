@@ -94,7 +94,7 @@ public class LLPlayFragment extends Fragment {
                 }
 
                 NodeView nodeView = new NodeView(getActivity());
-                nodeView.setId(mSequencer.next());
+                nodeView.setNodeId(mSequencer.next());
                 mNodeLayout.addView(nodeView, res.getDimensionPixelSize(R.dimen.node_width),
                         res.getDimensionPixelSize(R.dimen.node_height));
 
@@ -203,13 +203,13 @@ public class LLPlayFragment extends Fragment {
         final Resources res = getResources();
         int count = 0;
         for (final Pair<NodeView, EdgeView> pair : mNodes) {
-            if (pair.first.getId() == id) {
+            if (pair.first.getNodeId() == id) {
                 mHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         pair.first.setColor(res.getColor(R.color.red_400));
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
 
                 mHandler.postDelayed(new Runnable() {
                     @Override
@@ -227,7 +227,7 @@ public class LLPlayFragment extends Fragment {
                         mDelBtn.setEnabled(mNodeLayout.getChildCount() > 0);
                         mSearchBtn.setEnabled(mNodeLayout.getChildCount() > 0);
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
 
                 return true;
             } else {
@@ -236,7 +236,7 @@ public class LLPlayFragment extends Fragment {
                     public void run() {
                         pair.first.setColor(res.getColor(R.color.grey_500));
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
             }
         }
         return false;
@@ -253,13 +253,13 @@ public class LLPlayFragment extends Fragment {
         final Resources res = getResources();
         int count = 0;
         for (final Pair<NodeView, EdgeView> pair : mNodes) {
-            if (pair.first.getId() == id) {
+            if (pair.first.getNodeId() == id) {
                 mHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         pair.first.setColor(res.getColor(R.color.blue_400));
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
                 return true;
             } else {
                 mHandler.postDelayed(new Runnable() {
@@ -267,7 +267,7 @@ public class LLPlayFragment extends Fragment {
                     public void run() {
                         pair.first.setColor(res.getColor(R.color.grey_500));
                     }
-                }, 500 * ++count);
+                }, 750 * ++count);
             }
         }
         return false;
