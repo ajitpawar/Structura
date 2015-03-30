@@ -85,6 +85,8 @@ public class LLQuizFragment extends Fragment implements QAListAdapter.AdapterCal
                 .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        aQaList.didSubmit = true;
+                        aQaList.notifyDataSetChanged();
                         dialog.cancel();
                     }
                 })

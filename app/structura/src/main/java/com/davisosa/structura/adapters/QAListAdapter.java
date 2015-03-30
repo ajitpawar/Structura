@@ -1,6 +1,7 @@
 package com.davisosa.structura.adapters;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +33,8 @@ public class QAListAdapter extends ArrayAdapter<Question> {
     private AdapterCallback mAdapterCallback;
     private Map<Question, Answer> selectedAnswers;
 
+    public boolean didSubmit = false;
+
     public QAListAdapter(Context context, ArrayList<Question> objects, AdapterCallback mAdapterCallback) {
         super(context, android.R.layout.simple_list_item_1, objects);
         this.mAdapterCallback = mAdapterCallback;
@@ -39,7 +42,6 @@ public class QAListAdapter extends ArrayAdapter<Question> {
     }
 
     @Override
-
     public View getView(int position, View convertView, ViewGroup parent) {
 
         final Question currentQ = getItem(position);
@@ -63,6 +65,11 @@ public class QAListAdapter extends ArrayAdapter<Question> {
             RadioButton rbAnswer = new StructuraRadioButton(getContext(), currentAnswer);
             rbAnswer.setText(currentAnswer.answer);
             rbAnswer.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            if (currentAnswer == currentQ.correctAnswer && didSubmit) {
+                Resources res = rbAnswer.getResources();
+                rbAnswer.setBackgroundColor(res.getColor(R.color.correct_highlight));
+
+            }
             rgAnswers.addView(rbAnswer, i);
         }
 

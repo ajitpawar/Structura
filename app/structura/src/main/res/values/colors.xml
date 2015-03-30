@@ -78,6 +78,8 @@
     <color name="srch_accent">#ff4081</color>
     <color name="srch_accent_pressed">#f50057</color>
 
+    <color name="correct_highlight">#66BB6A</color>
+
     <!-- AboutLibraries -->
     <color name="about_libraries_card">@color/cardview_light_background</color>
     <color name="about_libraries_title_openSource">@color/body_text</color>

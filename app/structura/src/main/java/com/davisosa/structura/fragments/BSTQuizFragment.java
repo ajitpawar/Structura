@@ -88,6 +88,8 @@ public class BSTQuizFragment extends Fragment implements QAListAdapter.AdapterCa
                 .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        aQaList.didSubmit = true;
+                        aQaList.notifyDataSetChanged();
                         dialog.cancel();
                     }
                 })
