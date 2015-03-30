@@ -40,7 +40,7 @@ public class BSTPlayFragment extends Fragment {
     private static final int MAX_LEVELS = 4;
     private static final double MAX_NODES = Math.pow(2, MAX_LEVELS + 1) - 1;
 
-    private LinearLayout mNodeLayout;
+    private RelativeLayout mNodeLayout;
 
     private Button mInsBtn;
     private Button mDelBtn;
@@ -80,7 +80,7 @@ public class BSTPlayFragment extends Fragment {
         // Inflate the layout for this fragment
         FrameLayout root = (FrameLayout) inflater.inflate(R.layout.fragment_bst_play,
                 container, false);
-        mNodeLayout = (LinearLayout) root.findViewById(R.id.node_layout);
+        mNodeLayout = (RelativeLayout) root.findViewById(R.id.node_layout);
 
         mInsBtn = (Button) root.findViewById(R.id.btn_insert);
         mInsBtn.setOnClickListener(new View.OnClickListener() {
@@ -273,6 +273,7 @@ public class BSTPlayFragment extends Fragment {
         } else {
             mDelBtn.setEnabled(true);
             mSearchBtn.setEnabled(true);
+            mNodes.insert(Pair.create(nodeView, edgeView));
         }
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
@@ -285,7 +286,7 @@ public class BSTPlayFragment extends Fragment {
         }
         mNodeLayout.addView(nodeView, params);
 
-        mNodes.insert(Pair.create(nodeView, edgeView));
+        Timber.d("here");
         mInsBtn.setEnabled(getNumNodes() < MAX_NODES);
 
 /*
