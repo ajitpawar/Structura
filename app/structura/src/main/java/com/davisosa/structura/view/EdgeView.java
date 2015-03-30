@@ -49,6 +49,12 @@ public class EdgeView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPaint.setColor(mBackgroundColor);
+        canvas.save();
+        setRotation(-45f);
+/*
+        canvas.rotate(-45f, mWidth / 2, mHeight / 2);
+*/
         canvas.drawRect(0,0,mWidth,mHeight,mPaint);
+        canvas.restore();
     }
 }

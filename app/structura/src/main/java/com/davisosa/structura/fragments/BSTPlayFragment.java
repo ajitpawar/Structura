@@ -73,7 +73,7 @@ public class BSTPlayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        FrameLayout root = (FrameLayout) inflater.inflate(R.layout.fragment_ll_play,
+        FrameLayout root = (FrameLayout) inflater.inflate(R.layout.fragment_bst_play,
                 container, false);
         mNodeLayout = (LinearLayout) root.findViewById(R.id.node_layout);
         final Resources res = getResources();
@@ -99,6 +99,9 @@ public class BSTPlayFragment extends Fragment {
                         res.getDimensionPixelSize(R.dimen.node_height));
 
                 mNodes.insert(Pair.create(nodeView, edgeView));
+                if (mNodeLayout.getChildCount() >= 31) {
+                    mInsBtn.setEnabled(false);
+                }
             }
         });
 
@@ -152,6 +155,10 @@ public class BSTPlayFragment extends Fragment {
                                     Snackbar.with(getActivity())
                                             .text(res.getString(R.string.err_node_not_found, id))
                                             .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
+                        }
+
+                        if (mNodeLayout.getChildCount() < 31) {
+                            mInsBtn.setEnabled(true);
                         }
                     }
                 })
