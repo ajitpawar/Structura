@@ -69,3 +69,11 @@
 ---
 
 ### Vaishali Deswal (vdeswal)
+
+* My most significant contribution was in both phase 2 and phase 3. During phase 2, I implemented the summary fragment for Linked List data structure in the app [#16] (https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/issues/16). During phase 3, I collaborated on implementing the quiz feature of the app. I compiled the list of multiple choice questions for both Linked List and Binary Search Trees. [#56] (https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/issues/56). Along with some [code reviews] (https://github.com/UoT-CSC30x-W15/301W15-Prj-Team2-repo/pull/46), I contributed in creating the presentation slides for the project proposal and the final demo. 
+
+* This course was a great opportunity to learn many technical concepts that are critical in the software engineering industry. The main tool being able to use git properly. Initially, this was a challenge for me as I only ever used git/github for personal projects and not for a collaborative project. This led me to learn various features such as Pull Requests, code reviews and resolving merge conflicts. Another issue was learning Android development. I learned about the different components that make up the app such as the UI layouts, views, fragments, etc. 
+
+* As a team member, I would say my strength is communication and being a team player. Throughout the project, I have effectively communicated with my group members on planning and implementing various features of the app. I also work with the goal being efficent and timely completion of various phases of the project.
+
+* My main weakness as a team member would be that I did not contributed as much technical inputs as I would have liked to due to my lack of experience in mobile app development and being a bit outdated with Java.
