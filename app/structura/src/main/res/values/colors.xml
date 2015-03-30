@@ -50,9 +50,12 @@
     <color name="footer_separator_color">@color/divider</color>
 
     <!-- Play buttons -->
-    <color name="btn_insert_text_color">@color/green_A400</color>
-    <color name="btn_delete_text_color">@color/red_A400</color>
-    <color name="btn_search_text_color">@color/blue_A400</color>
+    <color name="btn_insert_text">@color/green_A400</color>
+    <color name="btn_insert_text_disabled">#4200E676</color>
+    <color name="btn_delete_text">@color/red_A400</color>
+    <color name="btn_delete_text_disabled">#42FF1744</color>
+    <color name="btn_search_text">@color/blue_A400</color>
+    <color name="btn_search_text_disabled">#422979FF</color>
 
     <!-- Add Node Button colors TODO: remove -->
     <color name="add_primary">#39CA74</color>

@@ -17,7 +17,5 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setTitle(R.string.landing);
-
-        overridePendingTransition(0, 0);
     }
 }

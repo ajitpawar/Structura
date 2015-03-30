@@ -4,13 +4,13 @@ apply plugin: 'idea'
 
 // Manifest version information
 def versionMajor = 0
-def versionMinor = 3
-def versionPatch = 5
+def versionMinor = 4
+def versionPatch = 0
 def versionBuild = 0    // Dogfood builds, public betas, etc.
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "22"
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.davisosa.structura"
@@ -55,11 +55,11 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.0.+'
 
     compile 'com.jakewharton.timber:timber:2.7.+'
+    compile 'com.afollestad:material-dialogs:0.6.+'
+    compile 'com.nispok:snackbar:2.10.+'
     compile('com.mikepenz.aboutlibraries:library:4.5.+@aar') {
         transitive = true
     }
-
-    compile 'com.melnykov:floatingactionbutton:1.2.0'   // TODO: remove
 }
 
 idea {

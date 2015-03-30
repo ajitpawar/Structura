@@ -19,6 +19,7 @@
 
     <!-- Body content -->
     <dimen name="element_spacing_normal">8dp</dimen>
+    <dimen name="content_padding_dialog">24dp</dimen>
     <dimen name="content_padding_normal">16dp</dimen>
     <dimen name="content_padding_small">8dp</dimen>
     <dimen name="text_size_xsmall">12sp</dimen>
@@ -59,4 +60,12 @@
     <dimen name="btn_insert_margin_right">@dimen/keyline_1</dimen>
     <dimen name="btn_delete_margin_right">@dimen/element_spacing_normal</dimen>
     <dimen name="btn_search_margin_right">@dimen/element_spacing_normal</dimen>
+
+    <!-- Nodes -->
+    <dimen name="node_width">56dp</dimen>
+    <dimen name="node_height">56dp</dimen>
+
+    <!-- Edges -->
+    <dimen name="edge_width">3dp</dimen>
+    <dimen name="edge_height">40dp</dimen>
 </resources>

@@ -55,6 +55,9 @@
     <!-- Linked list activity -->
     <style name="Theme.Structura.LLActivity" parent="Theme.Structura.WithNavDrawer" />
 
+    <!-- BST activity -->
+    <style name="Theme.Structura.BSTActivity" parent="Theme.Structura.WithNavDrawer" />
+
     <!-- Quiz activity -->
     <style name="Theme.Structura.QuizActivity" parent="Theme.Structura.WithNavDrawer" />
 

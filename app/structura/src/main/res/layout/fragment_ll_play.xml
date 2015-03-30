@@ -5,10 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".fragments.LLPlayFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/footer_height">
+
+        <LinearLayout
+            android:id="@+id/node_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/content_padding_normal" />
+    </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
+        android:layout_gravity="bottom"
         android:orientation="vertical">
 
         <View
@@ -33,11 +48,12 @@
                 android:layout_marginEnd="@dimen/btn_search_margin_right"
                 android:layout_marginRight="@dimen/btn_search_margin_right"
                 android:background="?attr/selectableItemBackground"
+                android:enabled="false"
                 android:paddingLeft="@dimen/btn_padding"
                 android:paddingRight="@dimen/btn_padding"
                 android:text="@string/btn_search_label"
                 android:textAppearance="@style/TextButton"
-                android:textColor="@color/btn_search_text_color" />
+                android:textColor="@drawable/btn_search_text_color" />
 
             <Button
                 android:id="@+id/btn_delete"
@@ -47,11 +63,12 @@
                 android:layout_marginEnd="@dimen/btn_delete_margin_right"
                 android:layout_marginRight="@dimen/btn_delete_margin_right"
                 android:background="?attr/selectableItemBackground"
+                android:enabled="false"
                 android:paddingLeft="@dimen/btn_padding"
                 android:paddingRight="@dimen/btn_padding"
                 android:text="@string/btn_delete_label"
                 android:textAppearance="@style/TextButton"
-                android:textColor="@color/btn_delete_text_color" />
+                android:textColor="@drawable/btn_delete_text_color" />
 
             <Button
                 android:id="@+id/btn_insert"
@@ -65,7 +82,7 @@
                 android:paddingRight="@dimen/btn_padding"
                 android:text="@string/btn_insert_label"
                 android:textAppearance="@style/TextButton"
-                android:textColor="@color/btn_insert_text_color" />
+                android:textColor="@drawable/btn_insert_text_color" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

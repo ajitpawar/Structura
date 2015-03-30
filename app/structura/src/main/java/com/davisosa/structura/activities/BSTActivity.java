@@ -10,7 +10,7 @@ import com.davisosa.structura.adapters.LLPagerAdapter;
 import com.davisosa.structura.fragments.LLPlayFragment;
 import com.davisosa.structura.widget.SlidingTabLayout;
 
-public class LLActivity extends BaseActivity
+public class BSTActivity extends BaseActivity
         implements LLPlayFragment.OnFragmentInteractionListener {
     private ViewPager mViewPager;
     private SlidingTabLayout mSlidingTabLayout;
@@ -23,14 +23,15 @@ public class LLActivity extends BaseActivity
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.layout.activity_linked_list);
+        setContentView(R.layout.activity_bst);
 
         getSupportActionBar().setTitle(R.string.title_linked_list);
+        overridePendingTransition(0, 0);
 
         // Get the ViewPager and set its PagerAdapter so that it can display items.
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setAdapter(new LLPagerAdapter(getSupportFragmentManager(),
-                LLActivity.this));
+                BSTActivity.this));
 
         // Give the SlidingTabLayout the ViewPager.
         mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);

@@ -3,6 +3,7 @@ package com.davisosa.structura.activities.base;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,8 +21,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.davisosa.structura.R;
+import com.davisosa.structura.activities.BSTActivity;
 import com.davisosa.structura.activities.LLActivity;
-import com.davisosa.structura.activities.MainActivity;
 import com.davisosa.structura.util.OverviewStyler;
 import com.davisosa.structura.util.PrefUtils;
 import com.davisosa.structura.util.UIUtils;
@@ -29,8 +30,6 @@ import com.mikepenz.aboutlibraries.Libs;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import timber.log.Timber;
 
 /**
  * A base {@link android.app.Activity} that handles common functionality in the app.
@@ -41,7 +40,7 @@ public abstract class BaseActivity extends ActionBarActivity
      * This is a list of all possible items, which are not necessarily present,
      * in the navigation drawer. */
     protected static final int DRAWER_ITEM_LL = 0;
-    protected static final int DRAWER_ITEM_SEC2 = 1;
+    protected static final int DRAWER_ITEM_BST = 1;
     protected static final int DRAWER_ITEM_SETTINGS = 2;
     protected static final int DRAWER_ITEM_ABOUT = 3;
     protected static final int DRAWER_ITEM_INVALID = -1;
@@ -52,7 +51,7 @@ public abstract class BaseActivity extends ActionBarActivity
     // Titles for navigation drawer items (indices must correspond to DRAWER_ITEM_*)
     private static final int[] RES_IDS_DRAWER_TITLE = new int[]{
             R.string.title_linked_list,
-            R.string.title_section2,
+            R.string.title_bst,
             R.string.title_settings,
             R.string.title_about
     };
@@ -67,11 +66,6 @@ public abstract class BaseActivity extends ActionBarActivity
 
     // Delay to launch navigation drawer item, to allow close animation to play
     private static final int DRAWER_LAUNCH_DELAY = 250;
-
-    /* Fade-in and fade-out durations for the main content when switching between
-     * different activities of the app through the navigation drawer */
-    private static final int MAIN_CONTENT_FADEOUT_DURATION = 150;
-    private static final int MAIN_CONTENT_FADEIN_DURATION = 250;
 
     // Navigation drawer
     private DrawerLayout mDrawerLayout;
@@ -125,7 +119,7 @@ public abstract class BaseActivity extends ActionBarActivity
         mDrawerItems.clear();
 
         mDrawerItems.add(DRAWER_ITEM_LL);
-        mDrawerItems.add(DRAWER_ITEM_SEC2);
+        mDrawerItems.add(DRAWER_ITEM_BST);
 
         mDrawerItems.add(DRAWER_ITEM_SEPARATOR_SPECIAL);
         mDrawerItems.add(DRAWER_ITEM_SETTINGS);
@@ -281,12 +275,6 @@ public abstract class BaseActivity extends ActionBarActivity
 
             // Change the active item on the list so the user can see the item changed.
             setSelectedDrawerItem(itemId);
-
-            // Fade out the main content.
-            View mainContent = findViewById(R.id.main_content);
-            if (mainContent != null) {
-                mainContent.animate().alpha(0).setDuration(MAIN_CONTENT_FADEOUT_DURATION);
-            }
         }
 
         mDrawerLayout.closeDrawer(Gravity.START);
@@ -350,12 +338,11 @@ public abstract class BaseActivity extends ActionBarActivity
     public void goToDrawerItem(int item) {
         switch (item) {
             case DRAWER_ITEM_LL:
-                startActivity(new Intent(this, LLActivity.class));
+                UIUtils.startActivityWithTransition(this, new Intent(this, LLActivity.class));
                 finish();
                 break;
-            case DRAWER_ITEM_SEC2:
-                // TODO: new Activity
-                startActivity(new Intent(this, MainActivity.class));
+            case DRAWER_ITEM_BST:
+                UIUtils.startActivityWithTransition(this, new Intent(this, BSTActivity.class));
                 finish();
                 break;
             case DRAWER_ITEM_SETTINGS:
@@ -364,7 +351,8 @@ public abstract class BaseActivity extends ActionBarActivity
             case DRAWER_ITEM_ABOUT:
                 new Libs.Builder()
                         .withFields(R.string.class.getFields())
-                        .withLibraries("materialdesignicons", "mdiexpanded", "slidingtabs")
+                        .withLibraries("materialdesignicons", "mdiexpanded", "slidingtabs",
+                                "materialdialogs", "snackbar")
                         .withExcludedLibraries("materialicons")
                         .withLicenseShown(true)
                         .withVersionShown(false)
@@ -379,14 +367,6 @@ public abstract class BaseActivity extends ActionBarActivity
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         setupNavigationDrawer();
-
-        View mainContent = findViewById(R.id.main_content);
-        if (mainContent != null) {
-            mainContent.setAlpha(0);
-            mainContent.animate().alpha(1).setDuration(MAIN_CONTENT_FADEIN_DURATION);
-        } else {
-            Timber.w("No view with ID main_content to fade in.");
-        }
     }
 
     @Override
@@ -481,12 +461,13 @@ public abstract class BaseActivity extends ActionBarActivity
         }
 
         // Configure its appearance according to whether or not it's selected.
+        Resources res = getResources();
         titleView.setTextColor(selected ?
-                getResources().getColor(R.color.drawer_text_color_selected) :
-                getResources().getColor(R.color.drawer_text_color));
+                res.getColor(R.color.drawer_text_color_selected) :
+                res.getColor(R.color.drawer_text_color));
         iconView.setColorFilter(selected ?
-                getResources().getColor(R.color.drawer_icon_tint_selected) :
-                getResources().getColor(R.color.drawer_icon_tint), PorterDuff.Mode.SRC_IN);
+                res.getColor(R.color.drawer_icon_tint_selected) :
+                res.getColor(R.color.drawer_icon_tint), PorterDuff.Mode.SRC_IN);
     }
 
     @Override
