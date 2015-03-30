@@ -3,28 +3,23 @@
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.LLPlayFragment">
-
+    tools:context=".fragments.BSTPlayFragment">
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/footer_height">
-        <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/node_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:gravity="center_horizontal"
-                android:padding="@dimen/content_padding_normal"
-                android:orientation="horizontal" />
+        <RelativeLayout
+            android:id="@+id/node_layout"
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/content_padding_normal" />
 
-    </ScrollView>
     </HorizontalScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

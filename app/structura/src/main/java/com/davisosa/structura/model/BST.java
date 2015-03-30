@@ -41,19 +41,24 @@ public class BST {
         while (x != null && x.pair.first.getNodeId() != id) {
             if (x.pair.first.getNodeId() < id) {
                 x = x.right;
-            } else x = x.left;
+            } else {
+                x = x.left;
+            }
         }
         return x.pair;
     }
 
     public BSTNode searchNode(int id) {
         BSTNode x = this.root;
-        while (x != null && x.pair.first.getId() != id){
-            if (x.pair.first.getId() < id){
+        while (x != null && x.pair.first.getNodeId() != id) {
+            if (x.pair.first.getNodeId() < id) {
                 x = x.right;
-            } else x = x.left;
+            } else {
+                x = x.left;
+            }
         }
         return x;
+
     }
 
     /**
@@ -128,7 +133,9 @@ public class BST {
         while (x != null && x.pair.first.getNodeId() != id) {
             if (x.pair.first.getNodeId() < id) {
                 x = x.right;
-            } else x = x.left;
+            } else {
+                x = x.left;
+            }
         }
         if (x != null) {
             remove(x);
@@ -153,7 +160,9 @@ public class BST {
             colored.push(x);
             if (x.pair.first.getNodeId() < id) {
                 x = x.right;
-            } else x = x.left;
+            } else {
+                x = x.left;
+            }
         }
         if (x != null) {
             x.pair.first.setColor(remove);
@@ -233,11 +242,16 @@ public class BST {
             if (x.pair.first.getNodeId() == root.pair.first.getNodeId()) {
                 Timber.d("This is the root: " + String.valueOf(x.pair.first.getNodeId()));
             }
-            Timber.d(String.valueOf(x.pair.first.getNodeId()));
+            Timber.d("---");
+            Timber.d("Node: " + String.valueOf(x.pair.first.getNodeId()));
+            Timber.d("Parent: " + String.valueOf(x.parent));
+            Timber.d("Left: " + String.valueOf(x.left));
+            Timber.d("Right: " + String.valueOf(x.right));
+            Timber.d("---");
             printout(x.left);
             printout(x.right);
         } else {
-            Timber.d("NULL");
+            Timber.d(String.valueOf(x));
         }
     }
 
