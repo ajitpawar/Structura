@@ -99,7 +99,7 @@ public class BSTPlayFragment extends Fragment {
                         res.getDimensionPixelSize(R.dimen.node_height));
 
                 mNodes.insert(Pair.create(nodeView, edgeView));
-                if (mNodeLayout.getChildCount() >= 31) {
+                if (mNodeLayout.getChildCount() >= 61) {
                     mInsBtn.setEnabled(false);
                 }
             }
