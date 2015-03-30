@@ -229,6 +229,7 @@ public class BSTPlayFragment extends Fragment {
     }
 
     private void insertNode(int id) {
+        final Resources res = getResources();
         NodeView nodeView = new NodeView(getActivity());
         nodeView.setId(UIUtils.generateViewId());
         nodeView.setNodeId(id);
@@ -263,6 +264,7 @@ public class BSTPlayFragment extends Fragment {
 
             int insertionLevel = getLastLevel(getNumNodes() + 1);
             int multiplier = MAX_LEVELS - insertionLevel;
+
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                     res.getDimensionPixelSize(R.dimen.edge_width),
                     multiplier * res.getDimensionPixelSize(R.dimen.edge_height));
