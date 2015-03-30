@@ -13,7 +13,7 @@
 
 ####Vaishali Deswal
 
-* Comipled questions for the quiz feature for Binary Search tree
+* Compiled questions for the quiz feature for Binary Search tree
 
 ####Ishan Thukral
 
