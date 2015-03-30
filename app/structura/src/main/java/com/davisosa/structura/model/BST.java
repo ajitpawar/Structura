@@ -27,10 +27,10 @@ public class BST {
     private Stack<BSTNode> colored;
 
     public class BSTNode {
-        public Pair<NodeView, EdgeView> pair;
+        public Pair<NodeView,EdgeView> pair;
         public BSTNode left, right, parent;
 
-        public BSTNode(Pair<NodeView, EdgeView> pair){
+        public BSTNode(Pair<NodeView,EdgeView> pair){
             this.pair = pair;
         }
 
@@ -59,6 +59,16 @@ public class BST {
         return x.pair;
     }
 
+
+    public BSTNode searchNode(int id){
+        BSTNode x = this.root;
+        while (x != null && x.pair.first.getId() != id){
+            if (x.pair.first.getId() < id){
+                x = x.right;
+            } else x = x.left;
+        }
+        return x;
+    }
     /**
      * Finds the node in the BST with the given ID, while colouring the nodes
      * it passes along the way.
@@ -94,7 +104,7 @@ public class BST {
      *
      * @param pair the NodeView, EdgeView pair
      */
-    public void insert(Pair<NodeView, EdgeView> pair){
+    public void insert(Pair<NodeView,EdgeView> pair){
         BSTNode x = new BSTNode(pair);
         BSTNode parent = null;
         BSTNode n = this.root;

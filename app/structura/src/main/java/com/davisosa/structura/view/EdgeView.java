@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.davisosa.structura.R;
@@ -50,7 +49,7 @@ public class EdgeView extends View {
         super.onDraw(canvas);
         mPaint.setColor(mBackgroundColor);
         canvas.save();
-        setRotation(-45f);
+        //setRotation(-45f);
 /*
         canvas.rotate(-45f, mWidth / 2, mHeight / 2);
 */

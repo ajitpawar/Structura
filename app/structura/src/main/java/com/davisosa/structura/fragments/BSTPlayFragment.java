@@ -82,23 +82,53 @@ public class BSTPlayFragment extends Fragment {
         mInsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EdgeView edgeView = null;
-                if (mNodeLayout.getChildCount() > 0) {
-                    resetNodeColors();
-                    edgeView = new EdgeView(getActivity());
-                    mNodeLayout.addView(edgeView, res.getDimensionPixelSize(R.dimen.edge_width),
-                            res.getDimensionPixelSize(R.dimen.edge_height));
-                } else {
-                    mDelBtn.setEnabled(true);
-                    mSearchBtn.setEnabled(true);
-                }
 
                 NodeView nodeView = new NodeView(getActivity());
-                nodeView.setId(mSequencer.next());
+                int nid = mSequencer.next();
+                nodeView.setId(nid);
+
+                EdgeView edgeView = null;
+
+                if (mNodeLayout.getChildCount() > 0)
+                {
+                    resetNodeColors();
+                    edgeView = new EdgeView(getActivity());
+                    mNodes.insert(Pair.create(nodeView, edgeView));
+
+                    BST.BSTNode x = mNodes.searchNode(nid);
+
+                    //rotate the node's edge about the parent node's bottom center
+                    float pivotX = x.parent.pair.first.getBottom();
+                    float pivotY = (x.parent.pair.first.getRight() - x.parent.pair.first.getLeft())/2;
+                    edgeView.setPivotX(pivotX);
+                    edgeView.setPivotY(pivotY);
+
+                    //TODO make the below if statement work. Crashing at the moment
+                    //TODO add translations accordingly(below and left of/right of) - might need to add ID to edgeview
+                    //rotate the edge to left or right based on which child the node is of its parent
+//                    if (x.parent.left.pair.first.getId() == x.pair.first.getId())
+//                        //edgeView.setRotation((float) 45.0);
+//                        Timber.d("left child");
+//
+//                    else
+//                        Timber.d("right child");
+//                        //edgeView.setRotation((float) -45.0);
+
+                    mNodeLayout.addView(edgeView, res.getDimensionPixelSize(R.dimen.edge_width),
+                            res.getDimensionPixelSize(R.dimen.edge_height));
+                }
+                else
+                {
+                    mDelBtn.setEnabled(true);
+                    mSearchBtn.setEnabled(true);
+                    mNodes.insert(Pair.create(nodeView, edgeView));
+                }
+
+
+
+
                 mNodeLayout.addView(nodeView, res.getDimensionPixelSize(R.dimen.node_width),
                         res.getDimensionPixelSize(R.dimen.node_height));
-
-                mNodes.insert(Pair.create(nodeView, edgeView));
                 if (mNodeLayout.getChildCount() >= 61) {
                     mInsBtn.setEnabled(false);
                 }
