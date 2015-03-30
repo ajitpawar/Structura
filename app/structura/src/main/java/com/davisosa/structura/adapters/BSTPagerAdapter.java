@@ -7,7 +7,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.davisosa.structura.R;
 import com.davisosa.structura.fragments.BSTPlayFragment;
+import com.davisosa.structura.fragments.BSTQuizFragment;
 import com.davisosa.structura.fragments.BSTSummaryFragment;
+import com.davisosa.structura.fragments.LLQuizFragment;
 
 import timber.log.Timber;
 
@@ -41,8 +43,7 @@ public class BSTPagerAdapter extends FragmentPagerAdapter {
                 return BSTSummaryFragment.newInstance(position + 1);
             case QUIZ:
                 Timber.d("Creating fragment #" + position + 1);
-                // TODO: Change
-                return BSTPlayFragment.newInstance();
+                return BSTQuizFragment.newInstance(position + 2);
             default:
                 return null;
         }
