@@ -103,19 +103,27 @@ public class BSTPlayFragment extends Fragment {
                     edgeView.setPivotX(pivotX);
                     edgeView.setPivotY(pivotY);
 
-                    //TODO make the below if statement work. Crashing at the moment
-                    //TODO add translations accordingly(below and left of/right of) - might need to add ID to edgeview
-                    //rotate the edge to left or right based on which child the node is of its parent
-//                    if (x.parent.left.pair.first.getId() == x.pair.first.getId())
-//                        //edgeView.setRotation((float) 45.0);
-//                        Timber.d("left child");
-//
-//                    else
-//                        Timber.d("right child");
-//                        //edgeView.setRotation((float) -45.0);
+                    float theta = 0;
 
-                    mNodeLayout.addView(edgeView, res.getDimensionPixelSize(R.dimen.edge_width),
-                            res.getDimensionPixelSize(R.dimen.edge_height));
+//                    //TODO add translations accordingly(below and left of/right of) - might need to add ID to edgeview
+//                    //rotate the edge to left or right based on which child the node is of its parent
+//                    if (x.parent.left != null)
+//                    {
+//                        if (x.parent.left.pair.first.getId() == x.pair.first.getId()) {
+//                            theta = (float)45.0;
+//                            Timber.d("left child");
+//                        }
+//                    }
+//
+//                    else if (x.parent.right != null)
+//                    {
+//                        Timber.d("right child");
+//                        theta = (float)-45.0;
+//                    }
+
+                    //TODO Edgeview not being drawn
+                    edgeView.setRotation(theta);
+                    mNodeLayout.addView(edgeView, res.getDimensionPixelSize(R.dimen.edge_width),res.getDimensionPixelSize(R.dimen.edge_height));
                 }
                 else
                 {
@@ -124,11 +132,7 @@ public class BSTPlayFragment extends Fragment {
                     mNodes.insert(Pair.create(nodeView, edgeView));
                 }
 
-
-
-
-                mNodeLayout.addView(nodeView, res.getDimensionPixelSize(R.dimen.node_width),
-                        res.getDimensionPixelSize(R.dimen.node_height));
+                mNodeLayout.addView(nodeView, res.getDimensionPixelSize(R.dimen.node_width), res.getDimensionPixelSize(R.dimen.node_height));
                 if (mNodeLayout.getChildCount() >= 61) {
                     mInsBtn.setEnabled(false);
                 }
