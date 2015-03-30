@@ -440,10 +440,10 @@ public class QuestionStore {
         Answer eight_answer_4 = new Answer(eight_answer_string_4);
 
         ArrayList<Answer> eight_answers = new ArrayList<Answer>();
-        three_answers.add(eight_answer_1);
-        three_answers.add(eight_answer_2);
-        three_answers.add(eight_answer_3);
-        three_answers.add(eight_answer_4);
+        eight_answers.add(eight_answer_1);
+        eight_answers.add(eight_answer_2);
+        eight_answers.add(eight_answer_3);
+        eight_answers.add(eight_answer_4);
 
         Answer eight_correct_answer = eight_answer_3;
 
