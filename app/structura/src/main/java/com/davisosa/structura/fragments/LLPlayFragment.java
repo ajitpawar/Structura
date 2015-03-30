@@ -94,7 +94,7 @@ public class LLPlayFragment extends Fragment {
                 }
 
                 NodeView nodeView = new NodeView(getActivity());
-                nodeView.setId(mSequencer.next());
+                nodeView.setNodeId(mSequencer.next());
                 mNodeLayout.addView(nodeView, res.getDimensionPixelSize(R.dimen.node_width),
                         res.getDimensionPixelSize(R.dimen.node_height));
 
@@ -203,7 +203,7 @@ public class LLPlayFragment extends Fragment {
         final Resources res = getResources();
         int count = 0;
         for (final Pair<NodeView, EdgeView> pair : mNodes) {
-            if (pair.first.getId() == id) {
+            if (pair.first.getNodeId() == id) {
                 mHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -253,7 +253,7 @@ public class LLPlayFragment extends Fragment {
         final Resources res = getResources();
         int count = 0;
         for (final Pair<NodeView, EdgeView> pair : mNodes) {
-            if (pair.first.getId() == id) {
+            if (pair.first.getNodeId() == id) {
                 mHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {

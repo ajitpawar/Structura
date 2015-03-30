@@ -13,10 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.davisosa.structura.R;
 import com.davisosa.structura.model.BST;
+import com.davisosa.structura.util.UIUtils;
 import com.davisosa.structura.view.EdgeView;
 import com.davisosa.structura.view.NodeView;
 import com.nispok.snackbar.Snackbar;
@@ -35,6 +37,9 @@ import timber.log.Timber;
  * create an instance of this fragment.
  */
 public class BSTPlayFragment extends Fragment {
+    private static final int MAX_LEVELS = 4;
+    private static final double MAX_NODES = Math.pow(2, MAX_LEVELS + 1) - 1;
+
     private LinearLayout mNodeLayout;
 
     private Button mInsBtn;
@@ -76,66 +81,13 @@ public class BSTPlayFragment extends Fragment {
         FrameLayout root = (FrameLayout) inflater.inflate(R.layout.fragment_bst_play,
                 container, false);
         mNodeLayout = (LinearLayout) root.findViewById(R.id.node_layout);
-        final Resources res = getResources();
 
         mInsBtn = (Button) root.findViewById(R.id.btn_insert);
         mInsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                NodeView nodeView = new NodeView(getActivity());
-                int nid = mSequencer.next();
-                nodeView.setId(nid);
-
-                EdgeView edgeView = null;
-
-                if (mNodeLayout.getChildCount() > 0)
-                {
-                    resetNodeColors();
-                    edgeView = new EdgeView(getActivity());
-                    mNodes.insert(Pair.create(nodeView, edgeView));
-
-                    BST.BSTNode x = mNodes.searchNode(nid);
-
-                    //rotate the node's edge about the parent node's bottom center
-                    float pivotX = x.parent.pair.first.getBottom();
-                    float pivotY = (x.parent.pair.first.getRight() - x.parent.pair.first.getLeft())/2;
-                    edgeView.setPivotX(pivotX);
-                    edgeView.setPivotY(pivotY);
-
-                    float theta = 0;
-
-//                    //TODO add translations accordingly(below and left of/right of) - might need to add ID to edgeview
-//                    //rotate the edge to left or right based on which child the node is of its parent
-//                    if (x.parent.left != null)
-//                    {
-//                        if (x.parent.left.pair.first.getId() == x.pair.first.getId()) {
-//                            theta = (float)45.0;
-//                            Timber.d("left child");
-//                        }
-//                    }
-//
-//                    else if (x.parent.right != null)
-//                    {
-//                        Timber.d("right child");
-//                        theta = (float)-45.0;
-//                    }
-
-                    //TODO Edgeview not being drawn
-                    edgeView.setRotation(theta);
-                    mNodeLayout.addView(edgeView, res.getDimensionPixelSize(R.dimen.edge_width),res.getDimensionPixelSize(R.dimen.edge_height));
-                }
-                else
-                {
-                    mDelBtn.setEnabled(true);
-                    mSearchBtn.setEnabled(true);
-                    mNodes.insert(Pair.create(nodeView, edgeView));
-                }
-
-                mNodeLayout.addView(nodeView, res.getDimensionPixelSize(R.dimen.node_width), res.getDimensionPixelSize(R.dimen.node_height));
-                if (mNodeLayout.getChildCount() >= 61) {
-                    mInsBtn.setEnabled(false);
-                }
+                resetNodeColors();
+                showInsertDialog();
             }
         });
 
@@ -159,6 +111,51 @@ public class BSTPlayFragment extends Fragment {
         });
 
         return root;
+    }
+
+    private double getNumNodes() {
+        return Math.ceil(mNodeLayout.getChildCount() / 2);
+    }
+
+    /**
+     * Returns the last level, starting at 0, given the number of nodes.
+     *
+     * @param numNodes number of nodes
+     * @return Last level
+     */
+    private int getLastLevel(double numNodes) {
+        return Double.valueOf(Math.floor(Math.log(numNodes) / Math.log(2))).intValue();
+    }
+
+    private void showInsertDialog() {
+        new MaterialDialog.Builder(getActivity())
+                .title(R.string.dialog_insert_title)
+                .positiveText(android.R.string.ok)
+                .negativeText(android.R.string.cancel)
+                .customView(R.layout.dialog_num_input, false)
+                .callback(new MaterialDialog.ButtonCallback() {
+                    @Override
+                    public void onPositive(MaterialDialog dialog) {
+                        FrameLayout root = (FrameLayout) dialog.getCustomView();
+                        EditText input = (EditText) root.findViewById(R.id.input);
+                        Resources res = getResources();
+                        int id = -1;
+                        try {
+                            id = Integer.valueOf(input.getText().toString());
+                        } catch (NumberFormatException nfe) {
+                            Timber.w("User didn't input node value.");
+                            SnackbarManager.show(
+                                    Snackbar.with(getActivity())
+                                            .text(res.getString(R.string.err_no_node_value))
+                                            .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
+                        }
+
+                        if (id > -1) {
+                            insertNode(id);
+                        }
+                    }
+                })
+                .show();
     }
 
     private void showDeleteDialog() {
@@ -191,9 +188,7 @@ public class BSTPlayFragment extends Fragment {
                                             .duration(Snackbar.SnackbarDuration.LENGTH_SHORT));
                         }
 
-                        if (mNodeLayout.getChildCount() < 31) {
-                            mInsBtn.setEnabled(true);
-                        }
+                        mInsBtn.setEnabled(getNumNodes() < MAX_NODES);
                     }
                 })
                 .show();
@@ -233,6 +228,121 @@ public class BSTPlayFragment extends Fragment {
                 .show();
     }
 
+    private void insertNode(int id) {
+        NodeView nodeView = new NodeView(getActivity());
+        nodeView.setId(UIUtils.generateViewId());
+        nodeView.setNodeId(id);
+
+        EdgeView edgeView = null;
+        float theta = 0;
+        if (mNodeLayout.getChildCount() > 0) {
+            edgeView = new EdgeView(getActivity());
+            edgeView.setId(UIUtils.generateViewId());
+            mNodes.insert(Pair.create(nodeView, edgeView));
+
+            BST.BSTNode node = mNodes.searchNode(id);
+
+            // Rotate the node's edge about the parent node's center.
+            NodeView parentNodeView = node.parent.pair.first;
+            float pivotX = (parentNodeView.getBottom() - parentNodeView.getTop()) / 2;
+            float pivotY = (parentNodeView.getRight() - parentNodeView.getLeft()) / 2;
+            edgeView.setPivotX(pivotX);
+            edgeView.setPivotY(pivotY);
+
+            // Rotate the edge to left or right based on which child the node is of its parent.
+            if (node.parent.left != null &&
+                    node.parent.left.pair.first.getId() == node.pair.first.getId()) {
+                theta = 45f;
+                Timber.d("left child");
+            } else if (node.parent.right != null) {
+                theta = -45f;
+                Timber.d("right child");
+            }
+
+            edgeView.setRotation(theta);
+
+            int insertionLevel = getLastLevel(getNumNodes() + 1);
+            int multiplier = MAX_LEVELS - insertionLevel;
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    res.getDimensionPixelSize(R.dimen.edge_width),
+                    multiplier * res.getDimensionPixelSize(R.dimen.edge_height));
+            params.addRule(RelativeLayout.BELOW, parentNodeView.getId());
+            mNodeLayout.addView(edgeView, params);
+        } else {
+            mDelBtn.setEnabled(true);
+            mSearchBtn.setEnabled(true);
+        }
+
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                res.getDimensionPixelSize(R.dimen.node_width),
+                res.getDimensionPixelSize(R.dimen.node_height));
+        if (edgeView != null) {
+            params.addRule(RelativeLayout.BELOW, edgeView.getId());
+            params.addRule(theta > 0 ? RelativeLayout.LEFT_OF : RelativeLayout.RIGHT_OF,
+                    edgeView.getId());
+        }
+        mNodeLayout.addView(nodeView, params);
+
+        mNodes.insert(Pair.create(nodeView, edgeView));
+        mInsBtn.setEnabled(getNumNodes() < MAX_NODES);
+
+/*
+        NodeView nodeView = new NodeView(getActivity());
+        int nid = mSequencer.next();
+        nodeView.setId(nid);
+
+        EdgeView edgeView = null;
+
+        if (mNodeLayout.getChildCount() > 0)
+        {
+            resetNodeColors();
+            edgeView = new EdgeView(getActivity());
+            mNodes.insert(Pair.create(nodeView, edgeView));
+
+            BST.BSTNode x = mNodes.searchNode(nid);
+
+            //rotate the node's edge about the parent node's bottom center
+            float pivotX = x.parent.pair.first.getBottom();
+            float pivotY = (x.parent.pair.first.getRight() - x.parent.pair.first.getLeft())/2;
+            edgeView.setPivotX(pivotX);
+            edgeView.setPivotY(pivotY);
+
+            float theta = 0;
+
+//                    //TODO add translations accordingly(below and left of/right of) - might need to add ID to edgeview
+//                    //rotate the edge to left or right based on which child the node is of its parent
+//                    if (x.parent.left != null)
+//                    {
+//                        if (x.parent.left.pair.first.getId() == x.pair.first.getId()) {
+//                            theta = (float)45.0;
+//                            Timber.d("left child");
+//                        }
+//                    }
+//
+//                    else if (x.parent.right != null)
+//                    {
+//                        Timber.d("right child");
+//                        theta = (float)-45.0;
+//                    }
+
+            //TODO Edgeview not being drawn
+            edgeView.setRotation(theta);
+            mNodeLayout.addView(edgeView, res.getDimensionPixelSize(R.dimen.edge_width),res.getDimensionPixelSize(R.dimen.edge_height));
+        }
+        else
+        {
+            mDelBtn.setEnabled(true);
+            mSearchBtn.setEnabled(true);
+            mNodes.insert(Pair.create(nodeView, edgeView));
+        }
+
+        mNodeLayout.addView(nodeView, res.getDimensionPixelSize(R.dimen.node_width), res.getDimensionPixelSize(R.dimen.node_height));
+        if (mNodeLayout.getChildCount() >= 61) {
+            mInsBtn.setEnabled(false);
+        }
+*/
+    }
+
     /**
      * Removes the node with the specified ID,
      * and colors each visited node including the desired node.
@@ -241,7 +351,6 @@ public class BSTPlayFragment extends Fragment {
      * @return {@code true} if node was found, {@code false} otherwise.
      */
     private boolean removeNode(int id) {
-
         if (!findNode(id)){
             return false;
         }
@@ -256,6 +365,7 @@ public class BSTPlayFragment extends Fragment {
             mNodeLayout.removeView(pair.first);
             mNodeLayout.removeView(mNodes.root.pair.second);
             mNodes.root.pair = new Pair<>(mNodes.root.pair.first, (EdgeView) null);
+            mNodes.insert(mNodes.root.pair);
         }
 
         else
@@ -275,9 +385,8 @@ public class BSTPlayFragment extends Fragment {
      */
     private boolean findNode(int id) {
         final Resources res = getResources();
-        boolean found = mNodes.search(id, res.getColor(R.color.grey_500),
+        return mNodes.search(id, res.getColor(R.color.grey_500),
                 res.getColor(R.color.blue_400));
-        return found;
     }
 
     private void resetNodeColors() {

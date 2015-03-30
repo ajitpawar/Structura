@@ -21,6 +21,16 @@ public final class Utils {
     }
 
     /**
+     * Determines if the SDK version is Jelly Bean MR1 or higher.
+     *
+     * @return {@code true} if the SDK version is Jelly Bean MR1 or higher;
+     * otherwise, returns {@code false}.
+     */
+    public static boolean hasJBMR1() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1;
+    }
+
+    /**
      * Determines if the SDK version is Lollipop or higher.
      *
      * @return {@code true} if the SDK version is Lollipop or higher;

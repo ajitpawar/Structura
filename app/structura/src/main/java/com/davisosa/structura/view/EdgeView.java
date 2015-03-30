@@ -15,8 +15,7 @@ public class EdgeView extends View {
     private int mWidth;
     private int mHeight;
 
-    public EdgeView(Context context)
-    {
+    public EdgeView(Context context) {
         super(context);
         setWillNotDraw(false);
 
@@ -28,8 +27,7 @@ public class EdgeView extends View {
     }
 
     @Override
-    protected void onSizeChanged(final int w, final int h, int oldw, int oldh)
-    {
+    protected void onSizeChanged(final int w, final int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         mWidth = w;
         mHeight = h;
@@ -48,12 +46,6 @@ public class EdgeView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPaint.setColor(mBackgroundColor);
-        canvas.save();
-        //setRotation(-45f);
-/*
-        canvas.rotate(-45f, mWidth / 2, mHeight / 2);
-*/
-        canvas.drawRect(0,0,mWidth,mHeight,mPaint);
-        canvas.restore();
+        canvas.drawRect(0, 0, mWidth, mHeight, mPaint);
     }
 }
