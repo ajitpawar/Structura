@@ -4,18 +4,16 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Divided the work for phase 3
+* Decided to implement the play fragment (#55)
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* Code review for #33
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* opened #56 to add Quiz questions
 
 ####Ishan Thukral
 
@@ -46,18 +44,15 @@
 
 ####Dhyey Sejpal
 
-* Something
-* Something else
+* Started researching the canvas to learn drawing on it
 
 ####Ajit Pawar
 
-* Something
-* Something else
+* More work on #33
 
 ####Vaishali Deswal
 
-* Something
-* Something else
+* compiled a list of questions on Singly linked list
 
 ####Ishan Thukral
 
