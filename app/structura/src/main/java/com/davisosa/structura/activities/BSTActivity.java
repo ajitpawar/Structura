@@ -6,31 +6,29 @@ import android.support.v4.view.ViewPager;
 
 import com.davisosa.structura.R;
 import com.davisosa.structura.activities.base.BaseActivity;
-import com.davisosa.structura.adapters.LLPagerAdapter;
-import com.davisosa.structura.fragments.LLPlayFragment;
+import com.davisosa.structura.adapters.BSTPagerAdapter;
+import com.davisosa.structura.fragments.BSTPlayFragment;
 import com.davisosa.structura.widget.SlidingTabLayout;
 
 public class BSTActivity extends BaseActivity
-        implements LLPlayFragment.OnFragmentInteractionListener {
+        implements BSTPlayFragment.OnFragmentInteractionListener {
     private ViewPager mViewPager;
     private SlidingTabLayout mSlidingTabLayout;
 
     @Override
-    protected int getSelfDrawerItem() {
-        return DRAWER_ITEM_LL;
-    }
+    protected int getSelfDrawerItem() { return DRAWER_ITEM_BST; }
 
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_bst);
 
-        getSupportActionBar().setTitle(R.string.title_linked_list);
+        getSupportActionBar().setTitle(R.string.title_bst);
         overridePendingTransition(0, 0);
 
         // Get the ViewPager and set its PagerAdapter so that it can display items.
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
-        mViewPager.setAdapter(new LLPagerAdapter(getSupportFragmentManager(),
+        mViewPager.setAdapter(new BSTPagerAdapter(getSupportFragmentManager(),
                 BSTActivity.this));
 
         // Give the SlidingTabLayout the ViewPager.

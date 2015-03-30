@@ -1,0 +1,88 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BSTPlayFragment">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/footer_height">
+
+        <RelativeLayout
+            android:id="@+id/node_layout"
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/content_padding_normal" />
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/footer_separator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/footer_separator_height"
+            android:background="@color/footer_separator_color" />
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/footer_height"
+            android:background="@color/footer_bg"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_search"
+                style="?android:attr/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginEnd="@dimen/btn_search_margin_right"
+                android:layout_marginRight="@dimen/btn_search_margin_right"
+                android:background="?attr/selectableItemBackground"
+                android:enabled="false"
+                android:paddingLeft="@dimen/btn_padding"
+                android:paddingRight="@dimen/btn_padding"
+                android:text="@string/btn_search_label"
+                android:textAppearance="@style/TextButton"
+                android:textColor="@drawable/btn_search_text_color" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                style="?android:attr/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginEnd="@dimen/btn_delete_margin_right"
+                android:layout_marginRight="@dimen/btn_delete_margin_right"
+                android:background="?attr/selectableItemBackground"
+                android:enabled="false"
+                android:paddingLeft="@dimen/btn_padding"
+                android:paddingRight="@dimen/btn_padding"
+                android:text="@string/btn_delete_label"
+                android:textAppearance="@style/TextButton"
+                android:textColor="@drawable/btn_delete_text_color" />
+
+            <Button
+                android:id="@+id/btn_insert"
+                style="?android:attr/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginEnd="@dimen/btn_insert_margin_right"
+                android:layout_marginRight="@dimen/btn_insert_margin_right"
+                android:background="?attr/selectableItemBackground"
+                android:paddingLeft="@dimen/btn_padding"
+                android:paddingRight="@dimen/btn_padding"
+                android:text="@string/btn_insert_label"
+                android:textAppearance="@style/TextButton"
+                android:textColor="@drawable/btn_insert_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

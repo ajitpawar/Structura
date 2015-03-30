@@ -15,10 +15,14 @@ import android.support.v4.view.ViewCompat;
 import android.text.TextUtils;
 import android.view.View;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * A utility class containing helper UI methods.
  */
 public final class UIUtils {
+    private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
+
     private UIUtils() {
         // Private constructor for utility class
     }
@@ -65,5 +69,31 @@ public final class UIUtils {
         Drawable drawable = ContextCompat.getDrawable(context, drawResId);
         drawable.setColorFilter(context.getResources().getColor(colResId), PorterDuff.Mode.SRC_IN);
         return drawable;
+    }
+
+    /**
+     * Copyright (C) 2006 The Android Open Source Project
+     * <p/>
+     * Generate a value suitable for use in {@link android.view.View#setId(int)}.
+     * This value will not collide with ID values generated at build time by aapt for R.id.
+     * <p/>
+     * Note: This is a compatibility shim for API <17.
+     *
+     * @return a generated ID value
+     */
+    public static int generateViewId() {
+        if (Utils.hasJBMR1()) {
+            return View.generateViewId();
+        } else {
+            for (; ; ) {
+                final int result = sNextGeneratedId.get();
+                // aapt-generated IDs have the high byte nonzero; clamp to the range under that.
+                int newValue = result + 1;
+                if (newValue > 0x00FFFFFF) newValue = 1; // Roll over to 1, not 0.
+                if (sNextGeneratedId.compareAndSet(result, newValue)) {
+                    return result;
+                }
+            }
+        }
     }
 }
